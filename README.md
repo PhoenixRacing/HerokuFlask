@@ -25,6 +25,19 @@ This package uses a Python virtualenv to manage dependencies. This means that ea
 source venv/bin/activate
 ```
 
+Deploying to Heroku
+------------------
+Once you are ready to deploy your app to Heroku for the first time, you must first create a Heroku account. To create a Heroku account visit the Heroku [quickstart guide](https://devcenter.heroku.com/articles/quickstart). Once you have an account and you have installed the Heroku client you can create your app from the command line using the command:
+```
+heroku create <your-app-name>
+```
+From then on you can push your changes to the Heroku server with the command
+```
+git push heroku master
+```
+
+For more information regarding Python and Heroku you can visit the [Getting Started guide](https://devcenter.heroku.com/articles/getting-started-with-python).
+
 Python virtualenv
 ---------------
 This skeleton takes advantage of a Python virtualenv, which is generally a good idea as it helps manage dependencies and prevents your application from breaking as you update dependencies. The downside of using the virtualenv is that, to ensure you are using the right dependencies, you must load the virtualenv each time you open a new terminal. This command is:
