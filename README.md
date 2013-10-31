@@ -1,35 +1,26 @@
 HerokuFlask
 ===========
-
 The skeleton for a Flask app that is designed to run on Heroku. This skeleton employs the MVC architecture and serves only test content.
 
 Dependencies
 --------------
--Python 2.7 (suggested version)
--Virtualenv:
+- Python 2.7 (suggested version)
+- Virtualenv:
 ```
 sudo pip install virtualenv
 ```
 
 First Time Use
 ---------------
-Designed to run on Ubuntu, you set everything up by running the setup.sh script.
-
-To make the script executable run:
+The setup script included is intended to run on Ubuntu. To change permissions and execute the script run:
 ```
 chmod +x setup.sh
-```
-
-To execute the script in your current session run:
-```
 source setup.sh
 ```
 
 Repeated Use
 --------------
-This package uses a Python virtualenv to manage dependencies. This means that each time you want to run your app locally you must first load the virtualenv.
-
-To do this simply run the command:
+This package uses a Python virtualenv to manage dependencies. This means that each time you want to run your app locally you must first load the virtualenv. To do this simply run the command:
 ```
 source venv/bin/activate
 ```
