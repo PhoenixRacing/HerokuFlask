@@ -5,8 +5,8 @@ The skeleton for a Flask app that is designed to run on Heroku. This skeleton em
 
 Dependencies
 --------------
-Python 2.7 (suggested version)
-Virtualenv:
+-Python 2.7 (suggested version)
+-Virtualenv:
 ```
 sudo pip install virtualenv
 ```
