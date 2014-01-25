@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{% block title %}Application{% endblock %}</title>
-	{% block meta %}{% include 'meta.html' %}{% endblock %}
-	{% block styles %}{% endblock %}
-	{% block scripts %}{% endblock %}
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{% block title %}Phoenix Racing{% endblock %}</title>
+	<!-- CSS -->
+	{% block styles %}
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/foundation.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/normalize.css')}}">
+	{% endblock %}
+	{% block head_scripts %}
+	<script src="{{url_for('static',filename='js/vendor/modernizr.js')}}"></script>
+	{% endblock %}
 </head>
 <body>
 	{% block header %}{%include 'header.html'%}{% endblock %}
 	{% block content %}{% endblock %}
 	{% block footer %}{% endblock %}
+	
+	<!-- Javascript -->
+	{% block body_scripts %}
+	<script src="{{url_for('static',filename='js/vendor/jquery.js')}}"></script>
+	<script src="{{url_for('static',filename='js/vendor/fastclick.js')}}"></script>
+	<script src="{{url_for('static',filename='js/foundation.min.js')}}"></script>
+	{% endblock %}
 </body>
 </html>
