@@ -3,16 +3,17 @@
 	<div class="small-4 columns">
 		{{field.label(class='right')}}
 	</div>
-	<div class="small-8 columns">
+	<div class="small-8 columns {% if field.errors %}error{% endif %}">
 		{{field(placeholder = field.name)|safe}}
+		{% if field.errors %}
+		<small>
+			{% for error in field.errors %}
+			{{error}}
+			<br>
+			{% endfor %}
+		</small>
+		{% endif %}
 	</div>
-	{% if field.errors %}
-	<ul class="errors">
-		{% for error in field.errors %}
-		<li>{{error}}</li>
-		{% endfor %}
-	</ul>
-	{% endif %}
 </div>
 {% endmacro %}
 
