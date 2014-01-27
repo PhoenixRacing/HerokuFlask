@@ -18,6 +18,16 @@ chmod +x setup.sh
 source setup.sh
 ```
 
+Install MongoDB
+--------------
+Install MongoDB on Ubuntu:
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10;
+echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" | sudo tee /etc/apt/sources.list.d/10gen.list;
+sudo apt-get update;
+sudo apt-get install mongodb-10gen;
+```
+
 Repeated Use
 --------------
 This package uses a Python virtualenv to manage dependencies. This means that each time you want to run your app locally you must first load the virtualenv. To do this simply run the command:
