@@ -20,7 +20,10 @@ body {
 }
 
 #logo {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
+}
+.display button{
+	margin-right: 10px;
 }
 /*	
 #Title {
