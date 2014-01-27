@@ -1,12 +1,37 @@
-body,html{
-    height:100%;
-    width:100%;
+body {
+	background-image: url(/static/img/background.jpg);
+	background-position: center center;
+	background-color: #333;
 }
 
-.off-canvas-wrap,.inner-wrap{
-    height:100%;   
+.display{
+	background-color: rgba(54, 54, 54, .75);
+	margin:10%;
+	padding:3%;
+	border-radius: 10px;
 }
 
-.page{
-    height:100%;
+.display *{
+	color: white;
 }
+
+.display p{
+	font-size: 1.3em;
+}
+
+#logo {
+	margin-bottom: 20px;
+}
+/*	
+#Title {
+	font-size: 1.5em;
+}
+
+#Title span {
+	display: block;
+	border-top: dotted white 5px;
+	width:100%;
+	font-size: 3em;
+	padding-top: -100px;
+}
+*/
