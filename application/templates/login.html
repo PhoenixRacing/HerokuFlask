@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block styles_body%}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/login.css')}}">
+{% endblock %}
+
 {% block content %}
 <div class="row">
 	<div class="small-9 large-centered">
@@ -27,11 +31,18 @@
 			</div>
 			<div class="row">
 				<div class="small-offset-4 small-8 columns">
-					<button class="button" type="submit">Log In</button>
-					<button class="button">Sign Up</button>
+					<button id="login" class="button" type="submit">Log In</button>
+					<a href="#">Sign up</a>
+					<!-- 
+					<button class="button secondary">Sign Up</button> -->
 				</div>
 			</div>
 		</form>
+		<!-- <div class="row">
+			<div class="small-offset-4 small-8 columns">
+				<a href="#">Forgot your password?</a>
+			</div>
+		</div> -->
 	</div>
 </div>
 {% endblock %}
