@@ -1,6 +1,5 @@
 from flask import render_template, request, redirect, flash, url_for
 from ..models.forms import LogInForm
-# from ...models.forms import LogInForm
 
 def login():
 	form = LogInForm(request.form)
