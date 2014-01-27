@@ -1,5 +1,52 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Login
+<div class="row">
+	<div class="small-9 large-centered">
+		<div class="row">
+			<div class="small-offset-4 small-8 columns">
+				<h1>Sign Up</h1>
+			</div>
+		</div>
+		<form>
+			<div class="row">
+				<div class="small-4 columns">
+					<label for="name" class="right">Full Name</label>
+				</div>
+				<div class="small-8 columns">
+					<input type="text" id="name" placeholder="Full Name" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-4 columns">
+					<label for="email" class="right">Email</label>
+				</div>
+				<div class="small-8 columns">
+					<input type="text" id="email" placeholder="Email" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-4 columns">
+					<label for="password" class="right">Password</label>
+				</div>
+				<div class="small-8 columns">
+					<input type="password" id="password" placeholder="Password" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-4 columns">
+					<label for="confirmPassword" class="right">Confirm Password</label>
+				</div>
+				<div class="small-8 columns">
+					<input type="password" id="confirmPassword" placeholder="Confirm Password" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-offset-4 small-8 columns">
+					<button class="button" type="submit">Sign Up</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
 {% endblock %}

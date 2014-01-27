@@ -3,7 +3,8 @@ from flask.ext.mongoengine import MongoEngine
 
 # Setup the app object
 app = Flask(__name__)
-# app.debug = True
+app.debug = True
+app.secret_key = "ThisWillChange"
 
 # Setup the Database
 app.config['MONGODB_SETTINGS'] = {'DB' : 'PhoenixRacing'}

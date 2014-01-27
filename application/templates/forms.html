@@ -1,0 +1,26 @@
+{% macro render_field(field) %}
+<div class="row">
+	<div class="small-4 columns">
+		{{field.label(class='right')}}
+	</div>
+	<div class="small-8 columns">
+		{{field(placeholder = field.name)|safe}}
+	</div>
+	{% if field.errors %}
+	<ul class="errors">
+		{% for error in field.errors %}
+		<li>{{error}}</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+</div>
+{% endmacro %}
+
+{% macro submit(text, alternate=None) %}
+<div class="row">
+	<div class="small-offset-4 small-8 columns">
+		<button id="submit" class="button" type="submit">{{text}}</button>
+		{{extra|safe}}
+	</div>
+</div>
+{% endmacro %}

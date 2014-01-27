@@ -6,10 +6,10 @@ import controllers
 def index():
 	return controllers.index()
 
-@app.route("/login/")
+@app.route("/login/", methods=['GET', 'POST'])
 def login():
 	return controllers.login()
 
-@app.route("/signup/")
+@app.route("/signup/", methods=['GET', 'POST'])
 def signup():
 	return controllers.signup()
