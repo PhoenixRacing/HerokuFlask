@@ -1,22 +1,20 @@
-HerokuFlask
+PhoenixRacingWebApp#noregrets
 ===========
-The skeleton for a Flask app that is designed to run on Heroku. This skeleton employs the MVC architecture and serves only test content.
-
-Dependencies
---------------
-- Python 2.7 (suggested version)
-- Virtualenv:
-```
-sudo pip install virtualenv
-```
+A web app for the Olin College MiniBaja team.
 
 First Time Use
 ---------------
+Install the Heroku toolbelt. For Ubuntu this command is:
+```
+wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+```
 The setup script included is intended to run on Ubuntu. To change permissions and execute the script run:
 ```
-chmod +x setup.sh
 source setup.sh
 ```
+If you are working on a different operating system, or if you would rather setup manually you will need to:
+- Setup a Python virtualenv
+- Install all of the dependencies in requirements.txt in the virtualenv
 
 Install MongoDB
 --------------
@@ -34,6 +32,11 @@ This package uses a Python virtualenv to manage dependencies. This means that ea
 ```
 source venv/bin/activate
 ```
+If you start adding dependencies to the project you will need to add them to the requirements.txt file. The easiest way to do this is to load the virtualenv and run the command
+```
+pip freeze > requirements.txt
+```
+in your virtualenv. This dumps all of the currently installed package information into requirements.txt.
 
 Deploying to Heroku
 ------------------
@@ -47,15 +50,3 @@ git push heroku master
 ```
 
 For more information regarding Python and Heroku you can visit the [Getting Started guide](https://devcenter.heroku.com/articles/getting-started-with-python).
-
-Python virtualenv
----------------
-This skeleton takes advantage of a Python virtualenv, which is generally a good idea as it helps manage dependencies and prevents your application from breaking as you update dependencies. The downside of using the virtualenv is that, to ensure you are using the right dependencies, you must load the virtualenv each time you open a new terminal. This command is:
-```
-source venv/bin/activate
-```
-
-As your app grows it will probably take on more dependencies. As you do this, you must update your requirements.txt file, so that Heroku will also use the appropriate dependencies. To do this you must load the virtualenv and type the command:
-```
-pip freeze -l > requirements.txt
-```
