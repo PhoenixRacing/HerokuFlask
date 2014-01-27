@@ -1,12 +1,15 @@
-from flask import Flask
-import router
+from . import app
 import controllers
 
-app = Flask(__name__)
-app.debug = True
-
 @app.route("/")
-@app.route("/index")
+@app.route("/index/")
 def index():
-	print "hello"
 	return controllers.index()
+
+@app.route("/login/")
+def login():
+	return controllers.login()
+
+@app.route("/signup/")
+def signup():
+	return controllers.signup()
