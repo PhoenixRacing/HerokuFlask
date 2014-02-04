@@ -24,6 +24,15 @@ body {
 }
 .display button{
 	margin-right: 10px;
+	font-weight: bold!important;
+}
+
+.display p{
+	font-weight: 400;
+}
+
+.display strong {
+	font-weight: 900;
 }
 /*	
 #Title {

@@ -13,3 +13,7 @@ def login():
 @app.route("/signup/", methods=['GET', 'POST'])
 def signup():
 	return controllers.signup()
+
+@app.route("/subteams/")
+def subteams():
+	return controllers.subteams()
