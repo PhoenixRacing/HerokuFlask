@@ -17,3 +17,7 @@ def signup():
 @app.route("/subteams/")
 def subteams():
 	return controllers.subteams()
+
+@app.route("/donate/")
+def donate():
+	return controllers.donate()
