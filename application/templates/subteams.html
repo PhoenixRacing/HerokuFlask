@@ -1,9 +1,40 @@
 {% extends 'base.html' %}
 
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
 {% block content %}
-<div class="row">
-	<div class="display small-8 small-centered columns text-center">
-		<h2>Phoenix Racing</h2>
+<div class="display small-8 small-centered columns text-center">
+	<div class="row">
+		<div class="large-3 columns">
+			<img id="logo" src="{{url_for('static',filename='img/chassis-icon.png')}}">
+			<h2>Chassis</h2>
+			<p>Designs our frame from 4130 chromoly steel tube and performs structural analysis</p>
+			<button class="button secondary radius" href="#">Check it!</button>
+		</div>
+
+		<div class="large-3 columns">
+			<img id="logo" src="{{url_for('static',filename='img/drivetrain-icon.png')}}">
+			<h2>Drivetrain</h2>
+			<p>Fabricates our custom gearbox, integrates a differential, and tunes our transmission</p>
+			<button class="button secondary radius" href="#">Check it!</button>
+		</div>
+
+	 	<div class="large-3 columns">
+	 		<img id="logo" src="{{url_for('static',filename='img/suspension-icon.png')}}">
+	 		<h2>Suspension</h2>
+	 		<p>Performs geometric optimization for maximum handling and cornering performance</p>
+	 		<button class="button secondary radius" href="#">Check it!</button>
+	 	</div>
+
+	 	<div class="large-3 columns">
+	 		<img id="logo" src="{{url_for('static',filename='img/electrical-icon.png')}}">
+	 		<h2>Electrical</h2>
+	 		<p>Integrates a speedometer and tachometer with wireless datalogging and driver communications</p>
+	 		<button class="button secondary radius" href="#">Check it!</button>
+	 	</div>
 	</div>
 </div>
 {% endblock %}
