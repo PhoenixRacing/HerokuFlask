@@ -34,3 +34,9 @@ body {
 .display strong {
 	font-weight: 900;
 }
+
+#sponsor-wrap{
+	background-color: rgba(200,200,200,.75);
+	border-radius: 20px;
+	padding-top: 20px;
+}
