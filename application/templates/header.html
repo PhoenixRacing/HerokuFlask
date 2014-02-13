@@ -9,10 +9,10 @@
 	<section class="top-bar-section">
 		<!-- Left Nav Section -->
 		<ul class="left">
-			<li class="active"><a href="url_for('subteams')">Subteams</a></li>
-			<li><a href="#">Dashboard</a></li>
+			<li class="active"><a href="{{url_for('subteams')}}">Subteams</a></li>
+			<li><a href="{{url_for('data')}}">Dashboard</a></li>
 			<li><a href="{{url_for('donate')}}">Donate</a></li>
-			<li><a href="#">Sponsors</a></li>
+			<li><a href="{{url_for('sponsors')}}">Sponsors</a></li>
 		</ul>
 
 		<!-- Right Nav Section -->
@@ -37,9 +37,9 @@
 	<ul class="off-canvas-list">
 		<li><a href="/">Home</a></li>
 		<li><a href="#">Subteams</a></li>
-		<li><a href="#">Dashboard</a></li>
+		<li><a href="{{url_for('data')}}">Dashboard</a></li>
 		<li><a href="#">Donate</a></li>
-		<li><a href="#">Sponsors</a></li>
+		<li><a href="{{url_for('sponsors')}}">Sponsors</a></li>
 		<li><label></label></li>
 		<li><a href="{{url_for('login')}}">Log In</a></li>
 		<li><a href="{{url_for('signup')}}">Sign Up</a></li>

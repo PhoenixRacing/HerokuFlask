@@ -25,3 +25,7 @@ def subteams():
 @app.route("/donate/")
 def donate():
 	return controllers.donate()
+
+@app.route("/sponsors/")
+def sponsors():
+	return controllers.sponsors()
