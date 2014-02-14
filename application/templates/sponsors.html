@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% set major_sponsors = [
+	{'name':'Bose','img':'sponsor-bose.png'},
+	{'name':'Olin College','img':'sponsor-olin.png'},
+	{'name':'Microsoft','img':'sponsor-msft.png'},
+	{'name':'Barrett Technology Inc.','img':'sponsor-barrett.png'}]
+%}
+
+{% set minor_sponsors = [
+	{'name':'Bettencourt\'s','img':'sponsor-bettencourt.png'},
+	{'name':'Chillybear','img':'sponsor-chillybear.png'},
+	{'name':'Motorcycles of Manchester Inc.','img':'sponsor-mom.png'},
+	{'name':'Zygote Ventures','img':'sponsor-zygote.png'},
+	{'name':'Advanced Plastics','img':'sponsor-ap.png'},
+	{'name':'Rockwell Automation','img':'sponsor-rockwell.png'}]
+%}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/sponsors.css')}}">
+{% endblock %}
+
+
+{% block content %}
+<div class="display small-8 small-centered columns text-center">
+	<div class="row">
+		<div class="large-12 columns">
+			<p>Thank you to all of our generous sponsors! What we do is only possible thanks to the help of the following people and organizations.</p>
+			<p><small>For information on sponsorship, please contact one of our fundraising managers, <a class="inline-a" href="mailto:e884e203@opayq.com">Forrest Bourke</a> or <a class="inline-a" href="mailto:Brandon.Chiou@students.olin.edu">Brandon Chiou</a>.</small></p>
+		</div>
+	</div>
+	<div class="sponsor-wrap">
+		<!-- major sponsors -->
+		<div class="row">
+		<p>Gold Sponsors</p>
+		{% for s in major_sponsors %}
+			<div class="large-6 columns">
+				<img src="{{url_for('static',filename='img/' + s['img'])}}"/>
+				<p><small>{{s['name']}}</small></p>
+			</div>	
+		{% endfor %}
+		</div>
+		<!-- minor sponsors -->
+		<div class="row">
+		<p>Silver Sponsors</p>
+		{% for s in minor_sponsors %}
+			<div class="large-4 columns">
+				<img src="{{url_for('static',filename='img/' + s['img'])}}"/>
+				<p><small>{{s['name']}}</small></p>
+			</div>	
+		{% endfor %}
+		</div>
+	</div>
+	<div class="row">
+		<p>Thank you to the following individuals and families:</p>
+		<p>Tal Schwartz, Wyatt Andree, Xy Ziemba, Dan Foran, Matt Wooton, The McMullen Family, The McClure Family, The Andree Family, Kathleen Scully, Marie and Ryan Stark, Jeff and Lola Stark, Jim Switzer, The Raymond Family, The Aletty Family, The Sakamoto Family, Jay Feldman, Dan Greeley</p>
+	</div>
+</div>
+{% endblock %}
