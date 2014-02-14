@@ -1,6 +1,4 @@
 body {
-	background-image: url(/static/img/background.jpg);
-	background-position: center center;
 	background-color: #333;
 }
 
@@ -34,3 +32,16 @@ body {
 .display strong {
 	font-weight: 900;
 }
+/*	
+#Title {
+	font-size: 1.5em;
+}
+
+#Title span {
+	display: block;
+	border-top: dotted white 5px;
+	width:100%;
+	font-size: 3em;
+	padding-top: -100px;
+}
+*/

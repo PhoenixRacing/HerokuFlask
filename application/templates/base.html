@@ -22,15 +22,15 @@
 	<div class="page">
 		<div class="off-canvas-wrap">
 			<div class="inner-wrap">
+				<div>
+					{% block header %}{%include 'header.html'%}{% endblock %}
+					<section class="main-section">
+						{% block content %}{% endblock %}
+						{% block footer %}{% endblock %}
+					</section>
 
-				{% block header %}{%include 'header.html'%}{% endblock %}
-				<section class="main-section">
-					{% block content %}{% endblock %}
-					{% block footer %}{% endblock %}
-				</section>
-
-				<a class="exit-off-canvas"></a>
-
+					<a class="exit-off-canvas"></a>
+				</div>
 			</div>
 		</div>
 	</div>

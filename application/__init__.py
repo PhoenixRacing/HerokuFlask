@@ -4,13 +4,10 @@ from flask.ext.mongoengine import MongoEngine
 # Setup the app object
 app = Flask(__name__)
 app.debug = True
-app.secret_key = "ThisWillChange"
 
 # Setup the Database
-app.config['MONGODB_SETTINGS'] = {'DB' : 'PhoenixRacing'}
-# app.config['SECRET_KEY'] = 'KeepThisS3cr3t'
-
+app.config.from_pyfile('mongo_config.cfg')
 db = MongoEngine(app)
 
-# The router cannot work until the app and database are created
+# The router cannot run until the app and database are created
 import router
