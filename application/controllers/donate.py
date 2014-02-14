@@ -1,4 +1,6 @@
+# donate.py
+
 from flask import render_template
 
 def donate():
-	return "This needs to be fixed"
+	return render_template('donate.html')
