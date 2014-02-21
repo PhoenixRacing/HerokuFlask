@@ -6,4 +6,4 @@ def login():
 	if request.method == 'POST' and form.validate():
 		flash('Email: {0}\nPassword: {1}'.format(form.email.data,form.password.data))
 		return redirect(url_for('index'))
-	return render_template('login.html', form=form)
+	return render_template('login.html', form=form, active_page='login')
