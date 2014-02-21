@@ -1,36 +1,9 @@
-body {
-	background-image: url(/static/img/background.jpg);
-	background-position: center center;
-	background-color: #333;
+/*.banner{
+	overflow: hidden;
+	height: 400px;
 }
 
-.display{
-	background-color: rgba(54, 54, 54, .75);
-	margin:10%;
-	padding:3%;
-	border-radius: 10px;
-}
-
-.display *{
-	color: white;
-}
-
-.display p{
-	font-size: 1.3em;
-}
-
-#logo {
-	margin-bottom: 30px;
-}
-.display a{
-	margin-right: 10px;
-	font-weight: bold!important;
-}
-
-.display p{
-	font-weight: 400;
-}
-
-.display strong {
-	font-weight: 900;
-}
+.banner img{
+	position: relative;
+	top: -10%;
+}*/
