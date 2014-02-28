@@ -10,24 +10,30 @@
 {% endblock %}
 
 {% block content %}
-<div class="banner">
-	<img id="logo" src="{{url_for('static',filename='img/banner.jpg')}}">
-</div>
+<img class="banner-img" src="{{url_for('static',filename='img/EpicBaja_trim.jpg')}}">
 
-<div class="row text-center">
-	<h1>Phoenix Racing</h1>
-	<h2>Olin College of Engineering</h2>
+<div class="banner-caption row">
+		<!-- <img class="banner-img" src="{{url_for('static',filename='img/logo2_clear_whitetext.png')}}"> -->
+		<div class="small-12 columns">
+			<!-- <h1>Baja</h1> -->
+			<p>A team of students from Olin College building and racing off-road vehicles for SAE's MiniBaja competition.
+			<br>
+			<br>
+			<a href="#">Meet the Team!</a>
+			<br>
+			<a href="{{url_for('data')}}">Watch the Car</a>
+			</p>
+		</div>
 </div>
-
 <div class="row">
+	
 </div>
-
-<div class="row">
+	<img class="banner-img" src="{{url_for('static',filename='img/logo2_clear_whitetext.png')}}">
+</div>
+<!-- <div class="row">
 	<div class="display small-12 medium-8 small-centered columns text-center">
 		<p>Phoenix Racing competes in <strong>SAE’s MiniBaja</strong>, an annual series of off-road challenges. Our team is <strong>completely student run</strong> with upper- and under-class technical leads and design managers. We’re a long term project with ongoing student involvement and high retention rates. Each year, the car is designed and fabricated <strong>entirely by students</strong>.</p>
-		<a class="button secondary radius" href="#">Meet the Team!</a>
-		<a class="button secondary radius" href="{{url_for('data')}}">Watch the Car</a>
 		<a class="button secondary radius" href="{{url_for('donate')}}">Donate Now</a>
 	</div>
-</div>
+</div> -->
 {% endblock %}

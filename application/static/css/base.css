@@ -1,6 +1,7 @@
 body,html{
     height:100%;
     width:100%;
+    background: rgb(51,51,51)
 }
 
 .off-canvas-wrap,.inner-wrap{
