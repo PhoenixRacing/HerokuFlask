@@ -10,18 +10,39 @@
 {% endblock %}
 
 {% block content %}
-<div class="row">
-	<div class="display small-8 small-centered columns text-center">
-		<!-- <h1 id="Title">Olin College of Engineering<span>Baja</span><h1> -->
-		<img id="logo" src="{{url_for('static',filename='img/logo.png')}}">
-		<h2>Phoenix Racing</h2>
 
-		<!-- <p>Thanks for visiting the Olin College MiniBaja page. This site is still under construction, check back for updates!</p> -->
-
-		<p>Phoenix Racing competes in <strong>SAE’s MiniBaja</strong>, an annual series of off-road challenges. Our team is <strong>completely student run</strong> with upper- and under-class technical leads and design managers. We’re a long term project with ongoing student involvement and high retention rates. Each year, the car is designed and fabricated <strong>entirely by students</strong>.</p>
-		<a class="button secondary radius" href="#">Meet the Team!</a>
-		<a class="button secondary radius" href="{{url_for('data')}}">Watch the Car</a>
-		<a class="button secondary radius" href="{{url_for('donate')}}">Donate Now</a>
+<div class="banner">
+	<img class="banner-img" src="{{url_for('static',filename='img/EpicBaja_trim.jpg')}}">
+	<div class="banner-caption row">
+		<div class="small-12 small-centered columns">
+			<img src="{{url_for('static',filename='img/logo2_clear_whitetext.png')}}">
+			<p>
+				A team of students from Olin College building and racing off-road vehicles for SAE's MiniBaja competition.
+				<br>
+				<br>
+				<a href="#">Meet the Team</a>
+				<br>
+				<a href="{{url_for('data')}}">Watch the Car</a>
+			</p>
+		</div>
 	</div>
 </div>
+<!-- <div class="row index-content">
+	<div class="small-12 large-8 large-centered columns">
+		<p>Phoenix Racing competes in <strong>SAE’s MiniBaja</strong>, an annual series of off-road challenges. Our team is <strong>completely student run</strong> with upper- and under-class technical leads and design managers. We’re a long term project with ongoing student involvement and high retention rates. Each year, the car is designed and fabricated <strong>entirely by students</strong>.</p>
+	</div>
+</div> -->
+
 {% endblock %}
+
+{#
+<div class="row">
+	<img class="banner-img" src="{{url_for('static',filename='img/logo2_clear_whitetext.png')}}">
+</div>
+
+<!-- <div class="row">
+	<div class="display small-12 medium-8 small-centered columns text-center">
+		<a class="button secondary radius" href="{{url_for('donate')}}">Donate Now</a>
+	</div>
+</div> -->
+#}

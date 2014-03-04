@@ -1,37 +1,50 @@
-body {
-	background-image: url(/static/img/background.jpg);
-	background-position: center center;
-	background-color: #333;
+.banner-img{
+	margin:auto;
+	width:100%;
 }
 
-.display{
-	background-color: rgba(54, 54, 54, .75);
-	margin:10%;
-	margin-top: 0;
-	padding:3%;
+.banner-caption{
+	background-color: rgba(51,51,51,1);/*.9);*/
 	border-radius: 10px;
 }
 
-.display *{
+@media only screen and (min-width:  64.063em) {
+	.banner-caption img{
+		width:100%;
+	}
+}
+@media only screen and (min-width:  64.063em) {
+	.banner-img{
+		position: relative;
+	}
+	.banner-caption{
+		width: 20%;
+		min-height: 30%;
+		position: absolute;
+		top: 10%;
+		left: 10%;
+	}
+	.banner-caption img{
+		max-width: 300px;
+	}
+}
+
+.banner-caption > div:first-child{
+	padding: 10%;
+	padding-bottom: 0;
+}
+.banner-caption p{
+	font-size: 100%;
 	color: white;
+	text-align: center;
+}
+.banner-caption a{
+	font-size: 90%;
+	color: white;
+	text-decoration: underline;
 }
 
-.display p{
-	font-size: 1.3em;
-}
-
-#logo {
-	margin-bottom: 30px;
-}
-.display a{
-	margin-right: 10px;
-	font-weight: bold!important;
-}
-
-.display p{
-	font-weight: 400;
-}
-
-.display strong {
-	font-weight: 900;
+.index-content{
+	padding-top: 5%;
+	color: white;
 }
