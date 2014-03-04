@@ -29,3 +29,19 @@ def donate():
 @app.route("/sponsors/")
 def sponsors():
 	return controllers.sponsors()
+
+@app.route("/chassis/")
+def chassis():
+	return controllers.chassis()
+
+@app.route("/drivetrain/")
+def drivetrain():
+	return controllers.drivetrain()
+
+@app.route("/suspension/")
+def suspension():
+	return controllers.suspension()
+
+@app.route("/electrical/")
+def electrical():
+	return controllers.electrical()
