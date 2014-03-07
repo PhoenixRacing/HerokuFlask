@@ -22,6 +22,10 @@ def data():
 def subteams():
 	return controllers.subteams()
 
+@app.route("/subteams/<subteam_name>/")
+def subteam_description(subteam_name):
+	return controllers.description(subteam_name)
+
 @app.route("/donate/")
 def donate():
 	return controllers.donate()
@@ -32,16 +36,16 @@ def sponsors():
 
 @app.route("/chassis/")
 def chassis():
-	return controllers.chassis()
+	return controllers.description('chassis')
 
 @app.route("/drivetrain/")
 def drivetrain():
-	return controllers.drivetrain()
+	return controllers.description('drivetrain')
 
 @app.route("/suspension/")
 def suspension():
-	return controllers.suspension()
+	return controllers.description('suspension')
 
 @app.route("/electrical/")
 def electrical():
-	return controllers.electrical()
+	return controllers.description('electrical')

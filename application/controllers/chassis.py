@@ -1,7 +1,0 @@
-from flask import render_template
-
-title = "Chassis"
-text = "Body Subteam is in charge of the chassis, stylistic elements, and all ways in which drivers engage with the vehicle's interface. Goals for this year include modifying the chassis design to be more robust, improving the driver experience, and making the car look generally more pleasing to the eye.\n As the chassis is being remade this year, there has been a lot of opportunity for improvement and rethinking of design directed toward making the chassis more robust and easier to manufacture. Examples include turning welded joints into bent tubing and implementing a 'whisker' bumper that covers the entire front of the car. The main elements of the user interface we deal with include the pedals, seat, and body panels, which are all being redesigned to be either more comfortable for the driver or more attractive.\n We conduct FEA (Finite Element Analysis) to simulate different types of collisions on different designs to ensure a sturdy chassis design, make sketch models to simulate how people will interact with the car, and use a variety of techniques and machines for fabrication of our parts, including a water jet cutter and a CNC router to make foam molds for our composites layups."
-
-def chassis():
-	return render_template('subteamdescription.html',title=title,text=text.split('\n'))
