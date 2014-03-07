@@ -27,22 +27,24 @@
 		</div>
 	</div>
 </div>
-<!-- <div class="row index-content">
-	<div class="small-12 large-8 large-centered columns">
-		<p>Phoenix Racing competes in <strong>SAE’s MiniBaja</strong>, an annual series of off-road challenges. Our team is <strong>completely student run</strong> with upper- and under-class technical leads and design managers. We’re a long term project with ongoing student involvement and high retention rates. Each year, the car is designed and fabricated <strong>entirely by students</strong>.</p>
+<div class="row bottom-wrap">
+	<div class="small-12 large-4 columns bottom-slide-wrap">
+		<div class="bottom-slide">
+			<img src="{{url_for('static',filename='img/team_photo_trim.jpg')}}">
+			<a href="#">Meet the Team</a>
+		</div>
 	</div>
-</div> -->
-
-{% endblock %}
-
-{#
-<div class="row">
-	<img class="banner-img" src="{{url_for('static',filename='img/logo2_clear_whitetext.png')}}">
+	<div class="small-12 large-4 columns bottom-slide-wrap">
+		<div class="bottom-slide">
+			<img src="{{url_for('static',filename='img/data_example.png')}}">
+			<a href="#">Check Out Stats</a>
+		</div>
+	</div>
+	<div class="small-12 end large-4 columns bottom-slide-wrap">
+		<div class="bottom-slide">
+			<img src="{{url_for('static',filename='img/data_example.png')}}">
+			<a href="#">Donate to the Team</a>
+		</div>
+	</div>
 </div>
-
-<!-- <div class="row">
-	<div class="display small-12 medium-8 small-centered columns text-center">
-		<a class="button secondary radius" href="{{url_for('donate')}}">Donate Now</a>
-	</div>
-</div> -->
-#}
+{% endblock %}
