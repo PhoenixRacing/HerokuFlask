@@ -6,7 +6,7 @@
 }
 
 .banner-caption{
-	background-color: rgba(51,51,51,1);
+	background-color: rgba(34,34,34,.8);
 }
 
 @media only screen and (min-width:  64.063em) {
@@ -83,7 +83,7 @@
 		padding: 5% 10%;
 	}
 	.bottom-slide > a{
-		width:80%;
-		bottom:7%;
+		width:78.8%;
+		bottom:10%;
 	}
 }
