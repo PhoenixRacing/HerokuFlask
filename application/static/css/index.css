@@ -7,7 +7,6 @@
 
 .banner-caption{
 	background-color: rgba(51,51,51,1);
-	border-radius: 10px;
 }
 
 @media only screen and (min-width:  64.063em) {
@@ -24,6 +23,7 @@
 		position: absolute;
 		top: 10%;
 		left: 10%;
+		border-radius: 10px;
 	}
 	.banner-caption img{
 		max-width: 100%;
@@ -51,9 +51,11 @@
 }
 
 .bottom-slide-wrap{
-	padding-top:2%;
-	padding-left:1%;
-	padding-right: 1%;
+	padding-top:1.5%;
+	padding-left:.75%;
+	padding-right: .75%;
+	padding-bottom: 1.5%;
+	overflow: hidden;
 }
 
 .bottom-slide{
@@ -66,9 +68,9 @@
 
 .bottom-slide > a{
 	position: absolute;
-	top:45%;
+	bottom:5.5%;
 	display: block;
-	width:100%;
+	width:95.5%;
 	text-align: center;
 	background-color: rgba(51,51,51,.8);
 	color: white;
@@ -81,6 +83,7 @@
 		padding: 5% 10%;
 	}
 	.bottom-slide > a{
-		width:80%;	
+		width:80%;
+		bottom:7%;
 	}
 }
