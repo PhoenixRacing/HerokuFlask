@@ -11,54 +11,52 @@
 
 {% set active_page = active_page|default('index') -%}
 
-<div class="fixed">
-	<nav class="top-bar hide-for-small fixed" data-topbar>
-			<ul class="title-area">
-				<li class="name">
-					<h1><a href="/">Phoenix Racing</a></h1>
-				</li>
-				<li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-			</ul>
-	
-			<section class="top-bar-section">
-				<!-- Left Nav Section -->
-				<ul class="left">
-					{% for id, caption in navbar['left'] %}
-					<li {% if id == active_page %}class="active"{% endif %}><a href="{{url_for(id)}}">{{caption}}</a></li>
-					{% endfor %}
-				</ul>
-	
-				<!-- Right Nav Section -->
-				<ul class="right">
-					{% for id, caption in navbar['right'] %}
-					<li {% if id == active_page %}class="active"{% endif %}><a href="{{url_for(id)}}">{{caption}}</a></li>
-					{% endfor %}
-				</ul>
-			</section>
-		</nav>
+<nav class="top-bar hide-for-small" data-topbar>
+	<ul class="title-area">
+		<li class="name">
+			<h1><a href="{{url_for('index')}}">Phoenix Racing</a></h1>
+		</li>
+	</ul>
+	<section class="top-bar-section">
+		<ul class="left">
+			{% for id, caption in navbar['left'] %}
+			<li {% if id == active_page %}class="active"{% endif %}><a href="{{url_for(id)}}">{{caption}}</a></li>
+			{% endfor %}
+		</ul>
+		<ul class="right">
+			{% for id, caption in navbar['right'] %}
+			<li {% if id == active_page %}class="active"{% endif %}><a href="{{url_for(id)}}">{{caption}}</a></li>
+			{% endfor %}
+		</ul>
+	</section>
+</nav>
 
-</div>
-<div class="fixed">
-	<nav class="tab-bar show-for-small">
+<!-- Nav Bar for small screens -->
+	<nav class="tab-bar show-for-small" data-topbar>
 		<section class="left-small">
 			<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
 		</section>
-
 		<section class="middle tab-bar-section">
 			<h1 class="title">Phoenix Racing</h1>
 		</section>
 	</nav>
-</div>
 
+<!-- Off Canvas for small screens -->
 <aside class="left-off-canvas-menu">
 	<ul class="off-canvas-list">
+		<!-- special case for index link -->
 		<li {% if 'index' == active_page %}class="active"{% endif %}><a href="{{url_for('index')}}">Home</a></li>
+
+		<!-- iterate through list of items on left navbar and display -->
 		{% for id, caption in navbar['left'] %}
 		<li {% if id == active_page %}class="active"{% endif %}><a href="{{url_for(id)}}">{{caption}}</a></li>
 		{% endfor %}
+
+		<!-- iterate through list of items on right navbar and display -->
 		<li><label></label></li>
 		{% for id, caption in navbar['right'] %}
 		<li {% if id == active_page %}class="active"{% endif %}><a href="{{url_for(id)}}">{{caption}}</a></li>
 		{% endfor %}
 	</ul>
 </aside>
+<a class="exit-off-canvas" href="#"></a>

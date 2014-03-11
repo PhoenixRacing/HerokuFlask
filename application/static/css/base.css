@@ -8,17 +8,7 @@ body,html{
     height:100%;   
 }
 
-.inner-wrap > div{
+section.main-section{
 	height: 100%;
-	overflow-y: scroll;
-}
-
-.page{
-    height:100%;
-}
-
-.has-header {
-	/*position: relative;*/
-	/*top: 45px;*/
-	/*margin-top: 45px;*/
+	overflow-y: auto;
 }
