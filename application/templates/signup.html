@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/login.css')}}">
+{% endblock %}
+
 {% block content %}
-<div class="row">
+<div class="row banner">
 	<div class="small-9 large-centered">
 		<div class="row">
 			<div class="small-offset-4 small-8 columns">
@@ -11,10 +16,18 @@
 		<form>
 			<div class="row">
 				<div class="small-4 columns">
-					<label for="name" class="right">Full Name</label>
+					<label for="first-name" class="right">First Name</label>
 				</div>
 				<div class="small-8 columns">
-					<input type="text" id="name" placeholder="Full Name" />
+					<input type="text" id="first-name" placeholder="First Name" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-4 columns">
+					<label for="last-name" class="right">Last Name</label>
+				</div>
+				<div class="small-8 columns">
+					<input type="text" id="last-name" placeholder="Last Name" />
 				</div>
 			</div>
 			<div class="row">

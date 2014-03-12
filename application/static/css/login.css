@@ -1,3 +1,12 @@
 #login {
 	margin-right: 20px;
 }
+
+.banner{
+	margin-top: 10%;
+	background-color: #333;
+	border-radius: 10px;
+}
+.banner h1, .banner label{
+	color: white;
+}
