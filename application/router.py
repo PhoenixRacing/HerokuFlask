@@ -16,8 +16,8 @@ def login():
 def signup():
 	return controllers.signup()
 
-@login_required
-@app.route("/logout/",methods=['PUT','POST'])
+# @login_required
+@app.route("/logout/",methods=['GET','POST'])
 def logout():
 	return controllers.logout()
 
@@ -56,3 +56,7 @@ def suspension():
 @app.route("/electrical/")
 def electrical():
 	return controllers.description('electrical')
+
+@app.route("/profile")
+def profile():
+	return controllers.profile()

@@ -41,7 +41,7 @@ class User(db.Document):
 		return False
 
 	def get_id(self):
-		return unicode(self.id)
+		return unicode(self.email)
 
 	def check_password(self,password):
 		return flask_bcrypt.check_password_hash(self.password,password)
