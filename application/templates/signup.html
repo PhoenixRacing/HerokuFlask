@@ -13,52 +13,14 @@
 				<h1>Sign Up</h1>
 			</div>
 		</div>
-		<form>
-			<div class="row">
-				<div class="small-4 columns">
-					<label for="first-name" class="right">First Name</label>
-				</div>
-				<div class="small-8 columns">
-					<input type="text" id="first-name" placeholder="First Name" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="small-4 columns">
-					<label for="last-name" class="right">Last Name</label>
-				</div>
-				<div class="small-8 columns">
-					<input type="text" id="last-name" placeholder="Last Name" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="small-4 columns">
-					<label for="email" class="right">Email</label>
-				</div>
-				<div class="small-8 columns">
-					<input type="text" id="email" placeholder="Email" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="small-4 columns">
-					<label for="password" class="right">Password</label>
-				</div>
-				<div class="small-8 columns">
-					<input type="password" id="password" placeholder="Password" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="small-4 columns">
-					<label for="confirmPassword" class="right">Confirm Password</label>
-				</div>
-				<div class="small-8 columns">
-					<input type="password" id="confirmPassword" placeholder="Confirm Password" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="small-offset-4 small-8 columns">
-					<button class="button" type="submit">Sign Up</button>
-				</div>
-			</div>
+		{% from 'forms.html' import render_field, submit %}
+		<form method="post" action="{{url_for('signup')}}">
+			{{render_field(form.first_name)}}
+			{{render_field(form.last_name)}}
+			{{render_field(form.email)}}
+			{{render_field(form.password)}}
+			{{render_field(form.confirm_password)}}
+			{{submit('Sign Up')}}
 		</form>
 	</div>
 </div>

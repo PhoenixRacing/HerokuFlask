@@ -10,3 +10,8 @@
 .banner h1, .banner label{
 	color: white;
 }
+
+.alert-box.error{
+	background-color: #f04124;
+	border-color: #B3301B;
+}

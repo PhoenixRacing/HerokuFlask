@@ -1,13 +1,28 @@
-{% set navbar = {
-'left':[
-('subteams', 'Subteams'),
-('data', 'Dashboard'),
-('donate','Donate'),
-('sponsors', 'Sponsors')],
-'right':[
-('login', 'Log In'),
-('signup', 'Sign Up'),
-]} -%}
+{% if user and user.is_authenticated() %}
+	{% set navbar = {
+	'left':[
+		('subteams', 'Subteams'),
+		('data', 'Dashboard'),
+		('donate','Donate'),
+		('sponsors', 'Sponsors')
+	],
+	'right':[
+		('profile',user.first_name),
+		('logoit','Log Out')
+	]} -%}
+{% else %}
+	{% set navbar = {
+	'left':[
+		('subteams', 'Subteams'),
+		('data', 'Dashboard'),
+		('donate','Donate'),
+		('sponsors', 'Sponsors')
+	],
+	'right':[
+		('login', 'Log In'),
+		('signup', 'Sign Up')
+	]} -%}
+{% endif %}
 
 {% set active_page = active_page|default('index') -%}
 

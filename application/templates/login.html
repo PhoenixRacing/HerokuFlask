@@ -13,6 +13,14 @@
 				<h1>Log In</h1>
 			</div>
 		</div>
+		{% if error == 'invalid credentials' %}
+		<div class="row">
+			<div data-alert class="small-offset-4 small-8 cloumns alert-box error round">
+				Invalid Username or Password
+				<a href="#" class="close">&times;</a>
+			</div>
+		</div>
+		{% endif %}
 		{% from 'forms.html' import render_field, submit %}
 		<form method="post" action="{{url_for('login')}}">
 			{{render_field(form.email)}}

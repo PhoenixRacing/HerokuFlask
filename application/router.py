@@ -1,4 +1,6 @@
-from . import app
+from flask import session
+from flask.ext.login import login_required
+from . import app, login_manager
 import controllers
 
 @app.route("/")
@@ -13,6 +15,11 @@ def login():
 @app.route("/signup/", methods=['GET', 'POST'])
 def signup():
 	return controllers.signup()
+
+@login_required
+@app.route("/logout/",methods=['PUT','POST'])
+def logout():
+	return controllers.logout()
 
 @app.route("/data/", methods=['GET','POST'])
 def data():

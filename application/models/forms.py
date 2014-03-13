@@ -5,7 +5,8 @@ class LogInForm(Form):
 	password = PasswordField('Password',[validators.Required()])
 
 class SignUpForm(Form):
-	name = TextField('Full Name', [validators.Length(min=4, max=50)])
-	email = TextField('Email', [validators.Required(), validators.Length(min=6,max=50)])
-	password = PasswordField('Password', [validators.Required(), validators.EqualTo('confirmPassword',message='Passwords must match')])
-	confirmPassword = PasswordField('Repeat Password')
+	first_name = TextField('First Name', [validators.Length(min=2, max=50), validators.DataRequired()])
+	last_name = TextField('Last Name', [validators.Length(min=2, max=50), validators.DataRequired()])
+	email = TextField('Email', [validators.DataRequired(), validators.Email()])
+	password = PasswordField('Password', [validators.Required(), validators.EqualTo('confirm_password',message='Passwords must match')])
+	confirm_password = PasswordField('Repeat Password')
