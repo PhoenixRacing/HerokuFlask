@@ -10,3 +10,8 @@ class SignUpForm(Form):
 	email = TextField('Email', [validators.DataRequired(), validators.Email()])
 	password = PasswordField('Password', [validators.Required(), validators.EqualTo('confirm_password',message='Passwords must match')])
 	confirm_password = PasswordField('Repeat Password')
+
+class EditUserForm(Form):
+	first_name = TextField('First Name', [validators.Length(min=2, max=50), validators.DataRequired()])
+	last_name = TextField('Last Name', [validators.Length(min=2, max=50), validators.DataRequired()])
+	email = TextField('Email', [validators.DataRequired(), validators.Email()])

@@ -1,5 +1,5 @@
-from flask import session
-from flask.ext.login import login_required
+from flask import url_for
+from flask.ext.login import LoginManager, login_required, fresh_login_required
 from . import app, login_manager
 import controllers
 
@@ -11,6 +11,8 @@ def index():
 @app.route("/login/", methods=['GET', 'POST'])
 def login():
 	return controllers.login()
+
+login_manager.login_view = 'login'
 
 @app.route("/signup/", methods=['GET', 'POST'])
 def signup():
@@ -57,6 +59,12 @@ def suspension():
 def electrical():
 	return controllers.description('electrical')
 
-@app.route("/profile")
-def profile():
-	return controllers.profile()
+@app.route("/user/")
+@login_required
+def user():
+	return controllers.user()
+
+@app.route("/user/edit/", methods=['GET','POST'])
+@fresh_login_required
+def edit_user():
+	return controllers.edit_user()

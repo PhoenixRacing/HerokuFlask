@@ -5,6 +5,6 @@ from logout import logout
 from data import data
 from donate import donate
 from sponsors import sponsors
-from profile import profile
+from user import user, edit_user
 from subteams import subteams
 from subteams import description
