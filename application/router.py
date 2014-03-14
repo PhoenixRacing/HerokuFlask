@@ -77,4 +77,5 @@ def edit_password():
 @app.route("/admin/",methods=['GET','POST'])
 @fresh_login_required
 def admin_page():
+	# TODO this also needs to be available to admin only
 	return "admin page\nthis page needs to be created"
