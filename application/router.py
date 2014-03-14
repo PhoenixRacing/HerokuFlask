@@ -1,7 +1,15 @@
-from flask import url_for
-from flask.ext.login import LoginManager, login_required, fresh_login_required
+from flask import url_for, abort, render_template
+from flask.ext.login import LoginManager, login_required, fresh_login_required, current_user
 from . import app, login_manager
 import controllers
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('error.html', error_name='Page Not Found', error_description='found a page that doesn\'t exist'), 404
+
+@app.errorhandler(401)
+def page_not_found(e):
+    return render_template('error.html', error_name='Permission_Denied', error_description='tried to access a page under false pretenses'), 404
 
 @app.route("/")
 @app.route("/index/")
@@ -77,5 +85,7 @@ def edit_password():
 @app.route("/admin/",methods=['GET','POST'])
 @fresh_login_required
 def admin_page():
+	if not current_user.is_admin():
+		return abort(401)
 	# TODO this also needs to be available to admin only
 	return "admin page\nthis page needs to be created"
