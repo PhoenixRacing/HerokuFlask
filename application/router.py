@@ -1,7 +1,17 @@
 from flask import url_for, abort, render_template
 from flask.ext.login import LoginManager, login_required, fresh_login_required, current_user
+# from flask.ext.cors import cross_domain
 from . import app, login_manager
 import controllers
+from functools import wraps
+
+def admin_required(f):
+	@wraps(f)
+	def wrapper(*args,**kwargs):
+		if not current_user.is_admin():
+			return abort(401)
+		return f(*args,**kwargs)
+	return wrapper
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -9,7 +19,7 @@ def page_not_found(e):
 
 @app.errorhandler(401)
 def page_not_found(e):
-    return render_template('error.html', error_name='Permission_Denied', error_description='tried to access a page under false pretenses'), 404
+    return render_template('error.html', error_name='Permission Denied', error_description='tried to access a page under false pretenses'), 404
 
 @app.route("/")
 @app.route("/index/")
@@ -77,15 +87,29 @@ def user():
 def edit_user():
 	return controllers.edit_user()
 
-@app.route("/user/edit_password/",methods=['GET','POST'])
+@app.route("/user/edit_password/", methods=['GET','POST'])
 @fresh_login_required
 def edit_password():
 	return "edit password\nthis page needs to be created"
 
-@app.route("/admin/",methods=['GET','POST'])
+@app.route("/admin/", methods=['GET','POST'])
 @fresh_login_required
+@admin_required
 def admin_page():
-	if not current_user.is_admin():
-		return abort(401)
 	# TODO this also needs to be available to admin only
-	return "admin page\nthis page needs to be created"
+	return controllers.admin_page()
+
+
+@app.route("/admin/modify_access/<user_id>/", methods=['POST'])
+# @cross_domain(origin='*')
+@login_required
+@admin_required
+def modify_access(user_id):
+	return controllers.modify_access(user_id)
+
+@app.route("/admin/delete/<user_id>/", methods=['POST'])
+# @cross_domain(origin='*')
+@login_required
+@admin_required
+def delete_user(user_id):
+	return controllers.delete_user(user_id)

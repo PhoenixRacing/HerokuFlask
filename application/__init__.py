@@ -5,7 +5,6 @@ from flask.ext.bcrypt import Bcrypt
 
 # Setup the app object
 app = Flask(__name__)
-app.debug = True
 
 # Setup BCrypt
 flask_bcrypt = Bcrypt(app)
@@ -20,3 +19,6 @@ login_manager.init_app(app)
 
 # The router cannot run until the app and database are created
 import router
+
+if __name__ == "__main__":
+	app.run()

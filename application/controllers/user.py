@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, url_for
 from flask.ext.login import current_user
-from ..models.forms import EditUserForm
+from ..models import EditUserForm
 
 def user():
 	return render_template('user.html',user=current_user)

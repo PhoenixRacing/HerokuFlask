@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect, flash, url_for
 from flask.ext.login import login_user
-from ..models.forms import SignUpForm
-from ..models.User import User
+from ..models import SignUpForm
+from ..models import User
 
 def signup():
 	form = SignUpForm(request.form)

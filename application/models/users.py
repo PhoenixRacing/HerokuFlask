@@ -2,9 +2,9 @@ from flask.ext.mongoengine import Document
 from flask.ext.mongoengine.wtf import model_form
 from .. import db, login_manager, flask_bcrypt
 
-access = ('admin','edit','none')
-
 class User(db.Document):
+	access_levels = ('admin','edit','none')
+
 	first_name = db.StringField(max_length=50, required=True)
 	last_name = db.StringField(max_length=50, required=True)
 	email = db.EmailField(required=True)
