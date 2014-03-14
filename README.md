@@ -44,7 +44,7 @@ use phoenix_racing
 ```
 you can then make a user with readWrite permissions using the command
 ```
-db.addUser({user:<choose a username>,pwd:<choose a password>,roles:['readWrite']})
+db.addUser({user:'<choose a username>',pwd:'<choose a password>',roles:['readWrite']})
 ```
 
 In order to use the database with this app you will need to add a file with the name mongo_config.cfg to the /application/ folder with the following contents:
