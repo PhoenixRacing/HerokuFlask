@@ -17,12 +17,6 @@
 		<a href="{{edit_link}}">edit</a>
 	</div>
 	{%endif%}
-	<!-- <div class="small-offset-4 small-8 columns">
-		<h2 class="section-title">{{title}}</h2>
-		{%if edit_link%}
-		<a class="section-edit" href="{{edit_link}}">edit</a>
-		{%endif%}
-	</div> -->
 </div>
 {% endmacro %}
 
@@ -32,13 +26,14 @@
 		<p class="right">{{name}}</p>
 	</div>
 	<div class="small-8 columns">
+		{% autoescape false %}
 		<p class="left">{{value}}</p>
+		{% endautoescape %}
 	</div>
 </div>
-
 {% endmacro%}
 
-
+<!-- Content -->
 {% block content %}
 <div class="row banner">
 	<div class="small-9 large-centered">
@@ -56,5 +51,10 @@
 	{{section_title('Account Information')}}
 	{{section_entry('Access',user.access)}}
 
+	{{section_title('Other Functions')}}
+	{{section_entry('','<a href="' ~ url_for('edit_password') ~ '">Change Password</a>')}}
+	{% if user.is_admin() %}
+	{{section_entry('','<a href="' ~ url_for('admin_page') ~ '">Admin Page</a>')}}
+	{% endif %}
 </div>
 {% endblock %}

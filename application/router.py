@@ -68,3 +68,13 @@ def user():
 @fresh_login_required
 def edit_user():
 	return controllers.edit_user()
+
+@app.route("/user/edit_password/",methods=['GET','POST'])
+@fresh_login_required
+def edit_password():
+	return "edit password\nthis page needs to be created"
+
+@app.route("/admin/",methods=['GET','POST'])
+@fresh_login_required
+def admin_page():
+	return "admin page\nthis page needs to be created"
