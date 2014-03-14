@@ -15,3 +15,8 @@ class EditUserForm(Form):
 	first_name = TextField('First Name', [validators.Length(min=2, max=50), validators.DataRequired()])
 	last_name = TextField('Last Name', [validators.Length(min=2, max=50), validators.DataRequired()])
 	email = TextField('Email', [validators.DataRequired(), validators.Email()])
+
+class EditPasswordForm(Form):
+	old_password = PasswordField('Old Password', [validators.Required()])
+	new_password = PasswordField('New Password', [validators.Required(), validators.EqualTo('confirm_new_password', message='Passwords must match')])
+	confirm_new_password = PasswordField('Confirm New Password', [validators.Required(), validators.EqualTo('new_password', message='Passwords must match')])
