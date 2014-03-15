@@ -3,7 +3,7 @@ from flask.ext.login import current_user
 from ..models import EditUserForm
 
 def user():
-	return render_template('user.html',user=current_user)
+	return render_template('user.html')#,user=current_user)
 
 def edit_user():
 	form = EditUserForm(request.form)
