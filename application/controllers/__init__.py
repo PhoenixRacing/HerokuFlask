@@ -9,3 +9,4 @@ from user import user, edit_user
 from admin import admin_page, delete_user, modify_access
 from subteams import subteams
 from subteams import description
+from blog import blog

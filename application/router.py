@@ -96,20 +96,21 @@ def edit_password():
 @fresh_login_required
 @admin_required
 def admin_page():
-	# TODO this also needs to be available to admin only
 	return controllers.admin_page()
 
 
 @app.route("/admin/modify_access/<user_id>/", methods=['POST'])
-# @cross_domain(origin='*')
 @login_required
 @admin_required
 def modify_access(user_id):
 	return controllers.modify_access(user_id)
 
 @app.route("/admin/delete/<user_id>/", methods=['POST'])
-# @cross_domain(origin='*')
 @login_required
 @admin_required
 def delete_user(user_id):
 	return controllers.delete_user(user_id)
+
+@app.route("/blog/")
+def blog():
+	return controllers.blog()
