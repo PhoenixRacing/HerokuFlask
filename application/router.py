@@ -13,6 +13,14 @@ def admin_required(f):
 		return f(*args,**kwargs)
 	return wrapper
 
+def edit_required(f):
+	@wraps(f)
+	def wrapper(*args,**kwargs):
+		if not current_user.is_admin() and not current_user.is_edit():
+			return abort(401)
+		return f(*args,**kwargs)
+	return wrapper
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('error.html', error_name='Page Not Found', error_description='found a page that doesn\'t exist'), 404
@@ -114,3 +122,15 @@ def delete_user(user_id):
 @app.route("/blog/")
 def blog():
 	return controllers.blog()
+
+@app.route("/blog/create/", methods=['POST','GET'])
+@login_required
+@edit_required
+def create_blog():
+	return controllers.create_blog()
+
+@app.route("/blog/edit/<blog_id>/", methods=['POST','GET'])
+@login_required
+@edit_required
+def edit_blog(blog_id):
+	return conteollers.edit_blog(blog_id)
