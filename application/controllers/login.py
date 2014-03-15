@@ -2,11 +2,13 @@ from flask import render_template, request, redirect, flash, url_for
 from flask.ext.login import login_user
 from ..models import LogInForm
 from ..models import User
+from ..models import Notify
 
 def login():
 
 	def invalidCredentials():
-		return  render_template('login.html', form=form, active_page='login', error='invalid credentials')
+		notification = Notify(notification_type = 'error', message = 'Invalid Username or Password')
+		return  render_template('login.html', form=form, active_page='login', notify = notification)
 
 	form = LogInForm(request.form)
 	if request.method == 'POST' and form.validate():

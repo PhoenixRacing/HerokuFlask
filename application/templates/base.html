@@ -28,6 +28,7 @@
 
 			<!-- Content -->
 			<section class="main-section scroll-container">
+				{% block notify %}{%include 'notify.html'%}{% endblock %}
 				{% block content %}{% endblock %}
 				{% block footer %}{% endblock %}	
 			</section>

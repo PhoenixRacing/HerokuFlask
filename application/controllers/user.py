@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, url_for
 from flask.ext.login import current_user
-from ..models import EditUserForm, EditPasswordForm
+from ..models import EditUserForm, EditPasswordForm, Notify
 
 def user():
 	return render_template('user.html',user=current_user)
@@ -27,8 +27,9 @@ def edit_password():
 			print(current_user.check_password(form.data['old_password']))
 			current_user.password = form.data['new_password'];
 			current_user.save()
+			notificiation = Notify(notification_type = 'success', message = 'Successfully Changed Password')
 			return redirect(url_for('user'))
 		else:
-			return render_template('edit_password.html', user=current_user, form=form, error='invalid password')
-	
+			notificiation = Notify(notification_type = 'error', message = 'Old Password Incorrect') 
+			return render_template('edit_password.html', user=current_user, form=form, notify = notificiation)
 	return render_template('edit_password.html', user=current_user, form=form)
