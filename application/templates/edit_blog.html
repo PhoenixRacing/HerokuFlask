@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/blog.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="row banner">
+	This will be the place where we edit and create blog posts. The only difference between editing a blog post and creating a blog post will be that the information for editing will be prefilled out.
+	
+</div>
+{% endblock %}
