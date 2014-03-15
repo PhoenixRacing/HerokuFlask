@@ -26,5 +26,4 @@ def login():
 			return redirect(url_for('index'))
 		else:
 			return invalidCredentials()
-
 	return render_template('login.html', form=form, active_page='login')
