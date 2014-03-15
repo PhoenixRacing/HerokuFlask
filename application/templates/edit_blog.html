@@ -7,7 +7,19 @@
 
 {% block content %}
 <div class="row banner">
-	This will be the place where we edit and create blog posts. The only difference between editing a blog post and creating a blog post will be that the information for editing will be prefilled out.
-	
+	<div class="small-9">
+		<div class="row">
+			<div class="small-offset-4 small-8 columns">
+				<h1>Edit Blog Post</h1>
+			</div>
+			{% from 'forms.html' import render_field, submit %}
+			<form method="post" action="{{url_for('create_blog')}}">
+				{{render_field(form.title)}}
+				{{render_field(form.body)}}	
+				<br>
+				{{submit('Save')}}		
+			</form>
+		</div>
+	</div>
 </div>
 {% endblock %}

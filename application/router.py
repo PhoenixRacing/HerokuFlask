@@ -16,7 +16,7 @@ def admin_required(f):
 def edit_required(f):
 	@wraps(f)
 	def wrapper(*args,**kwargs):
-		if not current_user.is_admin() and not current_user.is_edit():
+		if not current_user.can_edit():
 			return abort(401)
 		return f(*args,**kwargs)
 	return wrapper
