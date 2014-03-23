@@ -19,3 +19,8 @@ class EditUserForm(Form):
 class BlogPostForm(Form):
 	title = TextField('Title', [validators.DataRequired()])
 	body = TextAreaField('Body', [validators.DataRequired()])
+
+class EditPasswordForm(Form):
+	old_password = PasswordField('Old Password', [validators.Required()])
+	new_password = PasswordField('New Password', [validators.Required(), validators.EqualTo('confirm_new_password', message='Passwords must match')])
+	confirm_new_password = PasswordField('Confirm New Password', [validators.Required(), validators.EqualTo('new_password', message='Passwords must match')])

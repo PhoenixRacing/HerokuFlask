@@ -15,9 +15,9 @@
 		</div>
 		{% from 'forms.html' import render_field, submit %}
 		<form method="post" action="{{url_for('edit_user')}}">
-			{{render_field(form.first_name)}}
-			{{render_field(form.last_name)}}
-			{{render_field(form.email)}}
+            {{render_field(form.first_name)}}
+            {{render_field(form.last_name)}}
+            {{render_field(form.email)}}}
 			{{submit('Save')}}
 		</form>
 	</div>
