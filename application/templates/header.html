@@ -5,10 +5,10 @@
 		('data', 'Dashboard'),
 		('donate','Donate'),
 		('sponsors', 'Sponsors'),
-		('blog','Blog')
+		('view_blog','Blog')
 	],
 	'right':[
-		('user',user.first_name),
+		('user',user.first_name ~ ' ' ~user.last_name),
 		('logout','Log Out')
 	]} -%}
 {% else %}

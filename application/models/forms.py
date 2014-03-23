@@ -17,5 +17,5 @@ class EditUserForm(Form):
 	email = TextField('Email', [validators.DataRequired(), validators.Email()])
 
 class BlogPostForm(Form):
-	title = TextField('Title',[validators.DataRequired()])
-	body = TextAreaField('Body',[validators.DataRequired()])
+	title = TextField('Title', [validators.DataRequired()])
+	body = TextAreaField('Body', [validators.DataRequired()])

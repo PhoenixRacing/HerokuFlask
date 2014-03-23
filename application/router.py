@@ -120,17 +120,27 @@ def delete_user(user_id):
 	return controllers.delete_user(user_id)
 
 @app.route("/blog/")
-def blog():
-	return controllers.blog()
+def view_blog():
+	return controllers.view_blog()
+
+@app.route("/blog/<post_id>/")
+def view_post(post_id):
+	return controllers.view_post(post_id)
 
 @app.route("/blog/create/", methods=['POST','GET'])
 @login_required
 @edit_required
-def create_blog():
-	return controllers.create_blog()
+def create_post():
+	return controllers.create_post()
 
-@app.route("/blog/edit/<blog_id>/", methods=['POST','GET'])
+@app.route("/blog/edit/<post_id>/", methods=['POST','GET'])
 @login_required
 @edit_required
-def edit_blog(blog_id):
-	return conteollers.edit_blog(blog_id)
+def edit_post(post_id):
+	return controllers.edit_post(post_id)
+
+@app.route("/blog/delete/<post_id>", methods=['GET','POST'])
+@login_required
+@edit_required
+def delete_post(post_id):
+	return controllers.delete_post(post_id)

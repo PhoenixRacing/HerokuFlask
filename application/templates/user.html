@@ -54,7 +54,7 @@
 	{{section_title('Other Functions')}}
 	{{section_entry('','<a href="' ~ url_for('edit_password') ~ '">Change Password</a>')}}
 	{% if user.can_edit() %}
-	{{section_entry('','<a href="' ~ url_for('create_blog') ~ '">Create a Blog Post</a>')}}
+	{{section_entry('','<a href="' ~ url_for('create_post') ~ '">Create a Blog Post</a>')}}
 	{% endif %}
 	{% if user.is_admin() %}
 	{{section_entry('','<a href="' ~ url_for('admin_page') ~ '">Admin Page</a>')}}
