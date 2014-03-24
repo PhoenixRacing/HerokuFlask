@@ -3,12 +3,3 @@ body,html{
     width:100%;
     background-color: #222;
 }
-
-.off-canvas-wrap,.inner-wrap{
-    height:100%;   
-}
-
-section.main-section{
-	height: 100%;
-	overflow-y: auto;
-}
