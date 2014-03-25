@@ -10,8 +10,8 @@ class BlogPost(db.Document):
 	def p_list(self):
 	    return self.body.split('\n')
 
-if BlogPost.objects().count() < 1:
-	post = BlogPost()
-	post.title = "Test Post"
-	post.body = "This is the body of the post. This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.\nThis is the body of the post.This is the body of the post.This is the body of the post.\nThis is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post."
-	post.save()
+# if BlogPost.objects().count() < 1:
+	# post = BlogPost()
+	# post.title = "Test Post"
+	# post.body = "This is the body of the post. This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.\nThis is the body of the post.This is the body of the post.This is the body of the post.\nThis is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post.This is the body of the post."
+	# post.save()

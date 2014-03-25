@@ -27,6 +27,9 @@
 <div class="row banner">
 	<div class=" small-offset-1 small-10">
 		<h1 class="blog-title">Phoenix Racing Blog</h1>
+		{% if posts | length < 1 %}
+		<p>Sorry! No one has written a post yet. Check back later to view posts from the team.</p>
+		{% endif %}
 		{% for post in posts %}
 		{{ post_summary(post) }}
 		{% endfor %}
