@@ -16,7 +16,7 @@ host = os.environ.get('MONGODB_HOST')
 if host:
 	app.config['MONGODB_HOST'] = host
 	app.config['MONGODB_PORT'] = os.environ.get('MONGODB_PORT')
-	app.config['MONGODB_DATABASE'] = os.environ.get('MONGODB_DATABASE')
+	app.config['MONGODB_DB'] = os.environ.get('MONGODB_DB')
 	app.config['MONGODB_USERNAME'] = os.environ.get('MONGODB_USERNAME')
 	app.config['MONGODB_PASSWORD'] = os.environ.get('MONGODB_PASSWORD')
 	app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
