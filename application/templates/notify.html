@@ -1,0 +1,19 @@
+{% if notify and notify.type == 'success' %}
+<br>
+<div class="row">
+    <div data-alert class="small-12 columns alert-box success round">
+        {{notify.message}}
+        <a href="#" class="close">&times;</a>
+    </div>
+</div>
+{% endif %}
+
+{% if notify and notify.type == 'error' %}
+<br>
+<div class="row">
+    <div data-alert class="small-12 columns alert-box error round">
+        {{notify.message}}
+        <a href="#" class="close">&times;</a>
+    </div>
+</div>
+{% endif %}
