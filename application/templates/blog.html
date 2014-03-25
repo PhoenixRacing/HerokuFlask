@@ -15,6 +15,7 @@
 		<a href="{{url_for('delete_post',post_id=post.id)}}">delete</a>
 		{% endif %}
 	</div>
+	<br>
 </div>
 {% endmacro %}
 
@@ -26,7 +27,9 @@
 {% block content %}
 <div class="row banner">
 	<div class=" small-offset-1 small-10">
-		<h1 class="blog-title">Phoenix Racing Blog</h1>
+		<div class="row">
+			<h1 class="blog-title">Phoenix Racing Blog</h1>
+		</div>
 		{% if posts | length < 1 %}
 		<p>Sorry! No one has written a post yet. Check back later to view posts from the team.</p>
 		{% endif %}
@@ -34,5 +37,6 @@
 		{{ post_summary(post) }}
 		{% endfor %}
 	</div>
+	<br>
 </div>
 {% endblock %}
