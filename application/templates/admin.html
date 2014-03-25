@@ -16,29 +16,39 @@
 		<div class="row">
 			<div class="small-offset-2 small-8 columns">
 				<script type="text/javascript">
-				modify_user_access = function(access_select){
-					console.log(access_select)
-					console.log(access_select.selector)
-					id = access_select.selector.split("_")[1]
-					prefix = "{{url_for('modify_access',user_id='1')}}".split("1")[0]
-					url = prefix + id + '/'
-					console.log(url,{access:'edit'})
-					// $.post(url)
+
+				modify_user_access = function(user_id){
+					// build the URL
+					prefix = "{{url_for('modify_access',user_id='temp')}}".split("temp")[0]
+					url = prefix + user_id + '/'
+					
+					// send the request
 					$.ajax({
 						type: "POST",
 						contentType: "application/json; charset=utf-8",
 						url: url,
-						data: '{ "access": "'+access_select.val()+'"}',
-						success: function (data) {
-							// TODO, make some sort of indication to the user that the save was successful
-						},
+						data: '{ "access": "'+$("#access_"+user_id).val()+'"}',
 						dataType: "json"
+					}).error(function(jqXHR,textStatus,errorThrown){
+						alert(jqXHR.responseJSON.error);
+					}).success(function (data) {
+						// TODO, make some sort of indication to the user that the save was successful
+						alert("Successfully edited access level");
 					});
-					// location.reload()
 				}
 
 				delete_user = function(user_id){
+					// build the url
+					prefix = "{{url_for('delete_user',user_id='temp')}}".split("temp")[0]
+					url = prefix + user_id + '/'
 
+					// send the request
+					$.post(url).error(function(jqXHR,textStatus,errorThrown){
+						alert(jqXHR.responseJSON.error);
+					}).success(function(){data,textStatus,jqXHR
+						$.remove("row_" + user_id);
+						// TODO remove the user from the list
+					});
 				}
 				</script>
 				<table>
@@ -53,7 +63,7 @@
 					</thead>
 					{% for user in users %}
 					<tbody>
-						<tr>
+						<tr id="row_{{user.id}}">
 							<td>{{user.first_name}} {{user.last_name}}</td>
 							<td>{{user.email}}</td>
 							<td>
@@ -63,8 +73,8 @@
 									{%endfor%}
 								</select>
 							</td>
-							<td class="text-center"><button onclick="modify_user_access($('#access_{{user.id}}'))"><i class="fi-check"></i></button></td>
-							<td class="text-center"><button onclick="$.post('{{url_for('delete_user',user_id=user.id)}}');location.reload()"><i class="fi-x"></i></button></td>
+							<td class="text-center"><button onclick="modify_user_access('{{user.id}}')"><i class="fi-check"></i></button></td>
+							<td class="text-center"><button onclick="delete_user('{{user.id}}')"><i class="fi-x"></i></button></td>
 						</tr>
 					</tbody>
 					{% endfor %}

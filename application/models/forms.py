@@ -1,4 +1,4 @@
-from wtforms import Form, TextField, PasswordField, validators
+from wtforms import Form, TextField, TextAreaField, PasswordField, validators
 
 class LogInForm(Form):
 	email = TextField('Email',[validators.Required(), validators.Length(min=6,max=50)])
@@ -15,6 +15,10 @@ class EditUserForm(Form):
 	first_name = TextField('First Name', [validators.Length(min=2, max=50), validators.DataRequired()])
 	last_name = TextField('Last Name', [validators.Length(min=2, max=50), validators.DataRequired()])
 	email = TextField('Email', [validators.DataRequired(), validators.Email()])
+
+class BlogPostForm(Form):
+	title = TextField('Title', [validators.DataRequired()])
+	body = TextAreaField('Body', [validators.DataRequired()])
 
 class EditPasswordForm(Form):
 	old_password = PasswordField('Old Password', [validators.Required()])

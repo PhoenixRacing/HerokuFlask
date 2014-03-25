@@ -1,10 +1,10 @@
-{% macro render_field(field) %}
+{% macro render_field(field, value=None) %}
 <div class="row">
 	<div class="small-4 columns">
 		{{field.label(class='right')}}
 	</div>
 	<div class="small-8 columns {% if field.errors %}error{% endif %}">
-		{{field(placeholder = field.label.text)|safe}}
+		{{field(placeholder=field.label.text)|safe}}
 		{% if field.errors %}
 		<small>
 			{% for error in field.errors %}

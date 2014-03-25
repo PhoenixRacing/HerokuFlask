@@ -9,7 +9,7 @@ def user():
 		notification.message = request.args.get('notify_message')
 	else:
 		notification = None
-	return render_template('user.html',user=current_user, notify=notification)
+	return render_template('user.html', notify=notification)
 
 def edit_user():
 	form = EditUserForm(request.form)
@@ -37,5 +37,5 @@ def edit_password():
 			return redirect(url_for('user', notify = True, notify_type = notification.type, notify_message = notification.message))
 		else:
 			notification = Notify(notification_type = 'error', message = 'Old Password Incorrect') 
-			return render_template('edit_password.html', user=current_user, form=form, notify = notification)
-	return render_template('edit_password.html', user=current_user, form=form)
+			return render_template('edit_password.html', form=form, notify = notification)
+	return render_template('edit_password.html', form=form)

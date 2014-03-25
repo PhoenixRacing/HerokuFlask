@@ -1,4 +1,4 @@
-from flask import url_for, abort, render_template
+from flask import url_for, abort, render_template, g
 from flask.ext.login import LoginManager, login_required, fresh_login_required, current_user
 # from flask.ext.cors import cross_domain
 from . import app, login_manager
@@ -9,6 +9,14 @@ def admin_required(f):
 	@wraps(f)
 	def wrapper(*args,**kwargs):
 		if not current_user.is_admin():
+			return abort(401)
+		return f(*args,**kwargs)
+	return wrapper
+
+def edit_required(f):
+	@wraps(f)
+	def wrapper(*args,**kwargs):
+		if not current_user.can_edit():
 			return abort(401)
 		return f(*args,**kwargs)
 	return wrapper
@@ -96,20 +104,43 @@ def edit_password():
 @fresh_login_required
 @admin_required
 def admin_page():
-	# TODO this also needs to be available to admin only
 	return controllers.admin_page()
 
 
 @app.route("/admin/modify_access/<user_id>/", methods=['POST'])
-# @cross_domain(origin='*')
 @login_required
 @admin_required
 def modify_access(user_id):
 	return controllers.modify_access(user_id)
 
 @app.route("/admin/delete/<user_id>/", methods=['POST'])
-# @cross_domain(origin='*')
 @login_required
 @admin_required
 def delete_user(user_id):
 	return controllers.delete_user(user_id)
+
+@app.route("/blog/")
+def view_blog():
+	return controllers.view_blog()
+
+@app.route("/blog/<post_id>/")
+def view_post(post_id):
+	return controllers.view_post(post_id)
+
+@app.route("/blog/create/", methods=['POST','GET'])
+@login_required
+@edit_required
+def create_post():
+	return controllers.create_post()
+
+@app.route("/blog/edit/<post_id>/", methods=['POST','GET'])
+@login_required
+@edit_required
+def edit_post(post_id):
+	return controllers.edit_post(post_id)
+
+@app.route("/blog/delete/<post_id>", methods=['GET','POST'])
+@login_required
+@edit_required
+def delete_post(post_id):
+	return controllers.delete_post(post_id)
