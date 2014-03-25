@@ -1,4 +1,4 @@
-import flask
+import flask, os
 from flask import Flask
 from flask.ext.mongoengine import MongoEngine
 from flask.ext.login import LoginManager, current_user
@@ -12,7 +12,17 @@ app = Flask(__name__)
 flask_bcrypt = Bcrypt(app)
 
 # Setup the Database
-app.config.from_pyfile('mongo_config.cfg')
+host = os.environ.get('MONGODB_HOST')
+if host:
+	app.config('MONGODB_HOST') = host
+	app.config('MONGODB_PORT') = os.environ.get('MONGODB_PORT')
+	app.config('MONGODB_DATABASE') = os.environ.get('MONGODB_DATABASE')
+	app.config('MONGODB_USERNAME') = os.environ.get('MONGODB_USERNAME')
+	app.config('MONGODB_PASSWORD') = os.environ.get('MONGODB_PASSWORD')
+	app.config('SECRET_KEY') = os.environ.get('SECRET_KEY')
+else:
+	app.config.from_pyfile('mongo_config.cfg')
+
 db = MongoEngine(app)
 
 # Setup the log in system
