@@ -5,6 +5,13 @@
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/blog.css')}}">
 {% endblock %}
 
+{% block head_scripts %}
+<script src="{{url_for('static', filename='js/tinymce/tinymce.min.js')}}"></script>
+<script type="text/javascript">
+	tinymce.init({selector:'textarea'});
+</script>
+{% endblock %}
+
 {% block content %}
 <div class="row banner">
 	<div class="small-9">

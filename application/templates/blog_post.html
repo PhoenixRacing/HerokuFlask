@@ -9,9 +9,7 @@
 <div class="row banner">
 	<div class=" small-offset-1 small-10">
 		<h1 class="blog-title">{{post.title}}</h1>
-		{% for paragraph in post.p_list %}
-		<p>{{paragraph}}</p>
-		{% endfor %}
+		{{post.body|safe}}
 	</div>
 </div>
 {% endblock %}
