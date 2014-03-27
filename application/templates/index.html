@@ -20,7 +20,7 @@
 				A team of students from Olin College building and racing off-road vehicles for SAE's MiniBaja competition.
 				<br>
 				<br>
-				<a href="#">Meet the Team</a>
+				<a href="{{url_for('subteams')}}">Meet the Team</a>
 				<br>
 				<a href="{{url_for('data')}}">Watch the Car</a>
 			</p>
@@ -31,19 +31,19 @@
 	<div class="small-12 large-4 columns bottom-slide-wrap">
 		<div class="bottom-slide">
 			<img src="{{url_for('static',filename='img/team_photo_trim.jpg')}}">
-			<a href="#">Meet the Team</a>
+			<a href="{{url_for('subteams')}}">Meet the Team</a>
 		</div>
 	</div>
 	<div class="small-12 large-4 columns bottom-slide-wrap">
 		<div class="bottom-slide">
 			<img src="{{url_for('static',filename='img/data_example.png')}}">
-			<a href="#">Check Out Stats</a>
+			<a href="{{url_for('data')}}">Check Out Stats</a>
 		</div>
 	</div>
 	<div class="small-12 end large-4 columns bottom-slide-wrap">
 		<div class="bottom-slide">
 			<img src="{{url_for('static',filename='img/donate.jpg')}}">
-			<a href="#">Donate to the Team</a>
+			<a href="{{url_for('donate')}}">Donate to the Team</a>
 		</div>
 	</div>
 </div>
