@@ -6,6 +6,9 @@
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script type="text/javascript">
 	$(function () {
+		var name = "{{data_session.driver}}"
+
+		$("#yeebox").text(name);
 		var Xdata = [1,1,2,2,3,4,4,5,6]
 		var Ydata = [1,1,2,2,3,4,4,5,6]
 	    $('#container').highcharts({
@@ -26,5 +29,10 @@
 {% endblock %}
 
 {% block content %}
+<div style="width:100%; height:100px;">
+	<div id="yeebox">
+		<p>Yo</p>
+	</div>
+</div>
 <div id="container" style="width:100%; height:400px;"></div>
 {% endblock %}
