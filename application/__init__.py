@@ -1,5 +1,5 @@
 import flask, os
-from flask import Flask
+from flask import Flask, url_for
 from flask.ext.mongoengine import MongoEngine
 from flask.ext.login import LoginManager, current_user
 from flask.ext.bcrypt import Bcrypt
@@ -25,9 +25,18 @@ else:
 
 db = MongoEngine(app)
 
-# Setup the log in system
+# Setup the login system
 login_manager = LoginManager()
 login_manager.init_app(app)
+
+# Setup file upload
+UPLOAD_FOLDER = "/static/uploads"
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 # Setup globals in the views
 def render_decorator(f):

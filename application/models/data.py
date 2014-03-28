@@ -20,9 +20,8 @@ class DataSession(Document):
 	end_time = DateTimeField()
 	data = ListField(DataPoint)
 
-if __name__ == '__main__':
-	dummydata = []
-	for i in range(1,100):
-		datapoint = DataPoint(time=datetime.now())
-		dummydata.append(DataSession(driver = 'Patrick'+str(i),start_time = time.gmtime(([1392308290+(i*10)]))))
-	print str(dummydata)
+# If there are no admin users create a temporary one
+if DataSession.objects().count() == 0:
+	data_temp = DataSession()
+	# TODO : create some sample data to test on the app
+	data_temp.save()
