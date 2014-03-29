@@ -29,6 +29,15 @@ db = MongoEngine(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
+# Setup File Uploads
+UPLOAD_FOLDER = '/static/uploads/'
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+
 # Setup globals in the views
 def render_decorator(f):
 	@wraps(f)

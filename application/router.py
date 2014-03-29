@@ -144,3 +144,9 @@ def edit_post(post_id):
 @edit_required
 def delete_post(post_id):
 	return controllers.delete_post(post_id)
+
+@app.route("/upload/", methods=['POST'])
+@login_required
+@edit_required
+def upload():
+	return controllers.upload()

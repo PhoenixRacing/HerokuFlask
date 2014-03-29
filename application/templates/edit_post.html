@@ -6,16 +6,33 @@
 {% endblock %}
 
 {% block head_scripts %}
+{{super()}}
 <script src="{{url_for('static', filename='js/tinymce/tinymce.min.js')}}"></script>
 <script type="text/javascript">
 	tinymce.init({
-		selector:'textarea'//,
-	    //plugins: "image",
-	    // image_list: [ 
-	    //     {title: 'My image 1', value: 'http://www.tinymce.com/my1.gif'}, 
-	    //     {title: 'My image 2', value: 'http://www.moxiecode.com/my2.gif'}
-	    // ] 
+		selector:"textarea",
+		image_list: [ 
+		//	 {title: 'My image 1', value: 'http://www.tinymce.com/my1.gif'}, 
+		//	 {title: 'My image 2', value: 'http://www.moxiecode.com/my2.gif'}
+		] 
 	});
+</script>
+{% endblock %}
+
+{% block body_scripts %}
+{{super()}}
+<script src="{{url_for('static', filename='js/vendor/jquery.fileupload.js')}}"></script>
+<script>
+$(function () {
+    $('#fileupload').fileupload({
+        dataType: 'json',
+        done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                $('<p/>').text(file.name).appendTo(document.body);
+            });
+        }
+    });
+});
 </script>
 {% endblock %}
 
@@ -33,6 +50,17 @@
 				<br>
 				{{submit('Save')}}		
 			</form>
+			<div class="row">
+				<div class="small-4 columns">
+					<label for="image_upload" class="right">Images</label>
+				</div>
+				<div class="small-8 columns">
+					<input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple>
+				</div>
+			</div>
+			<div class="small-offset-4 small-8 columns">
+				<input type="button" value="Upload">
+			</div>
 		</div>
 	</div>
 </div>

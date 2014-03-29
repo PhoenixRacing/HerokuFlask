@@ -10,3 +10,4 @@ from admin import admin_page, delete_user, modify_access
 from subteams import subteams
 from subteams import description
 from blog import view_blog, view_post, create_post, edit_post, delete_post
+from upload import upload
