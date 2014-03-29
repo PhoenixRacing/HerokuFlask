@@ -7,16 +7,14 @@
 {% endblock %}
 
 {% block head_scripts %}
+{{super()}}
 <script src="{{url_for('static', filename='js/tinymce/tinymce.min.js')}}"></script>
 <script src="{{url_for('static', filename='js/dropzone.js')}}"></script>
 <script type="text/javascript">
 	tinymce.init({
-		selector:'textarea',
-	  	plugins: "image",
-	    image_list: [ 
-	    //     {title: 'My image 1', value: 'http://www.tinymce.com/my1.gif'}, 
-	    //     {title: 'My image 2', value: 'http://www.moxiecode.com/my2.gif'}
-	    ] 
+		selector:"textarea",
+	   	plugins: "image",
+	    image_list: [] 
 	});
 </script>
 {% endblock %}
@@ -39,7 +37,7 @@
 		<div class="row">
 			<div class="small-offset-4 small-8 columns">
 				<div id="dropzone">
-					<form action = "/upload" class="dropzone" id="my-dropzone"></form>
+					<form action = "/upload/" class="dropzone" id="my-dropzone"></form>
 				</div>
 			</div>
 		</div>
