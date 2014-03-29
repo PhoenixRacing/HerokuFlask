@@ -32,6 +32,22 @@ body {
 .display strong {
 	font-weight: 900;
 }
+
+#yeebox {
+	margin:auto;
+	width:30%; 
+	height:50%; 
+	background-color:white; 
+	color:black; 
+	border-radius:5px; 
+	line-height: 250%;
+	text-align:center;
+}
+
+#yeebox p {
+	
+}
+
 /*	
 #Title {
 	font-size: 1.5em;

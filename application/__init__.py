@@ -20,8 +20,10 @@ if host:
 	app.config['MONGODB_USERNAME'] = os.environ.get('MONGODB_USERNAME')
 	app.config['MONGODB_PASSWORD'] = os.environ.get('MONGODB_PASSWORD')
 	app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+	app.config['TEST'] = False
 else:
 	app.config.from_pyfile('mongo_config.cfg')
+	app.config['TEST'] = True
 
 db = MongoEngine(app)
 
