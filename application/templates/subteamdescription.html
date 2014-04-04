@@ -9,7 +9,7 @@
 <div class='display small-8 small-centered columns text-center block'>
 <!-- 	<img class= "background-img" src="{{url_for('static',filename='img/flag.jpg')}}"> -->
 	<h2 class= 'header'>{{title}}</h2>
-	{% for p in text %}
+	{% for p in team.description|split %}
 		<p class = 'paragraph'>
 		{{p}}
 		</p>

@@ -5,36 +5,23 @@
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/subteams.css')}}">
 {% endblock %}
 
-{% block content %}
-<div class="display small-8 small-centered columns text-center block">
+{% macro subteam_block(subteam) %}
+<div class="large-3 columns">
+	<img src="{{url_for('static',filename=subteam.image_path)}}">
+	<h2>{{subteam.name|title}}</h2>
+	<p>{{subteam.short_description}}</p>
 	<div class="row">
-		<div class="large-3 columns subteam-column">
-			<img id="logo-chassis" src="{{url_for('static',filename='img/chassis-icon.png')}}">
-			<h2 class='header'>Chassis</h2>
-			<p>Designs our frame from 4130 chromoly steel tube and performs structural analysis</p>
-			<a class="button secondary radius" href="{{url_for('subteam_description', subteam_name='chassis')}}">Learn More</a>
-		</div>
+		<a class="button secondary radius" href="{{url_for('subteam_description', subteam_name=subteam.name)}}">Learn More</a>
+	</div>
+</div>
+{% endmacro %}
 
-		<div class="large-3 columns subteam-column">
-			<img id="logo-drivetrain" src="{{url_for('static',filename='img/drivetrain-icon.png')}}">
-			<h2 class='header'>Drivetrain</h2>
-			<p>Fabricates our custom gearbox, integrates a differential, and tunes our transmission</p>
-			<a class="button secondary radius" href="{{url_for('subteam_description', subteam_name='drivetrain')}}">Learn More</a>
-		</div>
-
-	 	<div class="large-3 columns subteam-column">
-	 		<img id="logo-suspension" src="{{url_for('static',filename='img/suspension-icon.png')}}">
-	 		<h2 class='header'>Suspension</h2>
-	 		<p>Performs geometric optimization for maximum handling and cornering performance</p>
-	 		<a class="button secondary radius" href="{{url_for('subteam_description', subteam_name='suspension')}}">Learn More</a>
-	 	</div>
-
-	 	<div class="large-3 columns subteam-column">
-	 		<img id="logo-electrical" src="{{url_for('static',filename='img/electrical-icon.png')}}">
-	 		<h2 class='header'>Electrical</h2>
-	 		<p>Integrates a speedometer and tachometer with wireless datalogging and driver communications</p>
-	 		<a class="button secondary radius" href="{{url_for('subteam_description', subteam_name='electrical')}}">Learn More</a>
-	 	</div>
+{% block content %}
+<div class="banner small-8 small-centered columns text-center">
+	<div class="row">
+		{% for subteam in subteams %}
+		{{subteam_block(subteam)}}
+		{% endfor %}
 	</div>
 </div>
 {% endblock %}
