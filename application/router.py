@@ -1,6 +1,5 @@
 from flask import url_for, abort, render_template, g
 from flask.ext.login import LoginManager, login_required, fresh_login_required, current_user
-# from flask.ext.cors import cross_domain
 from . import app, login_manager
 import controllers
 from functools import wraps

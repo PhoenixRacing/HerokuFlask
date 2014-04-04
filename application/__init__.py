@@ -1,5 +1,5 @@
 import flask, os
-from flask import Flask
+from flask import Flask, url_for
 from flask.ext.mongoengine import MongoEngine
 from flask.ext.login import LoginManager, current_user
 from flask.ext.bcrypt import Bcrypt
@@ -20,17 +20,24 @@ if host:
 	app.config['MONGODB_USERNAME'] = os.environ.get('MONGODB_USERNAME')
 	app.config['MONGODB_PASSWORD'] = os.environ.get('MONGODB_PASSWORD')
 	app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+	app.config['TEST'] = False
 else:
 	app.config.from_pyfile('mongo_config.cfg')
+	app.config['TEST'] = True
 
 db = MongoEngine(app)
 
-# Setup the log in system
+# Setup the login system
 login_manager = LoginManager()
 login_manager.init_app(app)
 
+<<<<<<< HEAD
 # Setup File Uploads
 UPLOAD_FOLDER = '/static/uploads/'
+=======
+# Setup file upload
+UPLOAD_FOLDER = "/static/uploads"
+>>>>>>> c17593b712f8ae351eca52f6ccae09e2b2c5fc48
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 

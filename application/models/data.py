@@ -1,28 +1,36 @@
-from flask.ext.mongoengine import Document, EmbeddedDocument
+# from flask.ext.mongoengine import Document, EmbeddedDocument
+from datetime import datetime, timedelta
+from .. import db, app
 import time
 
-class Vector(EmbeddedDocument):
-	x = FloatField(required=True)
-	y = FloatField(required=True)
-	z = FloatField(required=True)
+class Vector(db.EmbeddedDocument):
+	x = db.FloatField(required=True)
+	y = db.FloatField(required=True)
+	z = db.FloatField(required=True)
 
-class DataPoint(EmbeddedDocument):
-	time = DateTimeField(required = True)
-	gps = GeoPointField()
-	accel = EmbeddedDocument(Vector)
-	gyro = EmbeddedDocument(Vector)
-	throttle = FloatField()
-	brake = FloatField()
+class DataPoint(db.EmbeddedDocument):
+	time = db.DateTimeField(required = True)	#DateTime
+	gps = db.GeoPointField()					#Location(gps=[<lon>,<lat>])
+	accel = db.EmbeddedDocumentField(Vector)	#[<x>,<y>,<z>]
+	gyro = db.EmbeddedDocumentField(Vector)		#[<x>,<y>,<z>]
+	throttle = db.FloatField()					
+	brake = db.FloatField()
 
-class DataSession(Document):
-	driver = StringField(required = True)
-	start_time = DateTimeField(required = True)
-	end_time = DateTimeField()
-	data = ListField(DataPoint)
+class DataSession(db.Document):
+	driver = db.StringField(required = True)
+	start_time = db.DateTimeField(required = True)
+	end_time = db.DateTimeField()
+	data = db.ListField(DataPoint)
 
-if __name__ == '__main__':
-	dummydata = []
-	for i in range(1,100):
-		datapoint = DataPoint(time=datetime.now())
-		dummydata.append(DataSession(driver = 'Patrick'+str(i),start_time = time.gmtime(([1392308290+(i*10)]))))
-	print str(dummydata)
+# If there are no admin users create a temporary one
+if app.config['TEST']:
+	data_temp = DataSession()
+	# TODO : create some sample data to test on the app
+	data_temp.driver = "kush"
+	data_temp.start_time = datetime.now()
+	d = timedelta(minutes = 20)
+	data_temp.end_time = datetime.now() + d
+
+	data_temp.data.gps = [21,32]
+
+	data_temp.save()
