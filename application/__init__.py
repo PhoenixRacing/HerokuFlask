@@ -31,13 +31,9 @@ db = MongoEngine(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-<<<<<<< HEAD
 # Setup File Uploads
-UPLOAD_FOLDER = '/static/uploads/'
-=======
-# Setup file upload
-UPLOAD_FOLDER = "/static/uploads"
->>>>>>> c17593b712f8ae351eca52f6ccae09e2b2c5fc48
+# UPLOAD_FOLDER = '/static/uploads/'
+UPLOAD_FOLDER = '/static/uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
