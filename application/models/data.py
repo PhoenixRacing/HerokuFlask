@@ -41,7 +41,7 @@ if app.config['TEST']:
 	data_temp.start_time = datetime.now()
 	data_temp.end_time = datetime.now() + timedelta(minutes = 20)
 	# Populate with 100 data points
-	data_temp.data = [DataPoint(time=datetime.now() + timedelta(minutes=i),\
+	data_temp.data = [DataPoint(time=datetime.now() + timedelta(seconds=i),\
 								gps=[sin(i/100.0),cos(i/100.0)],\
 								accel=Vector(x=random(),y=random(),z=random()),\
 								gyro=Vector(x=random(),y=random(),z=random()),\
