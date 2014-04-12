@@ -2,3 +2,5 @@ venv
 *.pyc
 *~
 application/mongo_config.cfg
+*.sublime-project
+*.sublime-workspace
