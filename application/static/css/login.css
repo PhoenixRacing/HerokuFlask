@@ -2,15 +2,6 @@
 	margin-right: 20px;
 }
 
-.banner{
-	margin-top: 10%;
-	background-color: #333;
-	border-radius: 10px;
-}
-.banner h1, .banner label{
-	color: white;
-}
-
 .alert-box.error{
 	background-color: #f04124;
 	border-color: #B3301B;

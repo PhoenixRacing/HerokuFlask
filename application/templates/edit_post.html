@@ -6,64 +6,48 @@
 {% endblock %}
 
 {% block head_scripts %}
-<script src="{{url_for('static', filename='js/tinymce/tinymce.min.js')}}"></script>
-<script type="text/javascript">
-
-	function myFileBrowser(field_name, url, type, win){
-		$("#file").click();
-
-		// var cmsURL = window.location.toString();    // script URL - use an absolute path!
-	 //    if (cmsURL.indexOf("?") < 0) {
-	 //        //add the type as the only query parameter
-	 //        cmsURL = cmsURL + "?type=" + type;
-	 //    }
-	 //    else {
-	 //        //add the type as an additional query parameter
-	 //        // (PHP session ID is now included if there is one at all)
-	 //        cmsURL = cmsURL + "&type=" + type;
-	 //    }
-
-	 //    tinyMCE.activeEditor.windowManager.open({
-	 //        file : cmsURL,
-	 //        title : 'My File Browser',
-	 //        width : 420,  // Your dimensions may differ - toy around with them!
-	 //        height : 400,
-	 //        resizable : "yes",
-	 //        inline : "yes",  // This parameter only has an effect if you use the inlinepopups plugin!
-	 //        close_previous : "no"
-	 //    }, {
-	 //        window : win,
-	 //        input : field_name
-	 //    });
-	 //    return false;
-	}
-
-	tinymce.init({
-		selector:"textarea",
-	    plugins: ["image autolink"],
-	    file_browser_callback : myFileBrowser
+{{super()}}
+<script src="{{url_for('static',filename='js/froala_editor.min.js')}}"></script>
+<script>
+	$(function() {
+		$('#edit').editable({
+			inlineMode: false,
+			saveURL: "{%if post%}{{url_for('edit_post',post_id=post.id)}}{%else%}{{url_for('create_post')}}{%endif%}",
+			imageUploadURL: '/upload/'
+		});
 	});
 </script>
 {% endblock %}
 
 {% block content %}
 <div class="row banner">
-	<div class="small-9">
+	<div class="small-12 columns">
 		<div class="row">
-			<div class="small-offset-4 small-8 columns">
+			<div class="small-12 columns">
 				<h1>{% if post %}Edit{% else %}New{%endif %} Blog Post</h1>
 			</div>
-			{% from 'forms.html' import render_field, submit %}
-			<form method="post" action="{{url_for('upload')}}" enctype="multipart/form-data">
-				<input type="file" name="upload" id="file">
-			</form>
-			<form method="post" action="{%if post%}{{url_for('edit_post',post_id=post.id)}}{%else%}{{url_for('create_post')}}{%endif%}">
-				{{render_field(form.title)}}
-				{{render_field(form.body)}}	
-				<br>
-				{{submit('Save')}}		
-			</form>
 		</div>
+		<div class="row">
+			<div class="small-12 columns">
+				<div class="edit-blog" id="edit">
+					<h2> {{ post.title }} </h2>
+					<br>
+					<p> {{ post.body|safe }} </p>
+				</div>
+				<a class="button expand" id="save">Save</a>
+			</div>
+		</div>
+		<div class="row">
+			{% from 'forms.html' import render_field, submit %}
+		</div>
+		<br>
 	</div>
 </div>
+
+<script>
+	$('#save').click(function (e) {
+		$('#edit').editable('save');
+		window.location = ("{{ url_for('view_blog') }}");
+	});
+</script>
 {% endblock %}

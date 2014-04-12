@@ -9,11 +9,11 @@ class Vector(db.EmbeddedDocument):
 	z = db.FloatField(required=True)
 
 class DataPoint(db.EmbeddedDocument):
-	time = db.DateTimeField(required = True)
-	gps = db.GeoPointField()
-	accel = db.EmbeddedDocumentField(Vector)
-	gyro = db.EmbeddedDocumentField(Vector)
-	throttle = db.FloatField()
+	time = db.DateTimeField(required = True)	#DateTime
+	gps = db.GeoPointField()					#Location(gps=[<lon>,<lat>])
+	accel = db.EmbeddedDocumentField(Vector)	#[<x>,<y>,<z>]
+	gyro = db.EmbeddedDocumentField(Vector)		#[<x>,<y>,<z>]
+	throttle = db.FloatField()					
 	brake = db.FloatField()
 
 class DataSession(db.Document):
@@ -24,12 +24,13 @@ class DataSession(db.Document):
 
 # If there are no admin users create a temporary one
 if app.config['TEST']:
-	DataSession.objects().delete()
 	data_temp = DataSession()
 	# TODO : create some sample data to test on the app
-	data_temp.driver = "fuuuyes"
+	data_temp.driver = "kush"
 	data_temp.start_time = datetime.now()
 	d = timedelta(minutes = 20)
 	data_temp.end_time = datetime.now() + d
+
+	data_temp.data.gps = [21,32]
 
 	data_temp.save()
