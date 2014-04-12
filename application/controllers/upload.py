@@ -12,4 +12,4 @@ def upload():
 			f.save(new_file)
 		f.close()
 
-	return jsonify(filename=filename, url=url_for('static', filename = 'uploads/' + filename))
+	return jsonify(link=url_for('static', filename = 'uploads/' + filename))

@@ -11,11 +11,14 @@
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/foundation-icons.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/normalize.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/base.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/froala_editor.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/font-awesome.min.css')}}">
 	{% endblock %}
 
 	<!-- Blocking Javascript Load-->
 	{% block head_scripts %}
 	<script src="{{url_for('static',filename='js/vendor/modernizr.js')}}"></script>
+	<script src="{{url_for('static',filename='js/vendor/jquery.js')}}"></script>
 	{% endblock %}
 </head>
 
@@ -37,7 +40,6 @@
 
 	<!-- Non-Blocking Javascript Load-->
 	{% block body_scripts %}
-	<script src="{{url_for('static',filename='js/vendor/jquery.js')}}"></script>
 	<script src="{{url_for('static',filename='js/vendor/fastclick.js')}}"></script>
 	<script src="{{url_for('static',filename='js/foundation.min.js')}}"></script>
 	<script>

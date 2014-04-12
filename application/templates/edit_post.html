@@ -3,45 +3,51 @@
 {% block styles %}
 {{super()}}
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/blog.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/dropzone.css')}}">
 {% endblock %}
 
 {% block head_scripts %}
 {{super()}}
-<script src="{{url_for('static', filename='js/tinymce/tinymce.min.js')}}"></script>
-<script src="{{url_for('static', filename='js/dropzone.js')}}"></script>
-<script type="text/javascript">
-	tinymce.init({
-		selector:"textarea",
-	   	plugins: "image",
-	    image_list: [] 
+<script src="{{url_for('static',filename='js/froala_editor.min.js')}}"></script>
+<script>
+	$(function() {
+		$('#edit').editable({
+			inlineMode: false,
+			saveURL: "{%if post%}{{url_for('edit_post',post_id=post.id)}}{%else%}{{url_for('create_post')}}{%endif%}",
+			imageUploadURL: '/upload/'
+		});
 	});
 </script>
 {% endblock %}
 
 {% block content %}
 <div class="row banner">
-	<div class="small-9">
+	<div class="small-12 columns">
 		<div class="row">
-			<div class="small-offset-4 small-8 columns">
+			<div class="small-12 columns">
 				<h1>{% if post %}Edit{% else %}New{%endif %} Blog Post</h1>
 			</div>
-			{% from 'forms.html' import render_field, submit %}
-			<form method="post" action="{%if post%}{{url_for('edit_post',post_id=post.id)}}{%else%}{{url_for('create_post')}}{%endif%}">
-				{{render_field(form.title)}}
-				{{render_field(form.body)}}	
-				<br>
-				{{submit('Save')}}		
-			</form>
 		</div>
 		<div class="row">
-			<div class="small-offset-4 small-8 columns">
-				<div id="dropzone">
-					<form action = "/upload/" class="dropzone" id="my-dropzone"></form>
+			<div class="small-12 columns">
+				<div class="edit-blog" id="edit">
+					<h2> {{ post.title }} </h2>
+					<br>
+					<p> {{ post.body|safe }} </p>
 				</div>
+				<a class="button expand" id="save">Save</a>
 			</div>
+		</div>
+		<div class="row">
+			{% from 'forms.html' import render_field, submit %}
 		</div>
 		<br>
 	</div>
 </div>
+
+<script>
+	$('#save').click(function (e) {
+		$('#edit').editable('save');
+		window.location = ("{{ url_for('view_blog') }}");
+	});
+</script>
 {% endblock %}
