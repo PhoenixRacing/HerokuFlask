@@ -10,10 +10,7 @@
 }
 
 @media only screen and (min-width:  64.063em) {
-	/*prevents the banner-caption from scrolling funny*/
-	.banner{
-		position: relative;
-	}
+	
 	/*prevents the banner from collapsing*/
 	.banner-img{
 		position: relative;

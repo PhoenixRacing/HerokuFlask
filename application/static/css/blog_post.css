@@ -1,0 +1,14 @@
+.f-basic, .blog_post{
+	background-color: #CCC;
+}
+.f-basic h1, .f-basic h2, .blog_post h1, .blog_post h2{
+	color: black;
+}
+
+.blog_post{
+	padding: 2%;
+	margin-bottom: 1em!important;
+	color: black;
+	border-radius: 10px;
+}
+
