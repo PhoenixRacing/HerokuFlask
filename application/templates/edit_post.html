@@ -2,7 +2,6 @@
 
 {% block styles %}
 {{super()}}
-<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/blog.css')}}">
 {% endblock %}
 
 {% block head_scripts %}
@@ -30,9 +29,15 @@
 		<div class="row">
 			<div class="small-12 columns">
 				<div class="edit-blog" id="edit">
-					<h2> {{ post.title }} </h2>
-					<br>
-					<p> {{ post.body|safe }} </p>
+					{% if post %}
+						<h2> {{ post.title }} </h2>
+						<br>
+						<p> {{ post.body|safe }} </p>
+					{% else %}
+						<h2> Title </h2>
+						<br>
+						<p> Body </p>
+					{%endif %}
 				</div>
 				<a class="button expand" id="save">Save</a>
 			</div>

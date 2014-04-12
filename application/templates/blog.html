@@ -2,9 +2,13 @@
 
 {% macro post_summary(post) %}
 <div class="row">
-	<div class="small-12">
+	<div class="small-12 columnas">
 		<h1>{{post.title}}</h1>
 		<div>{{post.body|truncate|safe}}</div>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
 		<a href="{{url_for('view_post',post_id=post.id)}}">read more</a>
 		{% if current_user.is_authenticated() and current_user.is_admin() %}
 		&nbsp;&nbsp;&nbsp;&nbsp;
@@ -19,7 +23,6 @@
 
 {% block styles %}
 {{super()}}
-<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/blog.css')}}">
 {% endblock %}
 
 {% block content %}

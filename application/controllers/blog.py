@@ -15,9 +15,10 @@ def view_post(post_id):
 def create_post():
 	post = BlogPost()
 	form = BlogPostForm(request.form)
-	if request.method == 'POST' and form.validate():
-		post.title = form.data['title']
-		post.body = form.data['body']
+	if request.method == 'POST':
+		data = request.form['body'].split('<h2>')[1].split('</h2>')
+		post.title = data[0]
+		post.body = data[1]
 		post.save()
 		return redirect(url_for('view_blog'))
 	return render_template('edit_post.html',form=form)
