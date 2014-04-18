@@ -17,6 +17,7 @@
 
 	<!-- Blocking Javascript Load-->
 	{% block head_scripts %}
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
 	<script src="{{url_for('static',filename='js/vendor/modernizr.js')}}"></script>
 	<script src="{{url_for('static',filename='js/vendor/jquery.js')}}"></script>
 	{% endblock %}
@@ -43,8 +44,8 @@
 	<script src="{{url_for('static',filename='js/vendor/fastclick.js')}}"></script>
 	<script src="{{url_for('static',filename='js/foundation.min.js')}}"></script>
 	<script>
-		$(document).foundation();
-	</script>
+		$(document).foundation();		
+	</script>		
 	{% endblock %}
 
 </body>
