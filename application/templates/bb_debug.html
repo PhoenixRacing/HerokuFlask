@@ -22,11 +22,7 @@
         
         socket.on('bb data', function(data) {
             if (data.data !== null) {
-                for (var key in data.data) {
-                    if (data.data.hasOwnProperty(key)) {
-                        $('#log').append('<p>' + key + ': ' + data.data[key] + '</p>');
-                    }
-                }
+                $('#log').html('<p>' + data.data + '</p>');
             }
         });
     });

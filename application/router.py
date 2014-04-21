@@ -154,7 +154,7 @@ def upload():
 @app.route("/bbdebug/", methods=['GET','POST'])
 def bb_debug():
 	if type(controllers.post_data[0]) != type(None):
-		socketio.emit('bb data', {'data': controllers.post_data[0]}, namespace='/debug')	
+		socketio.emit('bb data', {'data': controllers.post_data[0]}, namespace='/debug')
 	return controllers.debug()
 
 @socketio.on('query bb', namespace='/debug')

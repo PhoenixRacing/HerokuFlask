@@ -10,9 +10,7 @@ def debug():
 
     if request.method == 'POST':
         temp = dict(request.form)
-        for k,v in temp.items():
-            temp[k] = float(v[0])
-        if post_data[0] != request.form:
+        if post_data[0] != request.form['data'][0]:
             post_data[1] = post_data[0]
-            post_data[0] = temp
+            post_data[0] = temp['data'][0]
         return ''
