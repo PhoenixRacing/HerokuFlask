@@ -21,7 +21,7 @@ class DataPoint(db.EmbeddedDocument):
 	backRightWheel = db.FloatField()
 
 class DataSession(db.Document):
-	driver = db.StringField(required = True)
+	driver = db.StringField()
 	start_time = db.DateTimeField(required = True)
 	end_time = db.DateTimeField()
 	data = db.ListField(db.EmbeddedDocumentField(DataPoint))
