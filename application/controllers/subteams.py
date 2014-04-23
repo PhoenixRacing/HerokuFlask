@@ -6,4 +6,4 @@ def subteams():
 	return render_template('subteams.html', active_page='subteams',subteams=subteam_list.values())
 
 def description(team):
-	return render_template('subteamdescription.html', team=subteam_list[team])
+	return render_template('subteamdescription.html', team=subteam_list[team], text=subteam_list[team].description.split('\n'))
