@@ -28,6 +28,7 @@ if host:
 else:
     app.config.from_pyfile('mongo_config.cfg')
     app.config['TEST'] = True
+    app.config['DEBUG'] = True
 
 socketio = SocketIO(app)
 db = MongoEngine(app)
