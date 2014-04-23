@@ -1,6 +1,7 @@
 from flask import url_for, abort, render_template, g
 from flask.ext.login import LoginManager, login_required, fresh_login_required, current_user
-from . import app, login_manager
+from flask.ext.socketio import SocketIO, emit
+from . import app, login_manager, socketio
 import controllers
 from functools import wraps
 
@@ -149,3 +150,13 @@ def delete_post(post_id):
 @edit_required
 def upload():
 	return controllers.upload()
+
+@app.route("/bbdebug/", methods=['GET','POST'])
+def bb_debug():
+	if type(controllers.post_data[0]) != type(None):
+		socketio.emit('bb data', {'data': controllers.post_data[0]}, namespace='/debug')
+	return controllers.debug()
+
+@socketio.on('query bb', namespace='/debug')
+def query_bb():
+	emit('bb data', {'data': controllers.post_data[0]}, broadcast=True)

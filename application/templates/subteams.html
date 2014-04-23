@@ -2,17 +2,16 @@
 
 {% block styles %}
 {{super()}}
-<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/subteams.css')}}">
+<!-- <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/subteams.css')}}"> -->
 {% endblock %}
 
 {% macro subteam_block(subteam) %}
 <div class="large-3 columns">
-	<img src="{{url_for('static',filename=subteam.image_path)}}">
-	<h2>{{subteam.name|title}}</h2>
+	<a href="{{url_for('subteam_description', subteam_name=subteam.name)}}">
+		<img src="{{url_for('static',filename=subteam.image_path)}}">
+		<h2 href="{{url_for('subteam_description', subteam_name=subteam.name)}}">{{subteam.name|title}}</h2>
+	</a>
 	<p>{{subteam.short_description}}</p>
-	<div class="row">
-		<a class="button secondary radius" href="{{url_for('subteam_description', subteam_name=subteam.name)}}">Learn More</a>
-	</div>
 </div>
 {% endmacro %}
 

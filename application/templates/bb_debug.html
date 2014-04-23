@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="banner">
+    <h1> Debug Page </h1>
+    <div id="log">
+    </div>
+</div>
+
+{% endblock %}
+
+{% block body_scripts %}
+{{ super() }}
+<script type="text/javascript">
+    $(document).ready(function() {
+        var socket = io.connect('http://' + document.domain + ':' + location.port + '/debug');
+
+        //establish connection
+        window.setTimeout(function() {
+            socket.emit('query bb');
+        }, 2000);
+        
+        socket.on('bb data', function(data) {
+            if (data.data !== null) {
+                $('#log').html('<p>' + data.data + '</p>');
+            }
+        });
+    });
+</script>
+{% endblock %}
