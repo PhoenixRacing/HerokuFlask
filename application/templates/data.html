@@ -7,7 +7,11 @@
 <script src="{{url_for('static',filename='js/highcharts.js')}}"></script>
 <script src="{{url_for('static',filename='js/graph.js')}}"></script>
 <script type="text/javascript">
+	{% if data %}
 	var data = {{data|safe}};
+	{% else %}
+	var data = [];
+	{% endif %}
 </script>
 {% endblock %}
 
@@ -16,16 +20,7 @@
 {% endblock %}
 
 {% block content %}
-<!-- <div style="width:100%; height:100px;">
-	<div id="yeebox">
-		<p>Yo</p>
-	</div>
-</div> -->
-<div class="banner">
-	{% if data %}
+<div class="banner row">
 	<div id="container" style="width:100%; height:400px;"></div>
-	{% else %}
-	<p>Sorry, no data is available  at the moment.</p>
-	{% endif %}
 </div>
 {% endblock %}
