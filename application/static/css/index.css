@@ -16,11 +16,11 @@
 		position: relative;
 	}
 	.banner-caption{
-		width: 35%;
+		width: 30%;
 		height:auto;
 		position: absolute;
-		top: 8%;
-		left: 5%;
+		top: 6%;
+		left: 11%;
 		border-radius: 10px;
 	}
 	.banner-caption img{
@@ -47,7 +47,7 @@
 
 /* bottom slides */
 .bottom-wrap{
-	max-width: 100%;
+	max-width: 90%;
 }
 
 .bottom-slide-wrap{
@@ -94,4 +94,10 @@
 	color:white;
 	font-style: italic;
 
+}
+
+.container {
+	width:100%;
+	margin: auto;
+	text-align: center;
 }
