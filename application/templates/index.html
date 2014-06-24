@@ -7,6 +7,14 @@
 {% block styles %}
 {{super()}}
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 {% endblock %}
 
 {% block content %}
@@ -16,12 +24,22 @@
 	<div class="banner-caption row">
 		<div class="small-12 small-centered columns">
 			<img src="{{url_for('static',filename='img/logo2_clear_whitetext.png')}}">
-			<p>
+			<!--<p>
 				A team of students from Olin College building and racing off-road vehicles for SAE's MiniBaja competition.
-			</p>
+			</p>-->
 		</div>
 	</div>
 </div>
+<br>
+<br>
+<div class="frontpage-caption">
+	<p>We are a team of students from Olin College of Engineering that builds and races off-road vehicles for the SAE MiniBaja competitions.</p>
+	Check out our Subsystem page for more information about the different parts of our car and how we fabricate them.</p>
+	Follow us on Twitter and Facebook for live updates and pictures throughout the year</p>
+	<a href="https://twitter.com/PhnxRacing" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @PhnxRacing</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<br>
 <div class="row bottom-wrap">
 	<div class="small-12 large-4 columns bottom-slide-wrap">
 		<div class="bottom-slide">
@@ -31,8 +49,8 @@
 	</div>
 	<div class="small-12 large-4 columns bottom-slide-wrap">
 		<div class="bottom-slide">
-			<img src="{{url_for('static',filename='img/data_example.png')}}">
-			<a href="{{url_for('data')}}">Check Out Stats</a>
+			<img src="{{url_for('static',filename='img/bajaflag.jpg')}}">
+			<a href="{{url_for('view_blog')}}">Check Out Our Blog</a>
 		</div>
 	</div>
 	<div class="small-12 end large-4 columns bottom-slide-wrap">

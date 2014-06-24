@@ -53,11 +53,11 @@ def logout():
 def data():
 	return controllers.data()
 
-@app.route("/subteams/")
+@app.route("/subsystems/")
 def subteams():
 	return controllers.subteams()
 
-@app.route("/subteams/<subteam_name>/")
+@app.route("/subsystems/<subteam_name>/")
 def subteam_description(subteam_name):
 	return controllers.description(subteam_name)
 
@@ -68,6 +68,10 @@ def donate():
 @app.route("/sponsors/")
 def sponsors():
 	return controllers.sponsors()
+	
+@app.route("/follow/")
+def follow():
+	return controllers.follow()
 
 @app.route("/chassis/")
 def chassis():

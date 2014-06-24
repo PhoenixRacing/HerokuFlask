@@ -1,8 +1,8 @@
 {% if user and user.is_authenticated() %}
 	{% set navbar = {
 	'left':[
-		('subteams', 'Subteams'),
 		('data', 'Dashboard'),
+		('subteams', 'Subsystems'),
 		('donate','Donate'),
 		('sponsors', 'Sponsors'),
 		('view_blog','Blog')
@@ -14,8 +14,7 @@
 {% else %}
 	{% set navbar = {
 	'left':[
-		('subteams', 'Subteams'),
-		('data', 'Dashboard'),
+		('subteams', 'Subsystems'),
 		('donate','Donate'),
 		('sponsors', 'Sponsors'),
 		('view_blog','Blog')

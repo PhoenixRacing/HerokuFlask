@@ -1,0 +1,42 @@
+<!-- follow.html !-->
+
+{% extends 'base.html' %}
+
+{% block body_scripts %}
+<!--shit for the Facebook API!-->
+{{super()}}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="banner small-8 small-centered columns text-center">
+		<h1>Follow Us!</h1>
+		<br>
+		<p>
+			Follow Phoenix Racing on Twitter for live updates from the team throughout the year and during competitions: 
+		</p>
+		<p>
+			<!--Embedded Twitter follow button!-->
+			<a href="https://twitter.com/PhnxRacing" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @PhnxRacing</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<br>
+		</p>
+		<br>
+		<br>
+		<p>
+			Or Like us on Facebook for more pictures and videos from the team:
+		</p>
+		<div class="fb-like-box" data-href="https://www.facebook.com/OlinPhoenixRacing" data-width="180px" data-height="100px" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="false" data-show-border="true"></div>
+		<!--Embedded Facebook Like Button!-->
+	</div>
+
+</div>
+{% endblock %}
