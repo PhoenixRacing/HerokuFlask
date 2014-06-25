@@ -16,11 +16,11 @@
 		position: relative;
 	}
 	.banner-caption{
-		width: 30%;
+		width: 32%;
 		height:auto;
 		position: absolute;
-		top: 6%;
-		left: 11%;
+		top: 7%;
+		left: 7.5%;
 		border-radius: 10px;
 	}
 	.banner-caption img{
@@ -52,8 +52,8 @@
 
 .bottom-slide-wrap{
 	padding-top:1.5%;
-	padding-left:.75%;
-	padding-right: .75%;
+	padding-left:.85%;
+	padding-right: .85%;
 	padding-bottom: 1.5%;
 	overflow: hidden;
 }
@@ -90,6 +90,7 @@
 
 .frontpage-caption {
 	margin:auto;
+	width:65%;
 	text-align: center;
 	color:white;
 	font-style: italic;
