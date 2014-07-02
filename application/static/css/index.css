@@ -14,18 +14,29 @@
 	/*prevents the banner from collapsing*/
 	.banner-img{
 		position: relative;
+		width: 88.5%;
 	}
 	.banner-caption{
-		width: 32%;
+		width: 33%;
 		height:auto;
 		position: absolute;
-		top: 7%;
-		left: 7.5%;
+		top: 6%;
+		left: 8.5%;
 		border-radius: 10px;
 	}
 	.banner-caption img{
 		max-width: 100%;
 	}
+
+	.frontpage-container {
+	width:88.5%;
+	background-color:#333;
+	margin:auto;
+	padding-top:1.5%;
+	padding-left:1.5%;
+	padding-right: 1.5%;
+	padding-bottom: 1.5%; 
+}
 }
 
 .banner-caption > div:first-child{
@@ -90,11 +101,10 @@
 
 .frontpage-caption {
 	margin:auto;
-	width:65%;
+	width:75%;
 	text-align: center;
 	color:white;
 	font-style: italic;
-
 }
 
 .container {

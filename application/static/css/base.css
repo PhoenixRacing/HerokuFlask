@@ -19,3 +19,19 @@ body,html{
     background-color: white;
     color: black;
 }
+
+
+@media only screen and (min-width:  64.063em) {
+
+.main-content{
+	width:85%;
+	border-radius: 10px;
+
+}
+}
+
+.main-content{
+	width:100%;
+	border-radius:5px;
+	margin:auto;
+}
