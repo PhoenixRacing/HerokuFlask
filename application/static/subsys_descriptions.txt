@@ -2,20 +2,16 @@ Electrical
 
 Integrates a speedometer and tachometer with wireless datalogging and driver communications.
 
-This year, electricqal subteam will be 
+Electrical is the newest Phoenix Racing subsystem. We're responsible for everything from wiring the car's brake lights, to monitoring car speed, to maintaining the team website.
 
-Electrical subteam is just two years old. We do everything from wiring the brake lights to getting feedback to the driver. We haven't encountered any other SAE Baja teams pushing the boundaries of what an electrical subteam could do, and we're excited to find out.
-
-This year, we're equipping the car with a speedometer, tachometer, and a dashboard that will give drivers information such as speed, race stats, and gas level. We are also working on a driver communications system that would let the driver talk to the pit captain during races.
+This year, we will be focusing on creating simulations to validate the subsystem designs for drivetrain, body, and suspension. We will also be equipping the car with a sensor suite to allow us to conduct real-time failure analysis on the car and to provide the driver with useful data during races and practice drives. 
 
 
 Suspension
 
-Performs geometric optimization for maximum handling and cornering performance.
+Suspension seeks to optimize the car’s handling and insure that it can tackle as many of the competition obstacles as possible. Before designing any parts, we create complex geometric sketches that predict the roll axis, camber, toe, Ackerman, and steering radius of the car. From these sketches we design the suspension to be durable and replaceable to weather the difficult obstacles that the car faces. 
 
-Suspension makes sure that the car handles as well as it possibly can. Through optimizing the roll axis, camber, and other parameters, we make sure that the car performs optimally on all kinds of terrain for all drivers, not just on asphalt for 150-lb drivers. Despite being one of the longest cars at the competition (56 inch track length), Olin has one of the smallest turning radii at 7 feet.
-
-This year, we want to further reduce our bump steer, further tune our shocks for optimal performance across the entire camber curve, and update our adjustable shock mount design: an Olin original idea that allows us to even out the handling characteristics for drivers of all weights.
+This year, we want to further decrease the turning radius, correct handling issues that surfaced at competition, do more comprehensive analysis on the loads that the suspension is subjected to, and to perfect our adjustable shock mount design: an Olin original idea that allows us to even out the handling characteristics for drivers of all weights.
 
 
 Drivetrain
