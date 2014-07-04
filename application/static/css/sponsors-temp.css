@@ -1,0 +1,29 @@
+.gold-container {
+	text-align: center;
+	margin:auto;
+	width:95%;
+}
+
+.gold-img {
+	padding:15% 10% 5% 15%;
+}
+
+.silver-container {
+	text-align: center;
+	margin:auto;
+	width:95%;
+}
+
+.silver-img {
+	padding:25% 15% 10% 20%;
+}
+
+.main-content h4 {
+	color:white;
+}
+
+.sponsor-wrap {
+	padding:1%;
+	border-radius: 10px;
+	background-color: #999;
+}

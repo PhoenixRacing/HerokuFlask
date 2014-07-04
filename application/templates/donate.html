@@ -2,6 +2,11 @@
 
 {% extends 'base.html' %}
 
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
 {% block content %}
 <div class = "main-content">
 	<div class="banner small-8 small-centered columns text-center">
@@ -9,14 +14,15 @@
 		<img id="img/money.png" src="{{url_for('static',filename='img/money.png')}}">
 	</p>
 	
-	<p> Thanks for your interest in donating!</p>
+	<h4> Thanks for your interest in donating!</h4>
+	<br>
 	
 	<p> We've raised <strong>$2,000</strong> out of our	<strong>$22,000</strong> goal.</p>
 
 	<p>As an entirely donation-funded endeavor, Phoenix Racing relies on the generosity of people like you. As a 501(c)(3) non-profit, every donation is tax-deductable. Please make sure to check if your employer has an applicable donation-matching program--many do! Please make checks out to<strong> Olin College </strong>with <strong>SAE Baja </strong>in the memo line and mail them to:</p>
 
-	<p>Phoenix Racing</p>
-	<p>1000 Olin Way, MB 424,
+	<p>Phoenix Racing<br>
+	1000 Olin Way, MB 424,
 	Needham, MA 02492</p>
 
 	<p>Additionally, it is possible to donate online. Visit the Olin donation website (<a href="https://www.olin.edu/invest/ways/making-your-gift-olin-college/">https://www.olin.edu/invest/ways/making-your-gift-olin-college/</a>) and select "Student Project: Mini-Baja (Phoenix Racing Team)" in the 'Gift Information' field.</p>

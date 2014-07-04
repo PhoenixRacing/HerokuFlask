@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block body_scripts %}
+{{super()}}
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='slick/slick.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/sponsors-temp.css')}}">
+{% endblock %}
+
+{% block content %}
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="{{url_for('static', filename='slick/slick.min.js')}}"></script>
+<script>
+$(document).ready(function(){
+	$('.gold-container').slick({
+		autoplay: true,
+		dots: true,
+		swipe: true,
+		arrows: false,
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3
+	})
+});</script>
+
+<script>
+$(document).ready(function(){
+	$('.silver-container').slick({
+		autoplay: true,
+		dots: true,
+		swipe: true,
+		arrows: false,
+		infinite: true,
+		slidesToShow: 5,
+		slidesToScroll: 5
+	})
+});
+</script>
+
+<div class = "main-content">
+	<div class = "banner small-8 small-centered columns text-center">
+	<h1>Phoenix Racing Sponsors</h1>
+	<br>
+	<h4>Thank you to all of our generous sponsors! What we do is only possible thanks to the help of the following people and organizations.</p></h4>
+	<p>For information on sponsorship, please contact one of our fundraising managers, <a class="inline-a" href="mailto:e884e203@opayq.com">Forrest Bourke</a> or <a class="inline-a" href="mailto:Brandon.Chiou@students.olin.edu">Brandon Chiou</a>.</p>
+	<br>
+	<p>Gold Sponsors:</p>
+	<div class = "sponsor-wrap">
+		<div class="gold-container">
+		  <div><img class="gold-img" src="{{url_for('static',filename='img/sponsor-bose.png')}}"></div>
+		  <div><img class="gold-img" src="{{url_for('static',filename='img/sponsor-msft.png')}}"></div>
+		  <div><img class="gold-img" src="{{url_for('static',filename='img/sponsor-barrett.png')}}"></div>
+		  <div><img class="gold-img" src="{{url_for('static',filename='img/sponsor-olin.png')}}"></div>
+		  <br>
+		</div>
+		<br>
+		<br>
+		<br>
+	</div>
+	<br>
+	<br>
+	<p>Silver Sponsors:</p>
+	<div class = "sponsor-wrap">
+		<div class="silver-container">
+			<div><img class="silver-img" src="{{url_for('static',filename='img/sponsor-bettencourt.png')}}"></div>
+			<div><img class="silver-img" src="{{url_for('static',filename='img/sponsor-chillybear.png')}}"></div>
+			<div><img class="silver-img" src="{{url_for('static',filename='img/sponsor-mom.png')}}"></div>
+			<div><img class="silver-img" src="{{url_for('static',filename='img/sponsor-zygote.png')}}"></div>
+			<div><img class="silver-img" src="{{url_for('static',filename='img/sponsor-ap.png')}}"></div>
+			<div><img class="silver-img" src="{{url_for('static',filename='img/sponsor-rockwell.png')}}"></div>
+		</div>
+		<br>
+		<br>
+		<br>
+	</div>
+	<br>
+	<div class="row">
+		<h4>Thank you to the following individuals and families:</h4><br>
+		<p>Tal Schwartz, Wyatt Andree, Xy Ziemba, Dan Foran, Matt Wooton, The McMullen Family, The McClure Family, The Andree Family, Kathleen Scully, Marie and Ryan Stark, Jeff and Lola Stark, Jim Switzer, The Raymond Family, The Aletty Family, The Sakamoto Family, Jay Feldman, Dan Greeley</p>
+	</div>
+
+	</div>
+	</div>
+</div>
+
+{% endblock %}

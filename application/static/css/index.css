@@ -112,3 +112,8 @@
 	margin: auto;
 	text-align: center;
 }
+
+/*Some other formatting that was driving me crazy*/
+h4 {
+	color:white;
+}
