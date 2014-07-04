@@ -1,5 +1,21 @@
 {% extends 'base.html' %}
 
+{% set gold_sponsors = [
+	{'name':'Bose','img':'sponsor-bose.png'},
+	{'name':'Olin College','img':'sponsor-olin.png'},
+	{'name':'Microsoft','img':'sponsor-msft.png'},
+	{'name':'Barrett Technology Inc.','img':'sponsor-barrett.png'}]
+%}
+
+{% set silver_sponsors = [
+	{'name':'Bettencourt\'s','img':'sponsor-bettencourt.png'},
+	{'name':'Chillybear','img':'sponsor-chillybear.png'},
+	{'name':'Motorcycles of Manchester Inc.','img':'sponsor-mom.png'},
+	{'name':'Zygote Ventures','img':'sponsor-zygote.png'},
+	{'name':'Advanced Plastics','img':'sponsor-ap.png'},
+	{'name':'Rockwell Automation','img':'sponsor-rockwell.png'}]
+%}
+
 {% block body_scripts %}
 {{super()}}
 {% endblock %}
@@ -25,10 +41,6 @@ $(document).ready(function(){
 		slidesToShow: 3,
 		slidesToScroll: 3
 	})
-});</script>
-
-<script>
-$(document).ready(function(){
 	$('.silver-container').slick({
 		autoplay: true,
 		dots: true,
@@ -38,8 +50,8 @@ $(document).ready(function(){
 		slidesToShow: 5,
 		slidesToScroll: 5
 	})
-});
-</script>
+});</script>
+
 
 <div class = "main-content">
 	<div class = "banner small-8 small-centered columns text-center">
@@ -48,30 +60,26 @@ $(document).ready(function(){
 	<h4>Thank you to all of our generous sponsors! What we do is only possible thanks to the help of the following people and organizations.</p></h4>
 	<p>For information on sponsorship, please contact one of our fundraising managers, <a class="inline-a" href="mailto:e884e203@opayq.com">Forrest Bourke</a> or <a class="inline-a" href="mailto:Brandon.Chiou@students.olin.edu">Brandon Chiou</a>.</p>
 	<br>
-	<p>Gold Sponsors:</p>
+	<h4>Gold Sponsors:</h4>
 	<div class = "sponsor-wrap">
 		<div class="gold-container">
-		  <div><img class="gold-img" src="{{url_for('static',filename='img/sponsor-bose.png')}}"></div>
-		  <div><img class="gold-img" src="{{url_for('static',filename='img/sponsor-msft.png')}}"></div>
-		  <div><img class="gold-img" src="{{url_for('static',filename='img/sponsor-barrett.png')}}"></div>
-		  <div><img class="gold-img" src="{{url_for('static',filename='img/sponsor-olin.png')}}"></div>
-		  <br>
+			{%for s in gold_sponsors %}
+				<div><img class="gold-img" src="{{url_for('static',filename='img/' + s['img'])}}"></div>
+			{% endfor %}
 		</div>
 		<br>
 		<br>
 		<br>
 	</div>
+
 	<br>
 	<br>
-	<p>Silver Sponsors:</p>
+	<h4>Silver Sponsors:</h4>
 	<div class = "sponsor-wrap">
 		<div class="silver-container">
-			<div><img class="silver-img" src="{{url_for('static',filename='img/sponsor-bettencourt.png')}}"></div>
-			<div><img class="silver-img" src="{{url_for('static',filename='img/sponsor-chillybear.png')}}"></div>
-			<div><img class="silver-img" src="{{url_for('static',filename='img/sponsor-mom.png')}}"></div>
-			<div><img class="silver-img" src="{{url_for('static',filename='img/sponsor-zygote.png')}}"></div>
-			<div><img class="silver-img" src="{{url_for('static',filename='img/sponsor-ap.png')}}"></div>
-			<div><img class="silver-img" src="{{url_for('static',filename='img/sponsor-rockwell.png')}}"></div>
+			{%for s in silver_sponsors %}
+				<div><img class="silver-img" src="{{url_for('static',filename='img/' + s['img'])}}"></div>
+			{% endfor %}
 		</div>
 		<br>
 		<br>

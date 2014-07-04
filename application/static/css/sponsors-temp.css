@@ -5,7 +5,7 @@
 }
 
 .gold-img {
-	padding:15% 10% 5% 15%;
+	padding:15% 10% 5% 17%;
 }
 
 .silver-container {
@@ -15,7 +15,7 @@
 }
 
 .silver-img {
-	padding:25% 15% 10% 20%;
+	padding:25% 15% 3% 20%;
 }
 
 .main-content h4 {
@@ -25,5 +25,5 @@
 .sponsor-wrap {
 	padding:1%;
 	border-radius: 10px;
-	background-color: #999;
+	background-color: #888;
 }

@@ -21,7 +21,7 @@
 		height:auto;
 		position: absolute;
 		top: 6%;
-		left: 8.5%;
+		left: 10%;
 		border-radius: 10px;
 	}
 	.banner-caption img{
@@ -42,7 +42,7 @@
 .banner-caption > div:first-child{
 	padding-top: 3%;
 	padding-bottom: 3%;
-	padding-left:5%;
+	padding-left:8%;
 	padding-right:5%;
 }
 .banner-caption p{
@@ -51,7 +51,7 @@
 	text-align: center;
 }
 .banner-caption a{
-	font-size: 90%;
+	font-size: 85%;
 	color: white;
 	text-decoration: underline;
 }
