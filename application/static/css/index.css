@@ -7,7 +7,7 @@
 
 .banner-caption{
 	background-color: rgba(34,34,34,.8);
-	padding-top: 3%;
+	padding-top: 1%;
 }
 
 @media only screen and (min-width:  64.063em) {
@@ -15,14 +15,14 @@
 	/*prevents the banner from collapsing*/
 	.banner-img{
 		position: relative;
-		width: 85.5%;
+		width: 100%;
 	}
 	.banner-caption{
 		width: 33%;
 		height:auto;
 		position: absolute;
 		top: 6%;
-		left: 10%;
+		left: 11.3%;
 		border-radius: 10px;
 		padding-top: 0.5%;
 		padding-bottom: 0.5%;
@@ -42,7 +42,7 @@
 	} 
 
 	.container {
-		width:85.5%;
+		width:100%;
 	}
 
 }
@@ -71,10 +71,10 @@
 }
 
 .bottom-slide-wrap{
-	padding-top:1.3%;
-	padding-left:.8%;
-	padding-right: .8%;
-	padding-bottom: 1.3%;
+	padding-top:1.1%;
+	padding-left:.7%;
+	padding-right: .7%;
+	padding-bottom: 1.1%;
 	overflow: hidden;
 }
 
@@ -90,11 +90,12 @@
 	position: absolute;
 	bottom:5.5%;
 	display: block;
-	width:95.5%;
+	width:95.8%;
 	text-align: center;
 	background-color: rgba(51,51,51,.8);
 	color: white;
 	padding: 5%;
+	margin: auto;
 }
 
 @media only screen and (max-width:  64em) {
@@ -118,7 +119,7 @@
 }
 
 .container {
-	width:100%%;
+	width:85.5%;
 	margin: auto;
 	text-align: center;
 }
