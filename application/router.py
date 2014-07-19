@@ -50,6 +50,7 @@ def logout():
 	return controllers.logout()
 
 @app.route("/data/", methods=['GET','POST'])
+@login_required
 def data():
 	return controllers.data()
 
