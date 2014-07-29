@@ -1,0 +1,58 @@
+<!-- subteams-temp.html -->
+
+{% extends 'base.html' %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/donate.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/subsystems.css')}}">
+
+{% endblock %}
+
+{% macro subteam_block(subteam) %}
+<li>
+	<div class="subsystems">
+		<a href="{{url_for('subteam_description', subteam_name=subteam.name)}}">
+			<img src="{{url_for('static',filename=subteam.image_path)}}">
+			<h2 href="{{url_for('subteam_description', subteam_name=subteam.name)}}">{{subteam.name|title}}</h2>
+		</a>
+		<p>{{subteam.short_description}}</p>
+	</div>
+</li>
+{% endmacro %}
+
+{% block content %}
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.container').fadeIn('slow');
+	$('.subsystems-caption').fadeIn('slow');
+	$('.donate-banner-cap').fadeIn('slow');
+	$('.frontpage-container').fadeIn('slow');
+});
+</script>
+
+<div class="container">
+  <div><img class="banner-img" src="{{url_for('static',filename='img/subteams_pic.jpg')}}"></div>
+</div>
+<div class ="donate-banner-cap row">
+	<div class="small-12 small-centered columns">
+		<h1>Subsystems</h1>
+	</div>
+</div>
+
+
+<br>
+<div class="frontpage-container">
+	<div class="subsystems-caption"><br>
+		<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+		{% for subteam in subteams %}
+		{{subteam_block(subteam)}}
+		{% endfor %}
+		</ul>
+	</div>
+</div>
+<br>
+{% endblock %}

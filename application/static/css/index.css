@@ -6,7 +6,7 @@
 }
 
 .banner-caption{
-	background-color: rgba(34,34,34,.8);
+	background-color: rgba(34,34,34,.88);
 	padding-top: 1%;
 }
 
@@ -18,31 +18,36 @@
 		width: 100%;
 	}
 	.banner-caption{
-		width: 33%;
+		width: 32%;
 		height:auto;
 		position: absolute;
-		top: 6%;
-		left: 11.3%;
+		top: 7%;
+		left: 12.75%;
 		border-radius: 10px;
 		padding-top: 0.5%;
 		padding-bottom: 0.5%;
+		display:none;
+		
 	}
 	.banner-caption img{
 		max-width: 100%;
 	}
 
 	.frontpage-container {
-	width:85.5%;
+	width:86.1%;
 	background-color:#333;
 	margin:auto;
 	padding-top:1.5%;
 	padding-left:1.5%;
 	padding-right: 1.5%;
 	padding-bottom: 1.5%;
+	margin:auto;
+	text-align: center;
 	} 
 
 	.container {
 		width:100%;
+		display:none;
 	}
 
 }
@@ -60,14 +65,15 @@
 	text-align: center;
 }
 .banner-caption a{
-	font-size: 85%;
+	font-size: 86%;
 	color: white;
 	text-decoration: underline;
 }
 
 /* bottom slides */
 .bottom-wrap{
-	max-width: 86.7%;
+	max-width: 87.25%;
+	display:none;
 }
 
 .bottom-slide-wrap{
@@ -92,7 +98,7 @@
 	display: block;
 	width:95.8%;
 	text-align: center;
-	background-color: rgba(51,51,51,.8);
+	background-color: rgba(51,51,51,.88);
 	color: white;
 	padding: 5%;
 	margin: auto;
@@ -115,16 +121,21 @@
 	text-align: center;
 	color:white;
 	font-style: italic;
+	display:none;
+}
 
+.frontpage-container {
+	margin:auto;
+	text-align: center;
 }
 
 .container {
-	width:85.5%;
+	width:86%;
 	margin: auto;
 	text-align: center;
 }
 
 /*Some other formatting that was driving me crazy*/
-h4 {
+h1, h2, h3, h4 {
 	color:white;
 }

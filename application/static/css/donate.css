@@ -1,0 +1,33 @@
+.donate-caption {
+	width:95%;
+	margin:auto;
+	text-align: center;
+	color:white;
+	display: none;
+}
+
+.donate-banner-cap{
+	padding-top: 3%;
+	width:auto;
+	height:auto;
+	margin:auto;
+	text-align: center;
+	background-color: rgba(34,34,34, .75);
+	display:none;
+}
+
+@media only screen and (min-width:  64.063em) {
+	.donate-banner-cap{
+	position: absolute;
+	width:auto;
+	top: 7.5%;
+	left: 15%;
+	border-radius: 10px;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	border-radius: 10px;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	display:none;
+	}
+}

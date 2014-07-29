@@ -16,39 +16,37 @@
 <script type="text/javascript" src="{{url_for('static', filename='slick/slick.min.js')}}"></script>
 <script>
 $(document).ready(function(){
-	$('.container').slick({
+	$('.banner-caption').fadeIn('slow');
+	$('.bottom-wrap').fadeIn('slow');
+	$('.frontpage-container').fadeIn('slow');
+	$('.frontpage-caption').fadeIn('slow');
+	$('.container').fadeIn('slow').slick({
 		autoplay: true,
-		dots: true,
+		dots: false,
 		swipe: true,
-		arrows: false
-	})
-});</script>
+		arrows: true
+	});
+});
+</script>
 
 <div class="container">
   <div><img class="banner-img" src="{{url_for('static',filename='img/baja_trim_email.jpg')}}"></div>
-  <div><img class="banner-img" src="{{url_for('static',filename='img/EpicBaja_trim_old.jpg')}}"></div>
+  <div><img class="banner-img" src="{{url_for('static',filename='img/hill_banner2.jpg')}}"></div>
   <div><img class="banner-img" src="{{url_for('static',filename='img/waiting_rochester.jpg')}}"></div>
+  <div><img class="banner-img" src="{{url_for('static',filename='img/EpicBaja_trim.jpg')}}"></div>
 </div>
-<br>
-<br>
+
 <!--<div style="padding-top:1%">-->
 	<div class="banner-caption row">
 		<div class="small-12 small-centered columns">
-			<img src="{{url_for('static',filename='img/logo2_clear_whitetext.png')}}">
+			<div><img src="{{url_for('static',filename='img/logo2_clear_whitetext.png')}}"></div><br>
+			<p>A team of students from Olin College that builds and races offroad vehicles for SAE Mini Baja competitions. </p>
+			<!--<a href="https://twitter.com/PhnxRacing" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @PhnxRacing</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>-->
+			
 		</div>
 	</div>
 <!--</div>-->
-<br>
-<div class="frontpage-container">
-<div class="frontpage-caption">
-
-	<p>We are a team of students from Olin College of Engineering that builds and races off-road vehicles for the SAE MiniBaja competitions.
-	Check out our Subsystem page for more information about the different parts of our car and how we fabricate them.
-	Follow us on Twitter and Facebook for live updates, pictures, videos throughout the year.</p>
-	<a href="https://twitter.com/PhnxRacing" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @PhnxRacing</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div>
-</div>
 
 <div class="row bottom-wrap">
 	<div class="small-12 large-4 columns bottom-slide-wrap">
@@ -71,5 +69,13 @@ $(document).ready(function(){
 	</div>
 </div>
 
+<div class="frontpage-container">
+<div class="frontpage-caption">
+	<h3>About Us</h3>
+	<p>Phoenix Racing is a student team from Olin College of Engineering. We compete in the intercollegiate Baja SAE design series, which involves designing, building, testing, and racing an off-road vehicle. Our team has 35 undergraduate stdents from all classes. We are education-oriented and provide team members with long-term experience in an extensive, hands-on project. Additionally, students get to work on design, manufacturing, testing, fixing, and even racing our vehicle!</p>
+</div>
+</div>
+
+<br>
 
 {% endblock %}
