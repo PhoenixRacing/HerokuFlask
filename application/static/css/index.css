@@ -117,7 +117,7 @@
 
 .frontpage-caption {
 	margin:auto;
-	width:75%;
+	width:82%;
 	text-align: center;
 	color:white;
 	font-style: italic;
@@ -138,4 +138,8 @@
 /*Some other formatting that was driving me crazy*/
 h1, h2, h3, h4 {
 	color:white;
+}
+
+button.hover {
+	background-color: black;
 }

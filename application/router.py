@@ -125,10 +125,12 @@ def delete_user(user_id):
 	return controllers.delete_user(user_id)
 
 @app.route("/blog/")
+@login_required
 def view_blog():
 	return controllers.view_blog()
 
 @app.route("/blog/<post_id>/")
+@login_required
 def view_post(post_id):
 	return controllers.view_post(post_id)
 

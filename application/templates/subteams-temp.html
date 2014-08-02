@@ -14,7 +14,7 @@
 <li>
 	<div class="subsystems">
 		<a href="{{url_for('subteam_description', subteam_name=subteam.name)}}">
-			<img src="{{url_for('static',filename=subteam.image_path)}}">
+			<img src="{{url_for('static',filename=subteam.image_path)}}"><br>
 			<h2 href="{{url_for('subteam_description', subteam_name=subteam.name)}}">{{subteam.name|title}}</h2>
 		</a>
 		<p>{{subteam.short_description}}</p>
@@ -47,7 +47,7 @@ $(document).ready(function(){
 <br>
 <div class="frontpage-container">
 	<div class="subsystems-caption"><br>
-		<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
 		{% for subteam in subteams %}
 		{{subteam_block(subteam)}}
 		{% endfor %}

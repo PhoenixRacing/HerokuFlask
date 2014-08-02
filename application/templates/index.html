@@ -8,19 +8,29 @@
 {{super()}}
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='slick/slick.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
 {% endblock %}
 
 {% block content %}
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="{{url_for('static', filename='slick/slick.min.js')}}"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <script>
 $(document).ready(function(){
-	$('.banner-caption').fadeIn('slow');
-	$('.bottom-wrap').fadeIn('slow');
-	$('.frontpage-container').fadeIn('slow');
-	$('.frontpage-caption').fadeIn('slow');
-	$('.container').fadeIn('slow').slick({
+	$('.banner-caption').fadeIn(1000);
+	$('.bottom-wrap').fadeIn(1000);
+	$('.frontpage-container').fadeIn(1000);
+	$('.frontpage-caption').fadeIn(1000);
+	$('.container').fadeIn(1000).slick({
 		autoplay: true,
 		dots: false,
 		swipe: true,
@@ -31,7 +41,6 @@ $(document).ready(function(){
 
 <div class="container">
   <div><img class="banner-img" src="{{url_for('static',filename='img/baja_trim_email.jpg')}}"></div>
-  <div><img class="banner-img" src="{{url_for('static',filename='img/hill_banner2.jpg')}}"></div>
   <div><img class="banner-img" src="{{url_for('static',filename='img/waiting_rochester.jpg')}}"></div>
   <div><img class="banner-img" src="{{url_for('static',filename='img/EpicBaja_trim.jpg')}}"></div>
 </div>
@@ -58,12 +67,12 @@ $(document).ready(function(){
 	<div class="small-12 large-4 columns bottom-slide-wrap">
 		<div class="bottom-slide">
 			<img src="{{url_for('static',filename='img/bajaflag.jpg')}}">
-			<a href="{{url_for('view_blog')}}">Check Out Our Blog</a>
+			<a href="https://twitter.com/PhnxRacing">Check out our Twitter Page</a>
 		</div>
 	</div>
 	<div class="small-12 end large-4 columns bottom-slide-wrap">
 		<div class="bottom-slide">
-			<img src="{{url_for('static',filename='img/donate.jpg')}}">
+			<img src="{{url_for('static',filename='img/bajaflag.jpg')}}">
 			<a href="{{url_for('donate')}}">Donate to the Team</a>
 		</div>
 	</div>
@@ -77,5 +86,4 @@ $(document).ready(function(){
 </div>
 
 <br>
-
 {% endblock %}

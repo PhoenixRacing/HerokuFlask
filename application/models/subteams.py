@@ -22,7 +22,7 @@ drivetrain.description = 'Drivetrain is responsible for everything from the engi
 electrical = Subteam()
 electrical.name = 'electrical'
 electrical.image_path = 'img/electrical-icon.png'
-electrical.short_description = 'Integrates a speedometer and tachometer with wireless datalogging and driver communications.'
+electrical.short_description = 'Performs real-time performance analysis on the car and maintains the website.'
 electrical.description = 'Electrical is the newest Phoenix Racing subsystem. We\'re responsible for everything from wiring the car\'s brake lights, to tracking car speed, to maintaining the team website.\n This year we will be focusing on creating and running simulations to validate the designs for the car\'s drivetrain, body, and suspension systems. We will also be equipping the car with a sensor suite to allow us to conduct real-time failure analysis on the car and to provide the driver with useful data during races and practice drives. Lastly, we will be implementing a reliable driver communication system to help the driver more effectively communicate with teammembers in the pit and on the sidelines.'
 
 suspension = Subteam()
