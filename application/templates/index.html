@@ -27,10 +27,10 @@
 <script>
 $(document).ready(function(){
 	$('.banner-caption').fadeIn(1000);
-	$('.bottom-wrap').fadeIn(1000);
-	$('.frontpage-container').fadeIn(1000);
-	$('.frontpage-caption').fadeIn(1000);
-	$('.container').fadeIn(1000).slick({
+	$('.bottom-wrap').fadeIn(100);
+	$('.frontpage-container').fadeIn(100);
+	$('.frontpage-caption').fadeIn(100);
+	$('.container').fadeIn('slow').slick({
 		autoplay: true,
 		dots: false,
 		swipe: true,
@@ -47,9 +47,9 @@ $(document).ready(function(){
 
 <!--<div style="padding-top:1%">-->
 	<div class="banner-caption row">
-		<div class="small-12 small-centered columns">
+		<div class="small-12 small-centered columns" style="margin:auto; text-align:center">
 			<div><img src="{{url_for('static',filename='img/logo2_clear_whitetext.png')}}"></div><br>
-			<p>A team of students from Olin College that builds and races offroad vehicles for SAE Mini Baja competitions. </p>
+			<p>A team of students from Olin College that builds and races offroad vehicles for SAE Mini Baja competitions</p>
 			<!--<a href="https://twitter.com/PhnxRacing" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @PhnxRacing</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>-->
 			
@@ -67,12 +67,12 @@ $(document).ready(function(){
 	<div class="small-12 large-4 columns bottom-slide-wrap">
 		<div class="bottom-slide">
 			<img src="{{url_for('static',filename='img/bajaflag.jpg')}}">
-			<a href="https://twitter.com/PhnxRacing">Check out our Twitter Page</a>
+			<a href="https://twitter.com/PhnxRacing">Visit out our Twitter page</a>
 		</div>
 	</div>
 	<div class="small-12 end large-4 columns bottom-slide-wrap">
 		<div class="bottom-slide">
-			<img src="{{url_for('static',filename='img/bajaflag.jpg')}}">
+			<img src="{{url_for('static',filename='img/twitter_maybe.jpg')}}">
 			<a href="{{url_for('donate')}}">Donate to the Team</a>
 		</div>
 	</div>
@@ -81,7 +81,7 @@ $(document).ready(function(){
 <div class="frontpage-container">
 <div class="frontpage-caption">
 	<h3>About Us</h3>
-	<p>Phoenix Racing is a student team from Olin College of Engineering. We compete in the intercollegiate Baja SAE design series, which involves designing, building, testing, and racing an off-road vehicle. Our team has 35 undergraduate stdents from all classes. We are education-oriented and provide team members with long-term experience in an extensive, hands-on project. Additionally, students get to work on design, manufacturing, testing, fixing, and even racing our vehicle!</p>
+	<p>Phoenix Racing is a student team from Olin College of Engineering. We compete in the intercollegiate Baja SAE design series, which involves designing, building, testing, and racing an off-road vehicle. Our team has 35 undergraduate stdents from all classes. We are an education-oriented team which provides members with long-term experience in an extensive, hands-on engineering project. Additionally, students get to work on design, manufacturing, testing, fixing, and even racing our vehicle!</p>
 </div>
 </div>
 

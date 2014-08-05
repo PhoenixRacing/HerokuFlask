@@ -113,6 +113,10 @@
 		width:78.8%;
 		bottom:10%;
 	}
+
+	.conatiner {
+		display:none;
+	}
 }
 
 .frontpage-caption {
@@ -133,10 +137,11 @@
 	width:86%;
 	margin: auto;
 	text-align: center;
+	display:none;
 }
 
 /*Some other formatting that was driving me crazy*/
-h1, h2, h3, h4 {
+p, h1, h2, h3, h4, small {
 	color:white;
 }
 

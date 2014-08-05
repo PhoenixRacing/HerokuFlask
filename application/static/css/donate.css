@@ -7,7 +7,7 @@
 }
 
 .donate-banner-cap{
-	padding:0;
+	padding-top:3%;
 	width:auto;
 	height:auto;
 	margin:auto;
@@ -19,7 +19,7 @@
 @media only screen and (min-width:  64.063em) {
 	.donate-banner-cap{
 	position: absolute;
-	width:auto;
+	width:19%;
 	top: 7.5%;
 	left: 15.3%;
 	padding-bottom: .75%;
@@ -29,4 +29,16 @@
 	padding-right: .5%;
 	display:none;
 	}
+
+	.donate_banner_container {
+		width:86% !important;
+		display:none;
+	}
+}
+
+.donate_banner_container {
+	width:100%;
+	margin:auto;
+	text-align: center;
+	display:none;
 }

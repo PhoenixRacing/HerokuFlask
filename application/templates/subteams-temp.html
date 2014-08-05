@@ -27,23 +27,21 @@
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script>
 $(document).ready(function(){
-	$('.container').fadeIn('slow');
+	$('.donate_banner_container').fadeIn('slow');
 	$('.subsystems-caption').fadeIn('slow');
 	$('.donate-banner-cap').fadeIn('slow');
 	$('.frontpage-container').fadeIn('slow');
 });
 </script>
 
-<div class="container">
+<div class="donate_banner_container">
   <div><img class="banner-img" src="{{url_for('static',filename='img/subteams_pic.jpg')}}"></div>
 </div>
 <div class ="donate-banner-cap row">
 	<div class="small-12 small-centered columns">
-		<h1>Subsystems</h1>
+		<h1>Our Subsystems</h1>
 	</div>
 </div>
-
-
 <br>
 <div class="frontpage-container">
 	<div class="subsystems-caption"><br>
@@ -53,6 +51,7 @@ $(document).ready(function(){
 		{% endfor %}
 		</ul>
 	</div>
+	<small><em>Click the icons above for more information about the design and fabrication of our car</em></small>
 </div>
 <br>
 {% endblock %}

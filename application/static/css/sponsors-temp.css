@@ -27,3 +27,28 @@
 	border-radius: 10px;
 	background-color: #ccc;
 }
+
+.sponsor-banner-cap{
+	padding:0;
+	width:auto;
+	height:auto;
+	margin:auto;
+	text-align: center;
+	background-color: rgba(34,34,34, .75);
+	display:none;
+}
+
+@media only screen and (min-width:  64.063em) {
+	.sponsor-banner-cap{
+	position: absolute;
+	width:19%;
+	top: 4.6%;
+	left: 15.3%;
+	padding-bottom: .75%;
+	border-radius: 10px;
+	padding-top: .75%;
+	padding-left: .5%;
+	padding-right: .5%;
+	display:none;
+	}
+}
