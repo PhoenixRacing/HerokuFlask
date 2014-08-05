@@ -73,7 +73,6 @@
 /* bottom slides */
 .bottom-wrap{
 	max-width: 87.25%;
-	display:none;
 }
 
 .bottom-slide-wrap{
@@ -87,6 +86,7 @@
 .bottom-slide{
 	text-align: center;
 	color: white;
+	display:none;
 }
 .bottom-slide > img{
 	min-width: 100%;
@@ -116,6 +116,7 @@
 
 	.conatiner {
 		display:none;
+		width:86%;
 	}
 }
 
