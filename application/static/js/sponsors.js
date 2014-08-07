@@ -1,5 +1,9 @@
 //TODO: Make this shit look better on mobile!
 $(document).ready(function(){
+	$('.donate_banner_container').fadeIn('slow');
+	$('.frontpage-caption').fadeIn(500);
+	$('.sponsor-banner-cap').fadeIn('slow');
+	$('.frontpage-container').fadeIn('slow');
 	$('.gold-container').slick({
 		autoplay: true,
 		dots: true,
@@ -9,10 +13,6 @@ $(document).ready(function(){
 		slidesToShow: 3,
 		slidesToScroll: 3
 	})
-});</script>
-
-<script>
-$(document).ready(function(){
 	$('.silver-container').slick({
 		autoplay: true,
 		dots: true,
