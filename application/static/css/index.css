@@ -23,7 +23,7 @@
 		width: 100%;
 		height:auto;
 		margin:auto;
-		top:28.5%;
+		top:27.5%;
 		position: absolute;
 		text-align: center;
 		display:none;
@@ -175,6 +175,4 @@ p, h1, h2, h3, h4, small {
 	font-family: "Gadget", "Helvetica", sans-serif;
 }
 
-button.hover {
-	background-color: black;
-}
+
