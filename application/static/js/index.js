@@ -5,15 +5,5 @@ $(document).ready(function(){
 	$('.frontpage-container').fadeIn(800);
 	$('.frontpage-caption').fadeIn('slow');
 	$('.bottom-wrap').fadeIn(800);
-	$('.container').fadeIn('slow').slick({
-		autoplay: true,
-		dots: false,
-		draggable: false,
-		pauseOnHover: true,
-		arrows: true,
-		speed: 600,
-		autoplaySpeed: 6000,
-  		infinite: true,
-  		fade: true,
-	});
+	$('.container').fadeIn('slow');
 });

@@ -1,11 +1,11 @@
 {% if user and user.is_authenticated() %}
 	{% set navbar = {
 	'left':[
-		('data', 'Dashboard'),
 		('subteams', 'Subsystems'),
 		('donate','Donate'),
 		('sponsors', 'Sponsors'),
-		('view_blog','Blog')
+		('view_blog','Blog'),
+		('data', 'Dashboard')
 	],
 	'right':[
 		('user',user.first_name ~ ' ' ~user.last_name),
