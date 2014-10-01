@@ -13,3 +13,4 @@ from blog import view_blog, view_post, create_post, edit_post, delete_post
 from upload import upload
 from beaglebone import debug, post_data
 from follow import follow
+from team import team

@@ -1,0 +1,20 @@
+/*.top_image_container{
+	height: 0px;
+}
+*/
+.team-caption {
+	width:90%;
+	margin:auto;
+	text-align: center;
+	color:white;	
+}
+
+.teamMembers {
+	padding-left:1.5%;
+	padding-right:1.5%;
+}
+
+.gold-container {
+	width:20rem;
+}
+
