@@ -90,6 +90,15 @@ def suspension():
 def electrical():
 	return controllers.description('electrical')
 
+@app.route("/team/")
+def team():
+	return controllers.team()
+
+# @app.route("/purchases/")
+# @login_required
+# def purchase():
+# 	return controllers.purchase()
+
 @app.route("/user/")
 @login_required
 def user():

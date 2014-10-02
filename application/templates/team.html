@@ -2,8 +2,50 @@
 
 {% block body_scripts %}
 {{super()}}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/donate.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/team.css')}}">
 {% endblock %}
 
 {% block content %}
 <!--html here-->
+{% macro team_member_block(team_member) %}
+<li>
+	<div class="teamMembers">
+		<img src="{{url_for('static',filename=team_member.image_path)}}"><br>
+		<h2> {{team_member.name|title}}</h2>
+		<p>{{team_member.bio}}</p>
+	</div>
+</li>
+{% endmacro %}
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.donate_banner_container').fadeIn('slow');
+	$('.team-caption').fadeIn('slow');
+	$('.donate-banner-cap').fadeIn('slow');
+	$('.frontpage-container').fadeIn('slow');
+});</script>
+<!--Banner Image at top of page-->
+<div class="donate_banner_container">
+  <div><img class="donate_banner_image" src="{{url_for('static',filename='img/2014teampic.jpg')}}"></div>
+</div>
+<div class ="donate-banner-cap row">
+	<div class="small-12 small-centered columns">
+		<h1>Meet the Team</h1>
+	</div>
+</div>
+<br>
+<!-- Where all the team shit goes-->
+<div class="frontpage-container">
+	<div class="team-caption"><br>
+		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+		{% for team_member in team_members %}
+		{{team_member_block(team_member)}}
+		{% endfor %}
+		</ul>
+	</div>
+</div>
+<br>
 {% endblock %}
