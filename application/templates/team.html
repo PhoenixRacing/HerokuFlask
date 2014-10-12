@@ -9,12 +9,27 @@
 
 {% block content %}
 <!--html here-->
-{% macro team_member_block(team_member) %}
+{% macro gen_member_block(general_member) %}
 <li>
 	<div class="teamMembers">
-		<img src="{{url_for('static',filename=team_member.image_path)}}"><br>
-		<h2> {{team_member.name|title}}</h2>
-		<p>{{team_member.bio}}</p>
+		<img src="{{url_for('static',filename=general_member.image_path)}}"><br><br>
+		<h3> {{general_member.name}}</h3>
+		<p>{{general_member.major}}<br>
+		Class of {{general_member.year}}<br>
+		<a class="inline-a" href="mailto:{{general_member.contact}}">{{general_member.contact}}</a></p><br>
+	</div>
+</li>
+{% endmacro %}
+
+{% macro team_leads_block(team_lead) %}
+<li>
+	<div class="teamMembers">
+		<img src="{{url_for('static',filename=team_lead.image_path)}}"><br><br>
+		<h3> {{team_lead.name}}</h3>
+		<p>{{team_lead.major}}<br>
+		Class of {{team_lead.year}}<br>
+		{{team_lead.title}}<br>
+		<a class="inline-a" href="mailto:{{team_lead.contact}}">{{team_lead.contact}}</a></p><br>
 	</div>
 </li>
 {% endmacro %}
@@ -22,29 +37,53 @@
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script>
 $(document).ready(function(){
-	$('.donate_banner_container').fadeIn('slow');
 	$('.team-caption').fadeIn('slow');
-	$('.donate-banner-cap').fadeIn('slow');
-	$('.frontpage-container').fadeIn('slow');
+	$('.all-members').fadeIn('slow')
+	$('.sys-lead-caption').fadeIn('slow');
+	$('.team-banner').fadeIn('slow');
+	$('.team-blurb').fadeIn('slow')
+	$('.team-banner-cap').fadeIn(1100);
 });</script>
+
 <!--Banner Image at top of page-->
-<div class="donate_banner_container">
-  <div><img class="donate_banner_image" src="{{url_for('static',filename='img/2014teampic.jpg')}}"></div>
+<div class="team-banner">
+  <div><img class="donate_banner_image" src="{{url_for('static',filename='img/baja2014teampic.JPG')}}"></div>
 </div>
-<div class ="donate-banner-cap row">
+<div class ="team-banner-cap">
 	<div class="small-12 small-centered columns">
-		<h1>Meet the Team</h1>
+		<h2>Meet the Team</h2>
 	</div>
 </div>
-<br>
+<div class = "team-blurb">
+	<p>We are a team of undergraduate engineering students at Olin College of Engineering.<br>
+	<p>Contact information for each team member is provided below. Feel free to email our general team or subsystem leads with any questions regarding the design and fabrication of our car. Please email our Financial Manager for information on sponsorship. </p>
+</div>
 <!-- Where all the team shit goes-->
-<div class="frontpage-container">
-	<div class="team-caption"><br>
-		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
-		{% for team_member in team_members %}
-		{{team_member_block(team_member)}}
-		{% endfor %}
-		</ul>
+<br>
+<div class = "all-members" style="text-align:center">
+<h3>Team Captains</h3>
+	<div class="team-caption">
+			<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+			{% for team_lead in team_leads %}
+			{{team_leads_block(team_lead)}}
+			{% endfor %}
+			</ul>
+	</div>
+	<h1>System Leads</h1>
+	<div class="sys-lead-caption">
+			<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+			{% for system_lead in system_leads %}
+			{{team_leads_block(system_lead)}}
+			{% endfor %}
+			</ul>
+	</div>
+	<h1>General Members</h1>
+	<div class="team-caption">
+			<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+			{% for general_member in general_members %}
+			{{gen_member_block(general_member)}}
+			{% endfor %}
+			</ul>
 	</div>
 </div>
 <br>
