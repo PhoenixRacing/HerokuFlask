@@ -1,16 +1,91 @@
-.subsystems-caption {
-	width:90%;
-	margin:auto;
+.car-render {
+	width:100%;
 	text-align: center;
-	color:white;
-	
+	margin-right: 0 auto;
+	background-color: white;
 }
 
-.subsystems {
-	padding-left:1.5%;
-	padding-right:1.5%;
+.car-render img {
+	width:80%;
+	padding-bottom:1rem;
+	margin-right:10%;
+	margin-left: 10%;
 }
 
-.gold-container {
-	width:20rem;
+.suspension-blurb {
+	width:17.5%;
+	height:auto;
+	background-color: rgba(34,34,34,0.7);
+	position:absolute;
+	padding: 2rem;
+	border-radius: 50%;
+	text-align: center;
+	top: 38%;
+	left:7%;
+	display: none
+}
+
+
+
+.drivetrain-blurb {
+	width:17.5%;
+	height:auto;
+	background-color: rgba(34,34,34,0.7);
+	position:absolute;
+	padding: 2rem;
+	top: 10%;
+	left:68.5%;
+	border-radius: 50%;
+	text-align: center;
+	display: none;
+}
+
+
+.electrical-blurb {
+	width:17.5%;
+	height:auto;
+	background-color: rgba(34,34,34,0.7);
+	position:absolute;
+	padding: 2rem;
+	top: 60%;
+	left:79%;
+	border-radius: 50%;
+	text-align: center;
+	display: none;
+}
+
+.chassis-blurb {
+	width:17.5%;
+	height:auto;
+	background-color: rgba(34,34,34,0.7);
+	position:absolute;
+	padding: 2rem;
+	top: 8%;
+	left:22%;
+	border-radius: 50%;
+	text-align: center;
+	display: none;
+}
+
+.electrical-blurb:hover, .suspension-blurb:hover, .drivetrain-blurb:hover, .chassis-blurb:hover {
+	background-color: rgba(34,34,34,0.9);
+}
+
+@media only screen and (max-width:  64em) {
+
+	.suspension-blurb, .chassis-blurb, .drivetrain-blurb, .electrical-blurb{
+		position:relative;
+		border-radius:0rem;
+		margin:0 auto;
+		text-align: center;
+		width:100%;
+		left:0;
+	}
+
+}
+
+@media only screen and (min-width:  64em) {
+	.subsystems img {
+		display:none;
+	}
 }

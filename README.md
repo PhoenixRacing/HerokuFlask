@@ -53,6 +53,10 @@ MONGODB_SETTINGS = {\
 	'DB':'phoenix_racing',\
 	'USERNAME':'<same username as before>',\
 	'PASSWORD':'<same password as before>'}
+
+SECRET_KEY = '<Email me for secret key>'
+
+DEBUG = False
 ```
 Repeated Use
 ------------

@@ -10,8 +10,8 @@
 
 {% endblock %}
 
+
 {% macro subteam_block(subteam) %}
-<li>
 	<div class="subsystems">
 		<a href="{{url_for('subteam_description', subteam_name=subteam.name)}}">
 			<img src="{{url_for('static',filename=subteam.image_path)}}"><br>
@@ -19,7 +19,6 @@
 		</a>
 		<p>{{subteam.short_description}}</p>
 	</div>
-</li>
 {% endmacro %}
 
 {% block content %}
@@ -27,31 +26,23 @@
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script>
 $(document).ready(function(){
-	$('.donate_banner_container').fadeIn('slow');
-	$('.subsystems-caption').fadeIn('slow');
-	$('.donate-banner-cap').fadeIn('slow');
-	$('.frontpage-container').fadeIn('slow');
+	$('.car-render').fadeIn(500);
+	$('.drivetrain-blurb').fadeIn(700);
+	$('.electrical-blurb').fadeIn(900);
+	$('.chassis-blurb').fadeIn(1100);
+	$('.suspension-blurb').fadeIn(1300);
 });
 </script>
 
-<div class="donate_banner_container">
-  <div><img class="banner-img" src="{{url_for('static',filename='img/subteams_pic.jpg')}}"></div>
+
+<div class = "car-render">
+	<img src="{{url_for('static',filename='img/full_car_2014.JPG')}}">
 </div>
-<div class ="donate-banner-cap row">
-	<div class="small-12 small-centered columns">
-		<h1>Our Subsystems</h1>
-	</div>
+<div class = "electrical-blurb">{{subteam_block(subteams[0])}}
 </div>
-<br>
-<div class="frontpage-container">
-	<div class="subsystems-caption"><br>
-		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
-		{% for subteam in subteams %}
-		{{subteam_block(subteam)}}
-		{% endfor %}
-		</ul>
-	</div>
-	<small><em>Click the icons above for more information about the design and fabrication of our car</em></small>
+<div class = "chassis-blurb">{{subteam_block(subteams[1])}}
 </div>
-<br>
+<div class = "drivetrain-blurb">{{subteam_block(subteams[2])}}</div>
+<div class = "suspension-blurb">{{subteam_block(subteams[3])}}</div>
+
 {% endblock %}

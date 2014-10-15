@@ -1,9 +1,8 @@
 .donate-caption {
-	width:95%;
-	margin:auto;
+	background-color: rgba(34,34,34,0.73);
+	padding-top: 1%;
 	text-align: center;
-	color:white;
-	display: none;
+	margin: auto;
 }
 
 .donate-banner-cap{
@@ -16,18 +15,25 @@
 	display:none;
 }
 
+@media only screen and (max-width: 64.063em) {
+	.sponsors-blurb-wrap {
+		text-align: center;
+		background-color: #111;
+		padding:1rem;
+	}
+
+	.sponsor-img {
+		width:75%;
+		padding-bottom:1.5rem;
+		padding-top:1.5rem;
+	}
+}
+
 @media only screen and (min-width:  64.063em) {
-	.donate-banner-cap{
-	position: absolute;
-	width:19%;
-	top: 7.5%;
-	left: 15.3%;
-	padding-bottom: .75%;
-	border-radius: 10px;
-	padding-top: .75%;
-	padding-left: .5%;
-	padding-right: .5%;
-	display:none;
+	.sponsor-img {
+		height:auto;
+		width:100%;
+		padding: 1rem;
 	}
 
 	.donate_banner_container {
@@ -35,6 +41,51 @@
 		display:none;
 		margin: auto;
 		text-align: center;
+	}
+
+	.donate-caption{
+		width: 100%;
+		height:auto;
+		margin:auto;
+		top:6%;
+		position: absolute;
+		text-align: center;
+		display:none;
+		padding-top:0;	
+		-moz-box-shadow:    inset 0 0 2rem #1f1f1f;
+   		-webkit-box-shadow: inset 0 0 2rem #1f1f1f;
+   		box-shadow:        inset 0 0 2rem #1f1f1f;
+	}
+
+	.donate-caption div {
+		width:90%;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.sponsors-blurb {
+		text-align: center;
+		margin:0 auto;
+		width:70%;
+		padding:1rem;
+		color:#222 !important;
+	}
+
+	.sponsors-blurb-wrap {
+		width:100%; 
+		height:auto;
+		position: relative;
+		background-color: #111;
+		display: none;
+	}
+
+	.donate-background {
+   	display:none;
+	}
+
+	.random-sponsor-img {
+		width:100%;
+		margin: 0 auto;
 	}
 }
 
