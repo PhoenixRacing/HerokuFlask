@@ -94,10 +94,10 @@ def electrical():
 def team():
 	return controllers.team()
 
-# @app.route("/purchases/")
-# @login_required
-# def purchase():
-# 	return controllers.purchase()
+@app.route("/purchase/", methods=['GET','POST'])
+@login_required
+def purchase():
+	return controllers.purchases()
 
 @app.route("/user/")
 @login_required
