@@ -24,9 +24,10 @@ def purchases():
 		work_sheet.update_acell('A%s'%(i), form.data['name'])
 		work_sheet.update_acell('B%s'%(i), form.data['item'])
 		work_sheet.update_acell('C%s'%(i), form.data['cost'])
-		work_sheet.update_acell('D%s'%(i), form.data['link'])
-		work_sheet.update_acell('E%s'%(i), form.data['date'])
-		work_sheet.update_acell('F%s'%(i), form.data['quantity'])
+		work_sheet.update_acell('D%s'%(i), form.data['vendor'])
+		work_sheet.update_acell('E%s'%(i), form.data['link'])
+		work_sheet.update_acell('F%s'%(i), form.data['date'])
+		work_sheet.update_acell('G%s'%(i), form.data['quantity'])
 		return redirect(url_for('index'))
 	return render_template('purchase.html', form=form, active_page='purchase')
 	

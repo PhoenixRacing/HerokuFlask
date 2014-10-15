@@ -28,8 +28,9 @@ class EditPasswordForm(Form):
 class PurchaseForm(Form):
 	name = TextField('Name', [validators.DataRequired(), validators.Length(min=3,max=30)])
 	item = TextField('Item', [validators.DataRequired(), validators.Length(min=3,max=30)])
-	cost = TextField('Cost', [validators.DataRequired(), validators.Length(min=3,max=30)])
-	link = TextField('Link', [validators.DataRequired(), validators.Length(min=3,max=30), validators.URL(require_tld=True, message=u'Invalid link.')])
+	cost = TextField('Cost', [validators.DataRequired()])
+	vendor = TextField('Vendor', [validators.DataRequired()])
+	link = TextField('Link', [validators.Length(min=3,max=30), validators.URL(require_tld=True, message=u'Invalid link.')])
 	date = TextField('Date Needed', [validators.DataRequired()])
 	quantity = TextField('Quantity', [validators.DataRequired()])
 

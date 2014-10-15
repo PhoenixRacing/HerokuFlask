@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block body_scripts %}
+{% block body_scripts %}	
 {{super()}}
 {% endblock %}
 
@@ -13,10 +13,14 @@
 			</div>
 		</div>
 		{% from 'forms.html' import render_field, submit %}
-		<form method="GET" action="MAILTO:hellen.deborahv@gmail.com">
+		<form action="{{url_for('purchase')}}" method="post">
+			{{render_field(form.name)}}
 			{{render_field(form.item)}}
+			{{render_field(form.cost)}}
+			{{render_field(form.vendor)}}
 			{{render_field(form.link)}}
-			{{render_field(form.justification)}}
+			{{render_field(form.date)}}
+			{{render_field(form.quantity)}}
 			{{submit('Submit')}}
 		</form>
 	</div>
