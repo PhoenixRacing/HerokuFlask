@@ -168,6 +168,27 @@ zoe.major = "Electrical and Computer Engineering"
 zoe.year = '2016'
 zoe.contact = 'zoe.fiddler@students.olin.edu'
 
+ad = team_member()
+ad.name = "Adriana Garties"
+ad.image_path = 'img/team/Ad_headshot.jpg'
+ad.major = "Mechanical Engineering"
+ad.year = '2015'
+ad.contact = 'ad@students.olin.edu'
+
+lauren = team_member()
+lauren.name= 'Lauren Froschauer'
+lauren.image_path = 'img/team/lauren.jpg'
+lauren.major = 'Mechanical Engineering'
+lauren.year = '2016'
+lauren.contact = 'LaurenFroschauer@gmail.com'
+
+luke = team_member()
+luke.name = "Luke Morris"
+luke.image_path = "img/team/luke.jpg"
+luke.major = 'Mechanical Engineering'
+luke.year = '2017'
+luke.contact = "luke.morris@students.olin.edu"
+
 
 team_leads = {'chris': chris, 'maddie': maddie, 'kate': kate}
 
@@ -175,5 +196,5 @@ system_leads = {'joe': joe, 'deborah': deborah, 'daniel': daniel, 'lindsey': lin
 
 general_mems = {'kevin': kevin, 'brandon': brandon, 'anders': anders, 'meg': meg, \
 	'selina': selina, 'brett': brett, 'manik':manik, 'sawyer':sawyer, \
-	'searing': searing, 'kelli':kelli, 'keenan':keenan, 'zoe': zoe }
-
+	'searing': searing, 'kelli':kelli, 'keenan':keenan, 'zoe': zoe, 'ad': ad, \
+	'lauren': lauren, 'luke': luke}

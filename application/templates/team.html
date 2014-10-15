@@ -2,8 +2,8 @@
 
 {% block body_scripts %}
 {{super()}}
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/donate.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/team.css')}}">
 {% endblock %}
 
@@ -16,7 +16,7 @@
 		<h3> {{general_member.name}}</h3>
 		<p>{{general_member.major}}<br>
 		Class of {{general_member.year}}<br>
-		<a class="inline-a" href="mailto:{{general_member.contact}}">{{general_member.contact}}</a></p><br>
+		<a class="inline-a" href="mailto:{{general_member.contact}}"><i class="fa fa-envelope"></i>  {{general_member.contact}}</a></p><br>
 	</div>
 </li>
 {% endmacro %}
@@ -25,24 +25,26 @@
 <li>
 	<div class="teamMembers">
 		<img src="{{url_for('static',filename=team_lead.image_path)}}"><br><br>
-		<h3> {{team_lead.name}}</h3>
+		<h3> {{team_lead.name}} </h3>
 		<p>{{team_lead.major}}<br>
 		Class of {{team_lead.year}}<br>
 		{{team_lead.title}}<br>
-		<a class="inline-a" href="mailto:{{team_lead.contact}}">{{team_lead.contact}}</a></p><br>
+		<a class="inline-a" href="mailto:{{team_lead.contact}}"><i class="fa fa-envelope"></i>  {{team_lead.contact}}</a></p><br>
 	</div>
 </li>
 {% endmacro %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.js"
+    type="text/javascript"></script>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script>
 $(document).ready(function(){
-	$('.team-caption').fadeIn('slow');
-	$('.all-members').fadeIn('slow')
-	$('.sys-lead-caption').fadeIn('slow');
 	$('.team-banner').fadeIn('slow');
 	$('.team-blurb').fadeIn('slow')
 	$('.team-banner-cap').fadeIn(1100);
+	$('.all-members').fadeIn('slow');
+	$('.team-caption').fadeIn('slow');
+	$('.sys-lead-caption').fadeIn('slow');
 });</script>
 
 <!--Banner Image at top of page-->
@@ -60,8 +62,8 @@ $(document).ready(function(){
 </div>
 <!-- Where all the team shit goes-->
 <br>
-<div class = "all-members" style="text-align:center">
-<h3>Team Captains</h3>
+<div class = "all-members">
+<h1>Team Captains</h1>
 	<div class="team-caption">
 			<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 			{% for team_lead in team_leads %}
