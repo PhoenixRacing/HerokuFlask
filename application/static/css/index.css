@@ -12,6 +12,11 @@
 	margin: auto;
 }
 
+.decorator {
+	position:absolute;
+	top:64rem;
+}
+
 @media only screen and (min-width:  64.063em) {
 	
 	/*prevents the banner from collapsing*/
@@ -84,6 +89,7 @@
 .bottom-wrap{
 	max-width: 87.25%;
 	display: none;
+	padding-top: 1rem;
 }
 
 .bottom-slide-wrap{
@@ -100,6 +106,7 @@
 	display:none;
 	margin:auto;
 }
+
 .bottom-slide > img{
 	min-width: 100%;
 	text-align: center;
@@ -140,6 +147,10 @@
 		display:none;
 		/*for some reason this needs to be important...*/
 		width:100% !important;
+	}
+
+	.decorator {
+		display: none;
 	}
 }
 
