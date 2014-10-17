@@ -12,15 +12,20 @@
 <script>
 $(document).ready(function(){
 	$('.donate-background').fadeIn(650);
-	$('.donate-caption').fadeIn(800);
 	$('.sponsors-blurb-wrap').fadeIn(650);
+	$('.donate-caption').fadeIn(1000);
 });
 </script>
 
-
+<!--Decorators and Background Images-->
 <div class="donate-background">
 	<img class="banner-img" src="{{url_for('static',filename='img/background.jpg')}}">
 </div>
+<div class="decorator2">
+  <div><img src="{{url_for('static',filename='img/donate-page-decorator.png')}}"></div>
+</div>
+
+<!--Words and shit-->
 <div class="donate-caption">
 	<div class="small-12 small-centered columns" style="margin:auto; text-align:center">
 		<div><br><br>
@@ -49,13 +54,12 @@ $(document).ready(function(){
   		<div class="small-12 large-6 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/Microsoft-white.png')}}"></div>
 	</div><br><br><br>
 	<div class = "row">
-		<div class="small-12 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/moms-white.jpeg')}}"></div>
+		<div class="small-12 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/moms-white.png')}}"></div>
 		<div class="small-12 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/zygote-lg-white.png')}}"></div>
 		<div class="small-12 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/chillybear-white.png')}}"></div>
-	</div><br><br><br>
+	</div>
 
 </div></div>
-<!--<div class = "random-sponsor-img"><img src = "{{url_for('static', filename='img/random-sponsors-pic.jpg')}}"></div>-->
 <div class = "sponsors-blurb-wrap">
 	<div class = "sponsors-blurb"><br>
 	<h3>Thank you to the following individuals and families!</h3><br><br>
@@ -65,7 +69,6 @@ $(document).ready(function(){
   		<div class="small-12 large-3 columns"><p>Sandy and Sally Small<br>Jeff and Lola Stark<br> Kyle Copeland<br>The McClure Family<br>Marie and Ryan Stark<br>The Morris Family<br>The Rowley Family<br>The Varin Family</p></div>
   		<div class="small-12 large-3 columns"><p>Michael Wallace<br>The Aletty Family<br>The Behling Family<br>The Bledsoe Family<br>The Helmik Family<br>The Bourke Family<br>The Atkinson Family</p></div>
 	</div>
-
 	
 </div>
 </div>

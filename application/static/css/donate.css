@@ -15,17 +15,31 @@
 	display:none;
 }
 
+.decorator-donate {
+	position: relative;
+}
+
+.decorator2 {
+	position: absolute;
+	top:49rem;
+}
+
+
 @media only screen and (max-width: 64.063em) {
 	.sponsors-blurb-wrap {
 		text-align: center;
 		background-color: #111;
-		padding:1rem;
+		padding-top:1rem;
 	}
 
 	.sponsor-img {
 		width:75%;
 		padding-bottom:1.5rem;
 		padding-top:1.5rem;
+	}
+
+	.decorator {
+		display: none;
 	}
 }
 
@@ -75,8 +89,9 @@
 		width:100%; 
 		height:auto;
 		position: relative;
-		background-color: #111;
+		/*background-color: #111;*/
 		display: none;
+		padding:none;
 	}
 
 	.donate-background {

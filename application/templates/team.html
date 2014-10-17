@@ -40,28 +40,35 @@
 <script>
 $(document).ready(function(){
 	$('.team-banner').fadeIn('slow');
-	$('.team-blurb').fadeIn('slow')
-	$('.team-banner-cap').fadeIn(1100);
-	$('.all-members').fadeIn('slow');
-	$('.team-caption').fadeIn('slow');
+	$('.decorator-donate').fadeIn('slow');
+	$('.decorator2').fadeIn('slow');
+	$('.team-blurb').fadeIn(1000)
+	$('.team-banner-cap').fadeIn('slow');
+	$('.all-members').fadeIn(100);
 	$('.sys-lead-caption').fadeIn('slow');
 });</script>
 
-<!--Banner Image at top of page-->
+<!--Banner and background images-->
 <div class="team-banner">
-  <div><img class="donate_banner_image" src="{{url_for('static',filename='img/baja2014teampic.JPG')}}"></div>
+  <div><img class="donate_banner_image" src="{{url_for('static',filename='img/gestures_for_site.png')}}"></div>
+</div>
+<div class="decorator">
+  <div><img src="{{url_for('static',filename='img/team-page-decorator-temp.png')}}"></div>
+</div>
+<div class="decorator2">
+  <div><img src="{{url_for('static',filename='img/team-page-decorator2.png')}}"></div>
 </div>
 <div class ="team-banner-cap">
 	<div class="small-12 small-centered columns">
 		<h2>Meet the Team</h2>
 	</div>
 </div>
+<Br><br>
 <div class = "team-blurb">
-	<p>We are a team of undergraduate engineering students at Olin College of Engineering.<br>
+	<p>We are a team of undergraduate engineering students at Olin College of Engineering. We have a variety of interests and specialties, ranging from mechanical design to web development. Are you an Olin student interested in joining the team? Email one of us!<br>
 	<p>Contact information for each team member is provided below. Feel free to email our general team or subsystem leads with any questions regarding the design and fabrication of our car. Please email our Financial Manager for information on sponsorship. </p>
 </div>
 <!-- Where all the team shit goes-->
-<br>
 <div class = "all-members">
 <h1>Team Captains</h1>
 	<div class="team-caption">

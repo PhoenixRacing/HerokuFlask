@@ -1,10 +1,10 @@
+
 .team-caption {
 	position: relative;
 	width:76%;
 	margin:auto;
 	text-align: center;	
 	padding:1.5rem;
-   	display: none;
 }
 
 .sys-lead-caption {
@@ -20,8 +20,7 @@
 	margin:0 auto;
 	width: 80%;
 	text-align: center;
-	padding-top:3rem;
-	padding-bottom:1rem;
+	padding-top:10rem;
 	display: none;
 }
 
@@ -31,6 +30,8 @@
 	height:100%;
 	margin: auto;
 	text-align: center;
+	padding-top: 1.5rem;
+	padding-bottom: 3.5rem;
 }
 
 .team-blurb p {
@@ -43,35 +44,26 @@ h2 {
 
 .team-banner {
 	display: none;
-	-moz-box-shadow:    inset 0 0 2rem #1f1f1f;
-   	-webkit-box-shadow: inset 0 0 2rem #1f1f1f;
-   	box-shadow:        inset 0 0 2rem #1f1f1f;
+	position: absolute;
+	top:27rem;
 }
 
 .team-banner-cap {
 	position: absolute;
-	background-color: rgba(34,34,34,0.72);
 	padding-right:1.5rem;
 	padding-left:1.5rem;
-	padding-top:1.5rem;
-	padding-bottom:1.5rem;
-	top:37rem;
+	padding-top:2.25rem;
+	padding-bottom:5rem;
+	top:4rem;
 	text-align: center;
 	display:none;
 	width:100%;
-	-moz-box-shadow:    inset 0 0 1rem #111;
-   	-webkit-box-shadow: inset 0 0 1rem #111;
-   	box-shadow:        inset 0 0 1rem #111;
 }
 
 .teamMembers {
 	padding-left:1.5%;
 	padding-right:1.5%;
 	line-height: 90% !important;
-}
-
-.gold-container {
-	width:20rem;
 }
 
 .teamMembers img {
@@ -81,6 +73,21 @@ h2 {
    	box-shadow:        0 0 1rem #000;
 }
 
+.decorator {
+	position:absolute;
+	bottom:8rem;
+	right:-7rem;
+	display: none;
+}
+
+.decorator2 {
+	position:absolute;
+	bottom:-11.5rem;
+	left:-13rem;
+	display: none;
+}
+
+
 @media only screen and (max-width:  64.063em) {
 	.team-banner-cap {
 		position:relative;
@@ -89,6 +96,10 @@ h2 {
 
 	h2 {
 		font-size: 3rem;
+	}
+
+	.decorator {
+		display: none;
 	}
 }
 
