@@ -1,24 +1,24 @@
 .footer {
-	padding:.5% 1% .5% 1%;
-	bottom:1%;
+	position: relative;
+	padding-top: 1rem;
+	padding-bottom: 0rem;
+	width: 100%;
+	text-align: center;
+
 }
 
-.left-foot {
-	color:white;
-	text-align:left;
-	width:50%;
-	bottom:1%;
+
+.link img{
+	height:1rem;
 }
 
-.right-foot {
-	margin-right: 0;
-	text-align:right;
-	width:100%;
-	bottom:1%;
+.link{
+	display: inline-block;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 }
 
-.twitter-wrapper {
-	bottom:0;
-	position:absolute;
-	text-align: right;
+.name{
+	display: inline-block;
+	color: white;
 }

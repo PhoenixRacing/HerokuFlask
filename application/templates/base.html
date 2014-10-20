@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/base.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/froala_editor.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
 	{% endblock %}
 
 	<!-- Blocking Javascript Load-->
@@ -38,7 +39,7 @@
 			<section class="main-section scroll-container">
 				{% block notify %}{%include 'notify.html'%}{% endblock %}
 				{% block content %}{% endblock %}
-				{% block footer %}{% endblock %}	
+				{% block footer %}{%include 'footer.html' %}{% endblock %}	
 			</section>
 		</div>
 	</div>
