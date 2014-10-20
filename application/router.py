@@ -54,7 +54,7 @@ def logout():
 def data():
 	return controllers.data()
 
-@app.route("/subsystems/")
+@app.route("/car/")
 def subteams():
 	return controllers.subteams()
 
@@ -62,17 +62,9 @@ def subteams():
 def subteam_description(subteam_name):
 	return controllers.description(subteam_name)
 
-@app.route("/donate/")
+@app.route("/sponsorship/")
 def donate():
 	return controllers.donate()
-
-@app.route("/sponsors/")
-def sponsors():
-	return controllers.sponsors()
-	
-@app.route("/follow/")
-def follow():
-	return controllers.follow()
 
 @app.route("/chassis/")
 def chassis():
@@ -132,34 +124,6 @@ def modify_access(user_id):
 @admin_required
 def delete_user(user_id):
 	return controllers.delete_user(user_id)
-
-@app.route("/blog/")
-@login_required
-def view_blog():
-	return controllers.view_blog()
-
-@app.route("/blog/<post_id>/")
-@login_required
-def view_post(post_id):
-	return controllers.view_post(post_id)
-
-@app.route("/blog/create/", methods=['POST','GET'])
-@login_required
-@edit_required
-def create_post():
-	return controllers.create_post()
-
-@app.route("/blog/edit/<post_id>/", methods=['POST','GET'])
-@login_required
-@edit_required
-def edit_post(post_id):
-	return controllers.edit_post(post_id)
-
-@app.route("/blog/delete/<post_id>", methods=['GET','POST'])
-@login_required
-@edit_required
-def delete_post(post_id):
-	return controllers.delete_post(post_id)
 
 @app.route("/upload/", methods=['POST'])
 @login_required

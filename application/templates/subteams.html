@@ -31,18 +31,31 @@ $(document).ready(function(){
 	$('.electrical-blurb').fadeIn(900);
 	$('.chassis-blurb').fadeIn(1100);
 	$('.suspension-blurb').fadeIn(1300);
+	$('.pointers').fadeIn('fast');
 });
 </script>
 
 
 <div class = "car-render">
-	<img src="{{url_for('static',filename='img/full_car_2014.JPG')}}">
+	<img src="{{url_for('static',filename='img/full_car_2014.png')}}">
 </div>
-<div class = "electrical-blurb">{{subteam_block(subteams[0])}}
+<div class = "chassis-blurb">{{subteam_block(subteams[0])}}
 </div>
-<div class = "chassis-blurb">{{subteam_block(subteams[1])}}
+<div class = "drivetrain-blurb">{{subteam_block(subteams[1])}}
 </div>
-<div class = "drivetrain-blurb">{{subteam_block(subteams[2])}}</div>
-<div class = "suspension-blurb">{{subteam_block(subteams[3])}}</div>
+<div class = "electrical-blurb">{{subteam_block(subteams[2])}}</div>
+<div class = "suspension-blurb">{{subteam_block(subteams[3])}}</div><br><br>
+<!--<div class = "pointers">
+<div class = "chassis-line">
+		<img src="{{url_for('static',filename='img/chassis-line.png')}}">
+</div>
+<div class = "drivetrain-line">
+		<img src="{{url_for('static',filename='img/drivetrain-line.png')}}">
+</div>
+<div class = "suspension-line">
+		<img src="{{url_for('static',filename='img/suspension-line.png')}}">
+</div>
+</div>-->
+
 
 {% endblock %}

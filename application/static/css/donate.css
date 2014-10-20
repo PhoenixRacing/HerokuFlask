@@ -25,15 +25,15 @@
 }
 
 
-@media only screen and (max-width: 64.063em) {
+
+@media only screen and (max-width: 70em) {
 	.sponsors-blurb-wrap {
 		text-align: center;
-		background-color: #111;
 		padding-top:1rem;
 	}
 
 	.sponsor-img {
-		width:75%;
+		width:65%;
 		padding-bottom:1.5rem;
 		padding-top:1.5rem;
 	}
@@ -43,7 +43,7 @@
 	}
 }
 
-@media only screen and (min-width:  64.063em) {
+@media only screen and (min-width:  70em) {
 	.sponsor-img {
 		height:auto;
 		width:100%;
@@ -61,7 +61,7 @@
 		width: 100%;
 		height:auto;
 		margin:auto;
-		top:6%;
+		top:5.5%;
 		position: absolute;
 		text-align: center;
 		display:none;

@@ -24,7 +24,6 @@ $(document).ready(function(){
 <div class="decorator2">
   <div><img src="{{url_for('static',filename='img/donate-page-decorator.png')}}"></div>
 </div>
-
 <!--Words and shit-->
 <div class="donate-caption">
 	<div class="small-12 small-centered columns" style="margin:auto; text-align:center">
@@ -34,6 +33,7 @@ $(document).ready(function(){
 		<a href="https://www.olin.edu/invest/ways/making-your-gift-olin-college/" target="_blank"><button class="button secondary radius">Donate Online</button></a>
 		</div><br>
 			<p>We are an entirely donation-funded organization, so we rely on the support of people like you to keep this valuable educational opportunity available to our students. To donate online, please visit the Olin donation website by clicking the button above and select "Student Project: Mini-Baja (Phoenix Racing Team)" in the 'Gift Information' field.</p>
+			<p><a href="{{url_for('static',filename='img/ParentSponsorshipLevels.png')}}">Click here </a> for further information on individual sponsorship.</p>
 			<p><strong>See below for information about becoming a corporate sponsor!</strong></p>
 		</div>
 	</div>
@@ -42,21 +42,21 @@ $(document).ready(function(){
 <div class = "sponsors-blurb-wrap">
 	<div class = "sponsors-blurb">
 	<h1>Our 2014 Sponsors</h1><br>
-	<p>What we do is only possible thanks to the help of the following people and organizations. For further on corporate sponsorship, please contact our fundraising manager, <a class="inline-a" href="mailto:kevin.suzuki@students.olin.edu">Kevin Suzuki</a>.</p><br>
+	<p>What we do is only possible thanks to the help of the following people and organizations. <p><a href="{{url_for('static',filename='img/CorporateSponsorshipLevels.png')}}">Click here</a> to view our corporate sponsorship brochure. For further information on corporate sponsorship, please contact our fundraising manager, <a class="inline-a" href="mailto:kevin.suzuki@students.olin.edu">Kevin Suzuki</a>.</p><br>
 	<h3>Thank you to all of our Corporate sponsors! </h3><br><br>
 	<div class="row">
-		<div class="small-12 large-6 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/BOSE-white.png')}}"></div>
-		<div class="small-12 large-6 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/boeing-white.png')}}"></div>
+		<div class="small-12 medium-6 large-6 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/BOSE-white.png')}}"></div>
+		<div class="small-12 medium-6 large-6 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/boeing-white.png')}}"></div>
 
 	</div><br><br><Br>
 	<div class = "row">
-		<div class="small-12 large-6 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/bristolmyers-white.gif')}}"></div>
-  		<div class="small-12 large-6 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/Microsoft-white.png')}}"></div>
+		<div class="small-12 medium-6 large-6 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/bristolmyers-white.gif')}}"></div>
+  		<div class="small-12 medium-6 large-6 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/Microsoft-white.png')}}"></div>
 	</div><br><br><br>
 	<div class = "row">
-		<div class="small-12 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/moms-white.png')}}"></div>
-		<div class="small-12 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/zygote-lg-white.png')}}"></div>
-		<div class="small-12 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/chillybear-white.png')}}"></div>
+		<div class="small-12 medium-4 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/moms-white.png')}}"></div>
+		<div class="small-12 medium-4 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/zygote-lg-white.png')}}"></div>
+		<div class="small-12 medium-4 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/chillybear-white.png')}}"></div>
 	</div>
 
 </div></div>
@@ -64,10 +64,10 @@ $(document).ready(function(){
 	<div class = "sponsors-blurb"><br>
 	<h3>Thank you to the following individuals and families!</h3><br><br>
 	<div class = "row">
-		<div class="small-12 large-3 columns"><p>Xy Ziemba<br> Ert McMullen<br>Tim Raymond<br>Ryan Harris<br> Jim Switzer<br>Alex Jenko<br>Richard Harris<br>The Andree Family </p></div>
-  		<div class="small-12 large-3 columns"><p>The Perry Family<br>Guy and Barbara Jordan<br>The McCauley Family<br>The Townsend Family<br>The Celik Family<br> The Hilton-Joyce Family<br>Kathleen Scully<br>Annabelle Carr<br></p></div>
-  		<div class="small-12 large-3 columns"><p>Sandy and Sally Small<br>Jeff and Lola Stark<br> Kyle Copeland<br>The McClure Family<br>Marie and Ryan Stark<br>The Morris Family<br>The Rowley Family<br>The Varin Family</p></div>
-  		<div class="small-12 large-3 columns"><p>Michael Wallace<br>The Aletty Family<br>The Behling Family<br>The Bledsoe Family<br>The Helmik Family<br>The Bourke Family<br>The Atkinson Family</p></div>
+		<div class="small-12 medium-6 large-3 columns"><p>Xy Ziemba<br> Ert McMullen<br>Tim Raymond<br>Ryan Harris<br> Jim Switzer<br>Alex Jenko<br>Richard Harris<br>The Andree Family </p></div>
+  		<div class="small-12 medium-6 large-3 columns"><p>The Perry Family<br>Guy and Barbara Jordan<br>The McCauley Family<br>The Townsend Family<br>The Celik Family<br> The Hilton-Joyce Family<br>Kathleen Scully<br>Annabelle Carr<br></p></div>
+  		<div class="small-12 medium-6 large-3 columns"><p>Sandy and Sally Small<br>Jeff and Lola Stark<br> Kyle Copeland<br>The McClure Family<br>Marie and Ryan Stark<br>The Morris Family<br>The Rowley Family<br>The Varin Family</p></div>
+  		<div class="small-12 medium-6 large-3 columns"><p>Michael Wallace<br>The Aletty Family<br>The Behling Family<br>The Bledsoe Family<br>The Helmik Family<br>The Bourke Family<br>The Atkinson Family</p></div>
 	</div>
 	
 </div>
