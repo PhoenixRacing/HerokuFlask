@@ -12,6 +12,7 @@
 }
 
 .footer {
+<<<<<<< HEAD
 	position: absolute;
 	text-align: right;
 	width:100%;
@@ -46,3 +47,28 @@
 	}
 }
 
+=======
+	position: relative;
+	padding-top: 1rem;
+	padding-bottom: 0rem;
+	width: 100%;
+	text-align: center;
+
+}
+
+
+.link img{
+	height:1rem;
+}
+
+.link{
+	display: inline-block;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.name{
+	display: inline-block;
+	color: white;
+}
+>>>>>>> d5ff20010dc28bad4e37c2fc6229c61fd60e83bc
