@@ -47,7 +47,7 @@
 	background-color: rgba(34,34,34,0.7);
 	position:absolute;
 	padding: 2rem;
-	top: 60%;
+	top: 59%;
 	left:79%;
 	border-radius: 50%;
 	text-align: center;
@@ -96,6 +96,9 @@
 	opacity: 1;
 }
 
+.footer_container {
+	display: none;
+}
 
 .electrical-blurb:hover, .suspension-blurb:hover, .drivetrain-blurb:hover, .chassis-blurb:hover {
 	background-color: rgba(34,34,34,0.9);

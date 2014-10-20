@@ -181,7 +181,7 @@
 }
 
 /*Some other formatting that was driving me crazy*/
-p, h1, h2, h3, h4, small {
+p, h1, h2, h3, h4, small, strong {
 	color:white;
 	font-family: "Century Gothic"," Gadget", "Helvetica", sans-serif !important;
 }
