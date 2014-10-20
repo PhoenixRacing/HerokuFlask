@@ -54,7 +54,7 @@
 	display: none;
 }
 
-.chassis-blurb {
+.body-blurb {
 	width:16rem;
 	height:16rem;
 	background-color: rgba(34,34,34,0.7);
@@ -100,14 +100,15 @@
 	display: none;
 }
 
-.electrical-blurb:hover, .suspension-blurb:hover, .drivetrain-blurb:hover, .chassis-blurb:hover {
+.electrical-blurb:hover, .suspension-blurb:hover, .drivetrain-blurb:hover, .body-blurb:hover {
 	background-color: rgba(34,34,34,0.9);
 }
 
 @media only screen and (max-width:  64em) {
 
-	.suspension-blurb, .chassis-blurb, .drivetrain-blurb, .electrical-blurb{
+	.suspension-blurb, .body-blurb, .drivetrain-blurb, .electrical-blurb{
 		position:relative;
+		height:17rem;
 		border-radius:0rem;
 		margin:0 auto;
 		text-align: center;
@@ -123,7 +124,7 @@
 	.subsystems {
 		padding-bottom:3rem;
 	}
-	.electrical-blurb:hover, .suspension-blurb:hover, .drivetrain-blurb:hover, .chassis-blurb:hover {
+	.electrical-blurb:hover, .suspension-blurb:hover, .drivetrain-blurb:hover, .body-blurb:hover {
 	background-color: rgba(34,34,34,0.7);
 	}
 
