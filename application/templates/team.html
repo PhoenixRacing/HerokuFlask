@@ -5,6 +5,7 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/team.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
 {% endblock %}
 
 <!--html here-->
@@ -97,4 +98,6 @@ $(document).ready(function(){
 	</div>
 </div>
 <br>
+{% block footer %}{%include 'footer.html' %}{% endblock %}
 {% endblock %}
+
