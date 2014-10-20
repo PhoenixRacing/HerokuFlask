@@ -136,7 +136,7 @@ manik.contact = 'Manik.Sethi@students.olin.edu'
 sawyer = team_member()
 sawyer.name = 'Sawyer Vaughan'
 sawyer.image_path = 'img/team/sawyer.PNG'
-sawyer.major = 'Electrical Computer Engineering'
+sawyer.major = 'Electrical and Computer Engineering'
 sawyer.year = '2017'
 sawyer.contact = 'Sawyer.vaughan@students.olin.edu'
 
@@ -189,6 +189,26 @@ luke.major = 'Mechanical Engineering'
 luke.year = '2017'
 luke.contact = "luke.morris@students.olin.edu"
 
+forrest = team_member()
+forrest.name = "Forrest Bourke"
+forrest.image_path = "img/team/forrest.jpg"
+forrest.major = "Electrical and Computer Engineering"
+forrest.year = '2016'
+forrest.contact = "forrest.bourke@students.olin.edu"
+
+patrick = team_member()
+patrick.name = "Patrick Huston"
+patrick.image_path = "img/team/patrick.jpg"
+patrick.major = "Electrical and Computer Engineering"
+patrick.year = "2018"
+patrick.contact = "patrick.huston@students.olin.edu"
+
+kai = team_member()
+kai.name = "Kai Levy"
+kai.image_path = "img/team/kai.png"
+kai.major = "Electrical and Computer Engineering"
+kai.year = "2018"
+kai.contact = "kai.levy@students.olin.edu"
 
 team_leads = {'chris': chris, 'maddie': maddie, 'kate': kate}
 
@@ -197,4 +217,4 @@ system_leads = {'joe': joe, 'deborah': deborah, 'daniel': daniel, 'lindsey': lin
 general_mems = {'kevin': kevin, 'brandon': brandon, 'anders': anders, 'meg': meg, \
 	'selina': selina, 'brett': brett, 'manik':manik, 'sawyer':sawyer, \
 	'searing': searing, 'kelli':kelli, 'keenan':keenan, 'zoe': zoe, 'ad': ad, \
-	'lauren': lauren, 'luke': luke}
+	'lauren': lauren, 'luke': luke, 'forrest': forrest, 'patrick': patrick, 'kai': kai}

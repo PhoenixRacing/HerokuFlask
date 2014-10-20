@@ -26,9 +26,9 @@
 	<div class="teamMembers">
 		<img src="{{url_for('static',filename=team_lead.image_path)}}"><br><br>
 		<h3> {{team_lead.name}} </h3>
-		<p>{{team_lead.major}}<br>
+		<p><strong>{{team_lead.title}}</strong><br>
+		{{team_lead.major}}<br>
 		Class of {{team_lead.year}}<br>
-		{{team_lead.title}}<br>
 		<a class="inline-a" href="mailto:{{team_lead.contact}}"><i class="fa fa-envelope"></i>  Email</a></p><br>
 	</div>
 </li>
@@ -68,7 +68,7 @@ $(document).ready(function(){
 <Br><br>
 <div class = "team-blurb">
 	<p>We are a team of undergraduate engineering students at Olin College of Engineering. We have a variety of interests and specialties, ranging from mechanical design to web development. Are you an Olin student interested in joining the team? Email one of us!<br>
-	<p>Contact information for each team member is provided below. Feel free to email our general team or subsystem leads with any questions regarding the design and fabrication of our car. Please email our Financial Manager for information on sponsorship. </p>
+	<p>Contact information for each team member is provided below. Feel free to email our general team or subsystem leads with any questions regarding the design and fabrication of our car. Please email our Financial Manager, Kevin Suzuki, for information on sponsorship. </p>
 </div>
 <!-- Where all the team shit goes-->
 <div class = "all-members">
