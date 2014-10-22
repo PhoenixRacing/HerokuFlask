@@ -105,12 +105,13 @@ anders.major = 'Mechanical Engineering'
 anders.year = '2017'
 anders.contact = 'anders.johnson@students.olin.edu'
 
-meg = team_member()
+'''meg = team_member()
 meg.name = 'Meg McCauley'
 meg.image_path = 'img/team/meg.jpg'
 meg.major = 'Electrical and Computer Engineering'
 meg.year = '2017'
 meg.contact = 'meg@students.olin.edu'
+'''
 
 selina = team_member()
 selina.name = "Ziyu (Selina) Wang"
@@ -210,11 +211,21 @@ kai.major = "Electrical and Computer Engineering"
 kai.year = "2018"
 kai.contact = "kai.levy@students.olin.edu"
 
+michael = team_member()
+michael.name = "Michael Resnick"
+michael.image_path = "img/team/rezzy.png"
+michael.major = "Mechanical Engineering"
+michael.year = "2016"
+michael.contact = "michael.resnick@students.olin.edu"
+
+
+
 team_leads = {'chris': chris, 'maddie': maddie, 'kate': kate}
 
 system_leads = {'joe': joe, 'deborah': deborah, 'daniel': daniel, 'lindsey': lindsey}
 
-general_mems = {'kevin': kevin, 'brandon': brandon, 'anders': anders, 'meg': meg, \
+general_mems = {'kevin': kevin, 'brandon': brandon, 'anders': anders, \
 	'selina': selina, 'brett': brett, 'manik':manik, 'sawyer':sawyer, \
 	'searing': searing, 'kelli':kelli, 'keenan':keenan, 'zoe': zoe, 'ad': ad, \
-	'lauren': lauren, 'luke': luke, 'forrest': forrest, 'patrick': patrick, 'kai': kai}
+	'lauren': lauren, 'luke': luke, 'forrest': forrest, 'patrick': patrick, 'kai': kai,\
+	"michael": michael}

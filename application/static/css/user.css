@@ -21,3 +21,8 @@
 .hack-padding{
 	height:15px;
 }
+
+p, h1, h2, h3, h4, small, strong, div {
+	color:white;
+	font-family: "Avant Garde", "Helvetica", sans-serif !important;
+}
