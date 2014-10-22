@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, url_for
 from flask.ext.login import current_user
-from ..models import EditUserForm, EditPasswordForm, Notify
+from ..models import EditUserForm, EditPasswordForm, Notify, ForgotPasswordForm
 
 def user():
 	if request.args.get('notify'):
@@ -25,6 +25,21 @@ def edit_user():
 
 
 	return render_template('edit_user.html', form=form)
+
+def forgot_password():
+	form = ForgotPasswordForm(request.form)
+	if request.method == 'POST' and form.validate():
+		user = User.objects(email = form.data['email'])
+		if user.count() > 0:
+			old_user = user.first()
+			new_password = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
+			old_user.password = new_password
+			old_user.save()
+			send_email(form.data['email'], new_password)
+			#send_email('sawyer.vaughan@students.olin.edu', new_password)
+			notification = Notify(notification_type = 'success', message = 'Check your email')
+			return redirect(url_for('edit_password', notify = True, notify_type = notification.type, notify_message = notification.message))
+	return render_template('forgot_password.html', form=form)
 
 def edit_password():
 	form = EditPasswordForm(request.form)
