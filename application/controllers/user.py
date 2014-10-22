@@ -1,6 +1,9 @@
 from flask import render_template, request, redirect, url_for
 from flask.ext.login import current_user
 from ..models import EditUserForm, EditPasswordForm, Notify, ForgotPasswordForm
+from ..models import User
+import string
+import random
 
 def user():
 	if request.args.get('notify'):
