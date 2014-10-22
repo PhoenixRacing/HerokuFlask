@@ -57,3 +57,25 @@ def edit_password():
 			notification = Notify(notification_type = 'error', message = 'Old Password Incorrect') 
 			return render_template('edit_password.html', form=form, notify = notification)
 	return render_template('edit_password.html', form=form)
+
+def send_email(email, new_password):
+    import smtplib
+ 
+    gmail_user = "recover.phoenixracing@gmail.com"
+    gmail_pwd = "PhoenixRacing"
+    FROM = 'recover.phoenixracing@gmail.com'
+    TO = [email] #must be a list
+    SUBJECT = "Reset Your Password"
+    TEXT = "You requested a new password for olinbaja.com. Your new password for olinbaja.com is "+new_password+". Please login to olinbaja.com as soon as possible to change your password to something you will remember."
+
+    # Prepare actual message
+    message = """\From: %s\nTo: %s\nSubject: %s\n\n%s""" % (FROM, ", ".join(TO), SUBJECT, TEXT)
+    try:
+        server = smtplib.SMTP("smtp.gmail.com", 587) #or port 465 doesn't seem to work!
+        server.ehlo()
+        server.starttls()
+        server.login(gmail_user, gmail_pwd)
+        server.sendmail(FROM, TO, message)
+        server.close()
+    except:
+        print "failed to send mail"
