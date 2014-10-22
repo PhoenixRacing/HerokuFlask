@@ -25,6 +25,9 @@ class EditPasswordForm(Form):
 	new_password = PasswordField('New Password', [validators.Required(), validators.EqualTo('confirm_new_password', message='Passwords must match')])
 	confirm_new_password = PasswordField('Confirm New Password', [validators.Required(), validators.EqualTo('new_password', message='Passwords must match')])
 
+class ForgotPasswordForm(Form):
+	email = TextField('Email',[validators.Required(), validators.Length(min=6,max=50)])
+
 class PurchaseForm(Form):
 	name = TextField('Name', [validators.DataRequired(), validators.Length(min=3,max=30)])
 	item = TextField('Item', [validators.DataRequired(), validators.Length(min=3,max=30)])
