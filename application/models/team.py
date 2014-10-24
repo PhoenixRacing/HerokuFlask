@@ -136,7 +136,7 @@ manik.contact = 'Manik.Sethi@students.olin.edu'
 
 sawyer = team_member()
 sawyer.name = 'Sawyer Vaughan'
-sawyer.image_path = 'img/team/sawyer.PNG'
+sawyer.image_path = 'img/team/sawyer.jpg'
 sawyer.major = 'Electrical and Computer Engineering'
 sawyer.year = '2017'
 sawyer.contact = 'Sawyer.vaughan@students.olin.edu'
@@ -206,14 +206,14 @@ patrick.contact = "patrick.huston@students.olin.edu"
 
 kai = team_member()
 kai.name = "Kai Levy"
-kai.image_path = "img/team/kai.png"
+kai.image_path = "img/team/kai.jpg"
 kai.major = "Electrical and Computer Engineering"
 kai.year = "2018"
 kai.contact = "kai.levy@students.olin.edu"
 
 michael = team_member()
 michael.name = "Michael Resnick"
-michael.image_path = "img/team/rezzy.png"
+michael.image_path = "img/team/rezzy.jpg"
 michael.major = "Mechanical Engineering"
 michael.year = "2016"
 michael.contact = "michael.resnick@students.olin.edu"
