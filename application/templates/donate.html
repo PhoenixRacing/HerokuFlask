@@ -11,8 +11,15 @@
 
 {% block content %}
 <script>
-$(document).ready(function(){
+/*$(document).ready(function(){
 	$('.donate-background').fadeIn(650);
+	$('.sponsors-blurb-wrap').fadeIn(650);
+	$('.donate-caption').fadeIn(1000);
+});*/
+
+$( window ).resize(function() {
+ 	console.log("Window resized!");
+ 	$('.donate-background').fadeIn(650);
 	$('.sponsors-blurb-wrap').fadeIn(650);
 	$('.donate-caption').fadeIn(1000);
 });
