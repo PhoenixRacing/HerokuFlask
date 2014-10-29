@@ -5,7 +5,6 @@
 {% block styles %}
 {{super()}}
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/donate.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/subsystems.css')}}">
 
 {% endblock %}
@@ -31,7 +30,6 @@ $(document).ready(function(){
 	$('.electrical-blurb').fadeIn(900);
 	$('.body-blurb').fadeIn(1100);
 	$('.suspension-blurb').fadeIn(1300);
-	$('.pointers').fadeIn('fast');
 });
 </script>
 

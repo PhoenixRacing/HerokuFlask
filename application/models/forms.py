@@ -33,7 +33,7 @@ class PurchaseForm(Form):
 	item = TextField('Item', [validators.DataRequired(), validators.Length(min=3,max=30)])
 	cost = TextField('Cost', [validators.DataRequired()])
 	vendor = TextField('Vendor', [validators.DataRequired()])
-	link = TextField('Link', [validators.Length(min=3,max=30), validators.URL(require_tld=True, message=u'Invalid link.')])
+	link = TextField('Link', [validators.URL(require_tld=True, message=u'Invalid link.')])
 	date = TextField('Date Needed', [validators.DataRequired()])
 	quantity = TextField('Quantity', [validators.DataRequired()])
 

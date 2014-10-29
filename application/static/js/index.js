@@ -1,9 +1,18 @@
+/*
+Fade in awesomeness for front page
+*/
 $(document).ready(function(){
-	$('.banner-caption').fadeIn(1700);
 	$('.tryinstuff').fadeIn(600);
+	$('.banner-caption').fadeIn(1700);
 	$('.bottom-slide').fadeIn(500);
-	$('.frontpage-container').fadeIn(800);
 	$('.frontpage-caption').fadeIn('slow');
 	$('.bottom-wrap').fadeIn(800);
-	$('.container').fadeIn('slow');
+});
+
+$( window ).resize(function() {
+	$('.tryinstuff').fadeIn(600);
+	$('.banner-caption').fadeIn(1700);
+	$('.bottom-slide').fadeIn(500);
+	$('.frontpage-caption').fadeIn('slow');
+	$('.bottom-wrap').fadeIn(800);
 });
