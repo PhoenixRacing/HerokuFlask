@@ -6,3 +6,13 @@
 	background-color: #f04124;
 	border-color: #B3301B;
 }
+
+p, h1, h2, h3, h4, small, strong, {
+	color:white;
+	font-family: "Avant Garde", "Helvetica", sans-serif !important;
+}
+
+a, form {
+	font-family: "Avant Garde", "Helvetica", sans-serif !important;
+}
+
