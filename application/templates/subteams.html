@@ -11,13 +11,15 @@
 
 
 {% macro subteam_block(subteam) %}
+<a href="{{url_for('subteam_description', subteam_name=subteam.name)}}">
 	<div class="subsystems">
-		<a href="{{url_for('subteam_description', subteam_name=subteam.name)}}">
+		
 			<img src="{{url_for('static',filename=subteam.image_path)}}"><br>
 			<h2 href="{{url_for('subteam_description', subteam_name=subteam.name)}}">{{subteam.name|title}}</h2>
-		</a>
-		<p>{{subteam.short_description}}</p>
+			<p>{{subteam.short_description}}</p>
+		
 	</div>
+</a>
 {% endmacro %}
 
 {% block content %}

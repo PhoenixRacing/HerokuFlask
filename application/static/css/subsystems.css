@@ -123,6 +123,7 @@
 
 	.subsystems {
 		padding-bottom:3rem;
+		border-radius: 50%;
 	}
 	.electrical-blurb:hover, .suspension-blurb:hover, .drivetrain-blurb:hover, .body-blurb:hover {
 	background-color: rgba(34,34,34,0.7);
@@ -130,9 +131,12 @@
 
 }
 
+
+
 @media only screen and (min-width:  64em) {
 	.subsystems img {
 		display:none;
 	}
+
 
 }
