@@ -106,6 +106,10 @@ def edit_user():
 def edit_password():
 	return controllers.edit_password()
 
+@app.route("/user/forgot_password/", methods=['GET','POST'])
+def forgot_password():
+	return controllers.forgot_password()
+
 @app.route("/admin/", methods=['GET','POST'])
 @fresh_login_required
 @admin_required
