@@ -39,6 +39,7 @@
     type="text/javascript"></script>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.lazyload.js" type="text/javascript"></script>
 <script>
 $(document).ready(function(){
 	$('.team-banner').fadeIn('slow');
@@ -46,7 +47,7 @@ $(document).ready(function(){
 	$('.team-banner-cap').fadeIn('slow');
 	$('.decorator-donate').fadeIn('slow');
 	$('.decorator2').fadeIn('slow');
-	$('.all-members').fadeIn(100);
+	$('.all-members').fadeIn(800);
 	$('.sys-lead-caption').fadeIn('slow');
 });</script>
 
@@ -98,6 +99,7 @@ $(document).ready(function(){
 	</div>
 </div>
 <br>
+<script src="{{url_for('static',filename='jquery/lazyload.js')}}" type="text/javascript"></script>
 {% block footer %}{%include 'footer.html' %}{% endblock %}
 {% endblock %}
 

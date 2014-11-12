@@ -218,6 +218,13 @@ michael.major = "Mechanical Engineering"
 michael.year = "2016"
 michael.contact = "michael.resnick@students.olin.edu"
 
+emily = team_member()
+emily.name = "Emily Guthrie"
+emily.image_path = "img/team/emily.jpg"
+emily.major = "Electrical and Computer Engineering"
+emily.year = "2016"
+emily.contact = "emily.guthrie@students.olin.edu"
+
 
 team_leads = {'chris': chris, 'maddie': maddie, 'kate': kate}
 
@@ -227,4 +234,4 @@ general_mems = {'kevin': kevin, 'brandon': brandon, 'anders': anders, \
 	'selina': selina, 'brett': brett, 'manik':manik, 'sawyer':sawyer, \
 	'searing': searing, 'kelli':kelli, 'keenan':keenan, 'zoe': zoe, 'ad': ad, \
 	'lauren': lauren, 'luke': luke, 'forrest': forrest, 'patrick': patrick, 'kai': kai,\
-	"michael": michael, 'meg': meg}
+	"michael": michael, 'meg': meg, 'emily': emily}
