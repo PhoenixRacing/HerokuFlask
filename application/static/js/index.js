@@ -16,3 +16,4 @@ $( window ).resize(function() {
 	$('.frontpage-caption').fadeIn('slow');
 	$('.bottom-wrap').fadeIn(800);
 });
+
