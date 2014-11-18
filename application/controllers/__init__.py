@@ -15,3 +15,4 @@ from beaglebone import debug, post_data
 from follow import follow
 from team import team
 from purchases import purchases
+from gallery import gallery

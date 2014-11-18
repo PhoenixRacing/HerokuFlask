@@ -5,4 +5,5 @@ from notify import Notify
 from blog import BlogPost
 from data import Vector, DataSession, DataPoint
 from team import team_leads, general_mems, system_leads 
+from gallery import picture_list
 #uncomment this top line once you make team_list in the team.py 

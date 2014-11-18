@@ -58,6 +58,10 @@ def data():
 def subteams():
 	return controllers.subteams()
 
+@app.route("/gallery/")
+def gallery():
+	return controllers.gallery()
+
 @app.route("/subsystems/<subteam_name>/")
 def subteam_description(subteam_name):
 	return controllers.description(subteam_name)
