@@ -10,7 +10,7 @@
 {% macro image_block(picture) %}
 <li>
 	<div class="Pictures">
-		<img class="fancybox" src="{{url_for('static',filename=picture.image_path)}}" data-big="{{url_for('static',filename=picture.big_path)}}" title="{{picture.caption}}"><br>
+		<img class="fancybox" src="{{url_for('static',filename=picture.image_path)}}" data-big="{{url_for('static',filename=picture.image_path)}}" title="{{picture.caption}}"><br>
 		<p>{{picture.caption}}</p><br>
 	</div>
 </li>
