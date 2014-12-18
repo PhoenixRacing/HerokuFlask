@@ -2,6 +2,7 @@
 
 {% block styles %}
 {{super()}}
+<link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/gallery.css')}}">
 {% endblock %}
@@ -9,7 +10,7 @@
 {% macro image_block(picture) %}
 <li>
 	<div class="Pictures">
-		<img src="{{url_for('static',filename=picture.image_path)}}"><br>
+		<img class="fancybox" src="{{url_for('static',filename=picture.image_path)}}" data-big="{{url_for('static',filename=picture.big_path}}" title="{{picture.caption}}"><br>
 		<p>{{picture.caption}}</p><br>
 	</div>
 </li>
@@ -20,6 +21,7 @@
     type="text/javascript"></script>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="{{url_for('static',filename='js/gallery.js')}}"></script>
 
 <script>
 $(document).ready(function(){
@@ -35,5 +37,7 @@ $(document).ready(function(){
 {% endfor %}
 </ul>
 </div>
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
 
 {% endblock %}
