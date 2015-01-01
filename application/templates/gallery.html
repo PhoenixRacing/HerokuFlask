@@ -2,16 +2,19 @@
 
 {% block styles %}
 {{super()}}
-<link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/gallery.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='fancybox/source/jquery.fancybox.css')}}" type="text/css" media="screen" />
 {% endblock %}
 
 {% macro image_block(picture) %}
 <li>
 	<div class="Pictures">
-		<img class="fancybox" src="{{url_for('static',filename=picture.image_path)}}" data-big="{{url_for('static',filename=picture.image_path)}}" title="{{picture.caption}}"><br>
-		<p>{{picture.caption}}</p><br>
+		<a class = "fancybox" rel = "gallery" href = "{{url_for('static',filename=picture.image_path)}}" title="{{picture.caption}}">
+			<img src="{{url_for('static',filename=picture.image_path)}}">
+		</a><br>
+		<!--<p>{{picture.caption}}</p><br>-->
 	</div>
 </li>
 {% endmacro %}
@@ -21,12 +24,19 @@
     type="text/javascript"></script>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="{{url_for('static',filename='js/gallery.js')}}"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-<script>
+<script type="text/javascript" src = "{{url_for('static',filename='fancybox/source/jquery.fancybox.pack.js')}}"></script>
+
+
+<script type = "text/javascript">
 $(document).ready(function(){
 	$(".Gallery_Title").fadeIn('slow');
 	$(".Gallery_Content").fadeIn('slow');
+	$(".fancybox").fancybox({
+		padding: 8,
+		maxHeight: 600
+	});
 });</script>
 
 <div class = "Gallery_Title"><h1>Gallery</h1></div>
@@ -38,6 +48,5 @@ $(document).ready(function(){
 </ul>
 </div>
 
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
 
 {% endblock %}
