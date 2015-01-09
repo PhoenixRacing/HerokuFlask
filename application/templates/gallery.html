@@ -26,20 +26,32 @@
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
+<!--FancyBox gallery stuff-->
 <script type="text/javascript" src = "{{url_for('static',filename='fancybox/source/jquery.fancybox.pack.js')}}"></script>
-
 
 <script type = "text/javascript">
 $(document).ready(function(){
+	$(".decorator").fadeIn(250);
 	$(".Gallery_Title").fadeIn('slow');
-	$(".Gallery_Content").fadeIn('slow');
+	$(".Gallery_Blurb").fadeIn(600);
+	$(".Gallery_Content").fadeIn(800);
+	$(".decorator2").fadeIn('slow');
 	$(".fancybox").fancybox({
 		padding: 8,
 		maxHeight: 600
 	});
 });</script>
-
+<div class="decorator">
+  <div><img src="{{url_for('static',filename='img/donate-page-decorator.png')}}"></div>
+</div>
+<div class="decorator2">
+  <div><img src="{{url_for('static',filename='img/donate-decorator-2.png')}}"></div>
+</div>
 <div class = "Gallery_Title"><h1>Gallery</h1></div>
+<div class = "Gallery_Blurb">
+	<h4>A collection of pictures from various drive days, work days, and competitions. </h4>
+	<h4>Click on photos to enlarge.</h4>
+</div>
 <div class = "Gallery_Content">
 	<ul class = "small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 {% for i in range(0, pictures|length) %}
@@ -49,4 +61,12 @@ $(document).ready(function(){
 </div>
 
 
+<!--Lazyload jQuery-->
+<script src="{{url_for('static',filename='jquery/lazyload.js')}}" type="text/javascript"></script>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.lazyload.js" type="text/javascript"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+{% block footer %}{%include 'footer.html' %}{% endblock %}
 {% endblock %}

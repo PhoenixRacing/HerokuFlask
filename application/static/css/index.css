@@ -6,7 +6,7 @@
 }
 
 .banner-caption{	
-	background-color: rgba(34,34,34,0.83);
+	background-color: rgba(34,34,34,0.87);
 	padding-top: 1%;
 	text-align: center;
 	margin: auto;
@@ -28,7 +28,7 @@
 		width: 100%;
 		height:auto;
 		margin:auto;
-		top:27.5%;
+		top:28%;
 		position: absolute;
 		text-align: center;
 		display:none;
@@ -38,7 +38,7 @@
    		box-shadow:        inset 0 0 2rem #1f1f1f;
 	}
 	.banner-caption img{
-		max-width: 61%;
+		max-width: 58%;
 		text-align: center;
 		padding-left:3%;
 		padding-right: 3%;

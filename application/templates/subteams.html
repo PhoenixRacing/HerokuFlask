@@ -35,28 +35,23 @@ $(document).ready(function(){
 });
 </script>
 
-<div>
+
 <div class = "car-render">
 	<img src="{{url_for('static',filename='img/full_car_2014.png')}}">
 </div>
-<div class = "{{subteams[0].name}}-blurb">{{subteam_block(subteams[0])}}
+<div class = "caption">
+	<h1>The 2014 Racing Vehicle</h1>
+	<small>Click the blurbs for more information about the design and fabrication of each of the car's systems</small>
 </div>
-<div class = "{{subteams[1].name}}-blurb">{{subteam_block(subteams[1])}}
-</div>
-<div class = "{{subteams[2].name}}-blurb">{{subteam_block(subteams[2])}}</div>
-<div class = "{{subteams[3].name}}-blurb">{{subteam_block(subteams[3])}}</div>
-</div><br><Br>
-<!--<div class = "pointers">
-}<div class = "chassis-line">
-		<img src="{{url_for('static',filename='img/chassis-line.png')}}">
-</div>
-<div class = "drivetrain-line">
-		<img src="{{url_for('static',filename='img/drivetrain-line.png')}}">
-</div>
-<div class = "suspension-line">
-		<img src="{{url_for('static',filename='img/suspension-line.png')}}">
-</div>
-</div>-->
+<ul class = "small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+	<li><div class = "{{subteams[0].name}}-blurb">{{subteam_block(subteams[0])}}
+	<div></li>
+	<li><div class = "{{subteams[1].name}}-blurb">{{subteam_block(subteams[1])}}
+	</div></li>
+	<li><div class = "{{subteams[2].name}}-blurb">{{subteam_block(subteams[2])}}</div></li>
+	<li><div class = "{{subteams[3].name}}-blurb">{{subteam_block(subteams[3])}}</div></li>
+</ul>
+<br><br>
 
 
 {% endblock %}
