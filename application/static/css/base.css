@@ -2,6 +2,9 @@ body,html{
     height:100%;
     width:100%;
     background-color: #222;
+    font-weight:normal;
+    -webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
 }
 
 body,
@@ -19,6 +22,7 @@ h6,
 .h5,
 .h6 {
     font-family: "Lato", Helvetica, sans-serif!important;
+    opacity: 0.99;
 }
 
 .banner{
