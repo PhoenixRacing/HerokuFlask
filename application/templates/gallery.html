@@ -6,6 +6,21 @@
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/gallery.css')}}">
 <link rel="stylesheet" href="{{url_for('static',filename='fancybox/source/jquery.fancybox.css')}}" type="text/css" media="screen" />
+<script type="text/javascript" src="{{url_for('static', filename='fancybox/lib/jquery-1.10.1.min.js')}}"></script>
+<script type="text/javascript" src = "{{url_for('static',filename='fancybox/source/jquery.fancybox.pack.js')}}"></script>
+<script type="text/javascript" src = "{{url_for('static',filename='fancybox/source/jquery.fancybox.js')}}"></script>
+<script>
+$(document).ready(function($) {
+	$(".decorator").fadeIn("fast");
+	$(".Gallery_Title").fadeIn('slow');
+	$(".Gallery_Blurb").fadeIn("fast");
+	$(".Gallery_Content").fadeIn("fast");
+	$(".decorator2").fadeIn('fast');
+	$(".fancybox").fancybox({
+		padding: 8,
+		maxHeight: 600
+	});
+});</script>
 {% endblock %}
 
 {% macro image_block(picture) %}
@@ -20,27 +35,17 @@
 {% endmacro %}
 
 {% block content %}
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.js"
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.js"
     type="text/javascript"></script>
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>-->
 
 <!--FancyBox gallery stuff-->
+<!--<script type="text/javascript" src="{{url_for('static', filename='fancybox/lib/jquery-1.10.1.min.js')}}"></script>
 <script type="text/javascript" src = "{{url_for('static',filename='fancybox/source/jquery.fancybox.pack.js')}}"></script>
+<script type="text/javascript" src = "{{url_for('static',filename='fancybox/source/jquery.fancybox.js')}}"></script>-->
 
-<script type = "text/javascript">
-$(document).ready(function(){
-	$(".decorator").fadeIn(250);
-	$(".Gallery_Title").fadeIn('slow');
-	$(".Gallery_Blurb").fadeIn(600);
-	$(".Gallery_Content").fadeIn(800);
-	$(".decorator2").fadeIn('slow');
-	$(".fancybox").fancybox({
-		padding: 8,
-		maxHeight: 600
-	});
-});</script>
+
 <div class="decorator">
   <div><img src="{{url_for('static',filename='img/donate-page-decorator.png')}}"></div>
 </div>
@@ -63,10 +68,6 @@ $(document).ready(function(){
 
 <!--Lazyload jQuery-->
 <script src="{{url_for('static',filename='jquery/lazyload.js')}}" type="text/javascript"></script>
-<script src="jquery.js" type="text/javascript"></script>
-<script src="jquery.lazyload.js" type="text/javascript"></script>
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 {% block footer %}{%include 'footer.html' %}{% endblock %}
 {% endblock %}
