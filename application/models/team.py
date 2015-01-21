@@ -158,7 +158,7 @@ kelli.contact = "kelli.shimazu@students.olin.edu"
 keenan = team_member()
 keenan.name = "Keenan Zucker"
 keenan.image_path = 'img/team/keenan.jpg'
-keenan.major = 'Mechanical Engineering'
+keenan.major = 'Mekeenanical Engineering'
 keenan.year = '2018'
 keenan.contact = 'keenan.zucker@students.olin.edu'
 

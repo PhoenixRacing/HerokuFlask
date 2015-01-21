@@ -73,7 +73,7 @@ elpaso_waiting.caption = "Eerik waiting for the endurance race to begin"
 
 dust_elpaso = Picture()
 dust_elpaso.image_path = "img/gallery/dust-el-paso.JPG"
-dust_elpaso.caption = "Lindsay and Rezzy improvise dust protection gear in El Paso."
+dust_elpaso.caption = "Lindsey and Rezzy improvise dust protection gear in El Paso."
 
 elpaso_team = Picture()
 elpaso_team.image_path = "img/gallery/el-paso-team.JPG"
