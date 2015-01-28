@@ -13,7 +13,7 @@ def purchases():
 
     form = PurchaseForm(request.form)
     if request.method == 'POST' and form.validate():
-        gc = gspread.login('phoenixracingbaja@gmail.com','OlinBaja')
+        gc = gspread.login('phoenixracingbaja@gmail.com','BajaBaja')
         work_sheet = gc.open('Purchases').sheet1
         i = 1
         col_list = work_sheet.col_values(1)
@@ -36,7 +36,7 @@ def send_email():
     import smtplib
 
     gmail_user = "phoenixracingbaja@gmail.com"
-    gmail_pwd = "OlinBaja"
+    gmail_pwd = "BajaBaja"
     FROM = 'phoenixracingbaja@gmail.com'
     TO = ['kevin.suzuki@students.olin.edu'] #must be a list
     SUBJECT = "A Baja purchase request has been submitted."
