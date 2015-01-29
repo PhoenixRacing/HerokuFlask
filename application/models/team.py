@@ -207,7 +207,7 @@ patrick.contact = "patrick.huston@students.olin.edu"
 kai = team_member()
 kai.name = "Kai Levy"
 kai.image_path = "img/team/kai.jpg"
-kai.major = "Electrical and Computer Engineering"
+kai.major = "Electrikail and Computer Engineering"
 kai.year = "2018"
 kai.contact = "kai.levy@students.olin.edu"
 
