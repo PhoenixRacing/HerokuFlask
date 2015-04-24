@@ -38,6 +38,12 @@
 		padding-top:1.5rem;
 	}
 
+	.blueorigin {
+		height:auto;
+		width:15%;
+		padding:1rem;
+	}
+
 	.decorator {
 		display: none;
 	}
@@ -49,6 +55,12 @@
 		height:auto;
 		width:100%;
 		padding: 1rem;
+	}
+
+	.blueorigin {
+		height:auto;
+		width:35%;
+		padding:1rem;
 	}
 
 	.donate_banner_container {
