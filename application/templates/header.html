@@ -27,32 +27,32 @@
 
 {% set active_page = active_page|default('index') -%}
 
-<nav class="top-bar hide-for-small" data-topbar>
+<nav class="top-bar hide-for-small" data-topbar style = "background-color: #111 !important ">
 	<ul class="title-area">
-		<li class="name">
+		<li class="name" >
 			<h1><a href="{{url_for('index')}}">Phoenix Racing</a></h1>
 		</li>
 	</ul>
-	<section class="top-bar-section">
-		<ul class="left">
+	<section class="top-bar-section" style = "background-color: #111">
+		<ul class="left" style = "background-color: #111 !important ">
 			{% for id, caption in navbar['left'] %}
-			<li {% if id == active_page %}class="active"{% endif %}><a href="{{url_for(id)}}">{{caption}}</a></li>
+			<li {% if id == active_page %}class="active"{% endif %}><a href="{{url_for(id)}}" style = "background-color: #111 !important ">{{caption}}</a></li>
 			{% endfor %}
 		</ul>
-		<ul class="right">
+		<ul class="right" style = "background-color: #111 !important ">
 			{% for id, caption in navbar['right'] %}
-			<li {% if id == active_page %}class="active"{% endif %}><a href="{{url_for(id)}}">{{caption}}</a></li>
+			<li {% if id == active_page %}class="active"{% endif %}><a href="{{url_for(id)}}" style = "background-color: #111 !important ">{{caption}}</a></li>
 			{% endfor %}
 		</ul>
 	</section>
 </nav>
 
 <!-- Nav Bar for small screens -->
-	<nav class="tab-bar show-for-small" data-topbar>
-		<section class="left-small">
+	<nav class="tab-bar show-for-small" data-topbar style = "background-color: #111 !important ">
+		<section class="left-small" style = "background-color: #111 !important ">
 			<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
 		</section>
-		<section class="middle tab-bar-section">
+		<section class="middle tab-bar-section" style = "background-color: #111 !important ">
 			<h1 class="title">Phoenix Racing</h1>
 		</section>
 	</nav>

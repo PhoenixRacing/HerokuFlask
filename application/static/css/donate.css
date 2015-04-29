@@ -29,7 +29,7 @@
 @media only screen and (max-width: 70em) {
 	.sponsors-blurb-wrap {
 		text-align: center;
-		padding-top:1rem;
+		padding: 1rem;
 	}
 
 	.sponsor-img {
@@ -46,6 +46,10 @@
 
 	.decorator {
 		display: none;
+	}
+
+	.donate-caption {
+		background-color: #111;
 	}
 
 }

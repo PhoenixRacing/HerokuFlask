@@ -5,12 +5,17 @@
 	width:100%;
 }
 
-.banner-caption{	
-	background-color: rgba(34,34,34,0.87);
+.banner-caption {	
+	background-color: rgba(34,34,34,0.7);
 	padding-top: 1%;
-	text-align: center;
-	margin: auto;
 }
+
+/*.banner-caption h1 {
+	text-align:left;
+	font-size: 7rem;
+	font-weight: 500;
+	padding:1rem;
+}*/
 
 .decorator {
 	position:absolute;
@@ -28,17 +33,17 @@
 		width: 100%;
 		height:auto;
 		margin:auto;
-		top:28%;
+		top:57vh;
 		position: absolute;
 		text-align: center;
 		display:none;
 		padding-top:0;	
-		-moz-box-shadow:    inset 0 0 2rem #1f1f1f;
+		moz-box-shadow:    inset 0 0 2rem #1f1f1f;
    		-webkit-box-shadow: inset 0 0 2rem #1f1f1f;
    		box-shadow:        inset 0 0 2rem #1f1f1f;
 	}
 	.banner-caption img{
-		max-width: 58%;
+		max-width: 56%;
 		text-align: center;
 		padding-left:3%;
 		padding-right: 3%;
@@ -152,6 +157,10 @@
 	.decorator {
 		display: none;
 	}
+
+	.banner-caption{ 
+		background-color: #111;
+	}
 }
 
 /*About me section formatting*/
@@ -184,9 +193,4 @@
 /*Some other formatting that was driving me crazy*/
 p, h1, h2, h3, h4, small, strong {
 	color:white;
-	font-family: "Avant Garde", "Helvetica", sans-serif !important;
-}
-
-a {
-	font-family: "Avant Garde" ,"Helvetica", sans-serif !important;
 }

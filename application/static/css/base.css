@@ -1,10 +1,10 @@
 body,html{
     height:100%;
     width:100%;
-    background-color: #222;
-    font-weight:normal;
+    background-color: #111;
     -webkit-font-smoothing: antialiased !important;
 	-moz-osx-font-smoothing: grayscale !important;
+	font-size: 1.06rem;
 }
 
 body,
@@ -21,7 +21,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: "Lato", Helvetica, sans-serif!important;
+    font-family: "Raleway", sans-serif;
     opacity: 0.99;
 }
 
