@@ -7,6 +7,39 @@ class Picture(object):
 		self.image_path = image_path
 		self.caption = caption
 
+
+anders_enduro = Picture()
+anders_enduro.image_path = "img/gallery/andersenduro.jpg"
+anders_enduro.caption = ""
+
+anders_enduro2 = Picture()
+anders_enduro2.image_path = "img/gallery/andersendurostart.jpg"
+anders_enduro2.caption = ""
+
+anders_in_car = Picture()
+anders_in_car.image_path = "img/gallery/andersincar.jpg"
+anders_in_car.caption = ""
+
+car_driving = Picture()
+car_driving.image_path = "img/gallery/cardriving.jpg"
+car_driving.caption = ""
+
+car_driving2 = Picture()
+car_driving2.image_path = "img/gallery/cardriving2.jpg"
+car_driving2.caption = ""
+
+deborah_car = Picture()
+deborah_car.image_path = "img/gallery/deborahcar.jpg"
+deborah_car.caption = ""
+
+joe_grinding = Picture()
+joe_grinding.image_path = "img/gallery/joegrinding.jpg"
+joe_grinding.caption = ""
+
+juan_numbers = Picture()
+juan_numbers.image_path = "img/gallery/juannumbers.jpg"
+juan_numbers.caption = ""
+
 teampic2013 = Picture()
 teampic2013.image_path = "img/gallery/2013teampic.jpg"
 teampic2013.caption = "The 2012-2013 Phoenix Racing team picture"
@@ -104,10 +137,12 @@ kansas_enduro.image_path = "img/gallery/kansas_enduro.JPG"
 kansas_enduro.caption = "The endurance race during the 2014 Baja Competition in Pittsburg, Kansas"
 
 
-picture_list = [teampic2013, tenn_competition, tenn_strat, tenn_enduro, rochestermud, rochestermud2, \
-	rochestermud3, rochester2013, driveday, teampic2014, chassis2014, chris_chassis, \
-	chassis_work, workday, suspension, elpaso_waiting, dust_elpaso, hill_climb, enduro_elpaso, \
-	elpaso_team, pit_kansas, kansas_tech, maddie_kevin, kansas_enduro]
+picture_list = [anders_enduro2, anders_enduro, anders_in_car, car_driving, car_driving2, \
+	deborah_car, joe_grinding, juan_numbers ,teampic2013, tenn_competition, tenn_strat, \
+	tenn_enduro, rochestermud, rochestermud2, rochestermud3, rochester2013, driveday, \
+	teampic2014, chassis2014, chris_chassis, chassis_work, workday, suspension, \
+	elpaso_waiting, dust_elpaso, hill_climb, enduro_elpaso, elpaso_team, pit_kansas, \
+	kansas_tech, maddie_kevin, kansas_enduro]
 
 
 #TODO: support admin uploads to the gallery page
