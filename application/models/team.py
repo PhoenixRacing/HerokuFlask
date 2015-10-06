@@ -27,44 +27,36 @@ class team_member(object):
 # for i in team_member_object_list
 # 	team_list = {i.name:i}
 
-kate = team_member()
-kate.name = 'Kate Maschan'
-kate.image_path = 'img/team/kate.jpg'
-kate.major = 'Mechanical Engineering'
-kate.year = '2015'
-kate.title = 'General Project Manager'
-kate.contact = 'kate@students.olin.edu'
-
-chris = team_member()
-chris.name = "Chris Joyce"
-chris.image_path = 'img/team/chris.jpg'
-chris.major = 'Mechanical Engineering'
-chris.year = '2015'
-chris.title = 'Design Lead'
-chris.contact = 'christopher.Joyce@students.olin.edu'
-
-maddie = team_member()
-maddie.name = "Maddie Perry"
-maddie.image_path = 'img/team/maddie.jpg'
-maddie.major = 'Mechanical Engineering'
-maddie.year = '2015'
-maddie.title = 'Fabrication Manager'
-maddie.contact = 'madeline.perry@students.olin.edu'
+anders = team_member()
+anders.name = "Anders Johnson"
+anders.image_path = 'img/team/anders.jpg'
+anders.major = 'Mechanical Engineering'
+anders.year = '2017'
+anders.title = 'General Project Manager'
+anders.contact = 'anders.johnson@students.olin.edu'
 
 joe = team_member()
 joe.name = 'Joe Kochevar'
 joe.image_path = 'img/team/joe.jpeg'
 joe.major = 'Mechanical Engineering'
 joe.year = '2016'
-joe.title = 'Drivetrain System Lead'
+joe.title = 'Design Lead'
 joe.contact = 'joseph.kochevar@students.olin.edu'
+
+harris = team_member()
+harris.name = "Harris Davidson"
+harris.image_path = 'img/team/harris_davidson.jpg'
+harris.major = "Mechanical Engineering"
+harris.year = "2019"
+harris.title = "Fabrication Manager"
+harris.contact = "harris.davidson@students.olin.edu"
 
 deborah = team_member()
 deborah.name = 'Deborah Hellen'
 deborah.image_path = 'img/team/deborah.jpg'
 deborah.major = "Electrical and Computer Engineering"
 deborah.year = '2016'
-deborah.title = 'Electrical System Lead'
+deborah.title = 'Website and Marketing Lead'
 deborah.contact = 'deborah.hellen@students.olin.edu'
 
 daniel = team_member()
@@ -72,7 +64,6 @@ daniel.name = 'Daniel Leong'
 daniel.image_path = 'img/team/daniel.jpg'
 daniel.major = "Mechanical Engineering"
 daniel.year = '2016'
-daniel.title = 'Suspension System Lead'
 daniel.contact = 'daniel.leong@students.olin.edu'
 
 lindsey = team_member()
@@ -80,7 +71,6 @@ lindsey.name = 'Lindsey Andrade'
 lindsey.image_path = 'img/team/lindsay.JPG'
 lindsey.major = 'Mechanical Engineering'
 lindsey.year = '2017'
-lindsey.title = 'Body System Lead'
 lindsey.contact = 'lindsey.andrade@students.olin.edu'
 
 kevin = team_member()
@@ -91,40 +81,12 @@ kevin.year = '2017'
 kevin.title = 'Financial Manager'
 kevin.contact = 'kevin.suzuki@students.olin.edu'
 
-brandon = team_member()
-brandon.name = 'Brandon Chiou'
-brandon.image_path = 'img/team/brandon.jpg'
-brandon.major = 'Bioengineering'
-brandon.year = '2016'
-brandon.contact = 'brandon.chiou@students.olin.edu'
-
-anders = team_member()
-anders.name = "Anders Johnson"
-anders.image_path = 'img/team/anders.jpg'
-anders.major = 'Mechanical Engineering'
-anders.year = '2017'
-anders.contact = 'anders.johnson@students.olin.edu'
-
-meg = team_member()
-meg.name = 'Meg McCauley'
-meg.image_path = 'img/team/meg.jpg'
-meg.major = 'Electrical and Computer Engineering'
-meg.year = '2017'
-meg.contact = 'meg@students.olin.edu'
-
-
-selina = team_member()
-selina.name = "Ziyu (Selina) Wang"
-selina.image_path = 'img/team/selina.JPG'
-selina.major = 'Electrical and Computer Engineering'
-selina.year = '2018'
-selina.contact = 'ziyu.wang@students.olin.edu'
-
 brett = team_member()
 brett.name = 'Brett Atkinson'
 brett.image_path = 'img/team/brett.jpg'
 brett.major = 'Mechanical Engineering'
 brett.year = '2017'
+brett.title = "Body System Lead"
 brett.contact = 'brett.atkinson@students.olin.edu'
 
 manik = team_member()
@@ -132,6 +94,7 @@ manik.name = 'Manik Singh Sethi'
 manik.image_path = 'img/team/manik.jpg'
 manik.major = 'Mechanical Engineering'
 manik.year = '2018'
+manik.title = "Drivetrain System Lead"
 manik.contact = 'Manik.Sethi@students.olin.edu'
 
 sawyer = team_member()
@@ -160,35 +123,8 @@ keenan.name = "Keenan Zucker"
 keenan.image_path = 'img/team/keenan.jpg'
 keenan.major = 'Mekeenanical Engineering'
 keenan.year = '2018'
+keenan.title = "Old Car Czar"
 keenan.contact = 'keenan.zucker@students.olin.edu'
-
-zoe = team_member()
-zoe.name = "Zoe Fiddler"
-zoe.image_path = 'img/team/zoe.jpg'
-zoe.major = "Electrical and Computer Engineering"
-zoe.year = '2016'
-zoe.contact = 'zoe.fiddler@students.olin.edu'
-
-ad = team_member()
-ad.name = "Adriana Garties"
-ad.image_path = 'img/team/Ad_headshot.jpg'
-ad.major = "Mechanical Engineering"
-ad.year = '2015'
-ad.contact = 'ad@students.olin.edu'
-
-lauren = team_member()
-lauren.name= 'Lauren Froschauer'
-lauren.image_path = 'img/team/lauren.jpg'
-lauren.major = 'Mechanical Engineering'
-lauren.year = '2016'
-lauren.contact = 'LaurenFroschauer@gmail.com'
-
-luke = team_member()
-luke.name = "Luke Morris"
-luke.image_path = "img/team/luke.jpg"
-luke.major = 'Mechanical Engineering'
-luke.year = '2017'
-luke.contact = "luke.morris@students.olin.edu"
 
 forrest = team_member()
 forrest.name = "Forrest Bourke"
@@ -218,20 +154,27 @@ michael.major = "Mechanical Engineering"
 michael.year = "2016"
 michael.contact = "michael.resnick@students.olin.edu"
 
-emily = team_member()
-emily.name = "Emily Guthrie"
-emily.image_path = "img/team/emily.jpg"
-emily.major = "Electrical and Computer Engineering"
-emily.year = "2016"
-emily.contact = "emily.guthrie@students.olin.edu"
+jc = team_member()
+jc.name = "Juan Carlos del Rio"
+jc.image_path = "img/team/jc.jpg"
+jc.major = "Mechanical Engineering"
+jc.year = "2018"
+jc.contact = "juancarlos.delrio@students.olin.edu"
+
+radmer = team_member()
+radmer.name = "Radmer van der Hyde"
+radmer.image_path = "img/team/radmer.jpg"
+radmer.major = "Electrical and Computer Engineering"
+radmer.year = "2017"
+radmer.contact = "radmer.vanderhyde@students.olin.edu"
 
 
-team_leads = {'chris': chris, 'maddie': maddie, 'kate': kate}
+team_leads = {'joe': joe, "harris": harris, 'anders': anders}
 
-system_leads = {'joe': joe, 'deborah': deborah, 'daniel': daniel, 'lindsey': lindsey}
+system_leads = {'manik': manik, 'brett': brett, 'jc': jc, 'radmer': radmer}
 
-general_mems = {'kevin': kevin, 'brandon': brandon, 'anders': anders, \
-	'selina': selina, 'brett': brett, 'manik':manik, 'sawyer':sawyer, \
-	'searing': searing, 'kelli':kelli, 'keenan':keenan, 'zoe': zoe, 'ad': ad, \
-	'lauren': lauren, 'luke': luke, 'forrest': forrest, 'patrick': patrick, 'kai': kai,\
-	"michael": michael, 'meg': meg, 'emily': emily}
+general_mems = {'kevin': kevin, 'daniel':daniel, 'lindsey': lindsey,\
+	'brett': brett, 'manik':manik, 'sawyer':sawyer, \
+	'searing': searing, 'kelli':kelli, 'keenan':keenan, \
+	'forrest': forrest, 'patrick': patrick, 'kai': kai,\
+	"michael": michael, 'deborah': deborah}
