@@ -41,7 +41,7 @@
 	.blueorigin {
 		height:auto;
 		width:85%;
-		padding-top:5rem;
+		padding:1rem;
 	}
 
 	.decorator {
@@ -57,14 +57,13 @@
 @media only screen and (min-width:  70em) {
 	.sponsor-img {
 		height:auto;
-		width:100%;
-		padding: 1rem;
+		width:80%;
 	}
 
 	.blueorigin {
 		height:auto;
-		width:55%;
-		padding-top:5rem;
+		width:100%;
+		padding: 1rem;
 	}
 
 	.donate_banner_container {

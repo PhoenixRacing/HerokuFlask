@@ -18,7 +18,6 @@
 });*/
 
 $( window ).resize(function() {
- 	console.log("Window resized!");
  	$('.donate-background').fadeIn(650);
 	$('.sponsors-blurb-wrap').fadeIn(650);
 	$('.donate-caption').fadeIn(1000);
@@ -50,7 +49,7 @@ $( window ).resize(function() {
 <div class = "sponsors-blurb-wrap">
 	<div class = "sponsors-blurb">
 	<h1>Our 2015/2016 Sponsors</h1><br>
-	<p>What we do is only possible thanks to the help of the following people and organizations. <p><a href="{{url_for('static',filename='img/CorporateSponsorshipLevels.png')}}">Click here</a> to view our corporate sponsorship brochure. For further information on corporate sponsorship, please contact our marketing manager, <a class="inline-a" href="mailto:deborah.hellen@students.olin.edu">Deborh Hellen</a>.</p><br>
+	<p>What we do is only possible thanks to the help of the following people and organizations. <p><a href="{{url_for('static',filename='img/CorporateSponsorshipLevels.png')}}">Click here</a> to view our corporate sponsorship brochure. For further information on corporate sponsorship, please contact our marketing manager, <a class="inline-a" href="mailto:deborah.hellen@students.olin.edu">Deborah Hellen</a>.</p><br>
 	<h3>Thank you to all of our Corporate sponsors! </h3><br><br>
 	<div class="row">
 		<div class="small-12 medium-6 large-6 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/BOSE-white.png')}}"></div>
@@ -61,9 +60,10 @@ $( window ).resize(function() {
 		<div class="small-12 medium-4 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/moms-white.png')}}"></div>
 		<div class="small-12 medium-4 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/zygote-lg-white.png')}}"></div>
 		<div class="small-12 medium-4 large-4 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/chillybear-white.png')}}"></div>
-	</div>
+	</div><br><br><Br>
 	<div class = "row">
-		<div class="small-12 medium-12 large-12 columns"><img class = "blueorigin" src="{{url_for('static',filename='img/blueoriginlogowhite.png')}}"></div>
+		<div class="small-12 medium-6 large-6 columns"><img class = "sponsor-img" src="{{url_for('static',filename='img/blueoriginlogowhite.png')}}"></div>
+		<div class ="small-12 medium-6 large-6 columns"><img class = "sponsor-img" src = "{{url_for('static', filename='img/Metal_Supermarkets_Logo.png')}}"></div>
   	
 	</div><br><br><br>
 
@@ -72,10 +72,9 @@ $( window ).resize(function() {
 	<div class = "sponsors-blurb"><br>
 	<h3>Thank you to the following individuals and families!</h3><br><br>
 	<div class = "row">
-		<div class="small-12 medium-6 large-3 columns"><p>Xy Ziemba<br> Ert McMullen<br>Tim Raymond<br>Ryan Harris<br> Jim Switzer<br>Alex Jenko<br>Richard Harris<br>The Andree Family </p></div>
-  		<div class="small-12 medium-6 large-3 columns"><p>The Perry Family<br>Guy and Barbara Jordan<br>The McCauley Family<br>The Townsend Family<br>The Celik Family<br> The Hilton-Joyce Family<br>Kathleen Scully<br>Annabelle Carr<br></p></div>
-  		<div class="small-12 medium-6 large-3 columns"><p>Sandy and Sally Small<br>Jeff and Lola Stark<br> Kyle Copeland<br>The McClure Family<br>Marie and Ryan Stark<br>The Morris Family<br>The Rowley Family<br>The Varin Family</p></div>
-  		<div class="small-12 medium-6 large-3 columns"><p>Michael Wallace<br>The Aletty Family<br>The Behling Family<br>The Bledsoe Family<br>The Helmik Family<br>The Bourke Family<br>The Atkinson Family</p></div>
+		<div class="small-12 medium-6 large-4 columns"><p>Tiu-Levy Family<br>Bourke Family<br>Nik Martelaro<br>Johnson Family<br> Eerik Helmik<br>Rutheven Family<br>Harris Family<br>Searing Family</p></div>
+  		<div class="small-12 medium-6 large-4 columns"><p>McClure Family<br>Kathleen Scully<br>Dan Greeley<br>Froschauer Family<br>Hellen Family<br>Perry Family<br>Andrade Family<br>Joe Funke<br></p></div>
+  		<div class="small-12 medium-6 large-4 columns"><p>McCauley Family<br>Zucker Family<br>Jay Feldman<br>Dan Foran<br>Hilton-Joyce Family<br>Ryan Harris<br>Xy Ziemba<br></p></div>
 	</div>
 	
 </div>
@@ -83,5 +82,4 @@ $( window ).resize(function() {
 <br><br><br>
 {% block footer %}{%include 'footer.html' %}{% endblock %}
 {% endblock %}
-
 
