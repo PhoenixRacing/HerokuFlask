@@ -11,25 +11,9 @@ class team_member(object):
 		self.title = title
 		self.contact = contact
 
-# Maybe a way to reduce the amount of information we need to input??
-
-# team_member_object_list = []
-# team_member_name_list = ['Kate','Chris','Debora']
-# team_member_image_path_list = ['','','']
-# team_member_bio_list = ['','','']
-# for i in range(len(team_member_name_list)):
-# 	member_object = team_member()
-# 	member_object.name = team_member_name_list[i]
-# 	member_object.image_path = team_member_image_path_list[i]
-# 	member_object.bio = team_member_bio_list[i]
-# 	team_member_object_list.append(member_object)
-
-# for i in team_member_object_list
-# 	team_list = {i.name:i}
-
 anders = team_member()
 anders.name = "Anders Johnson"
-anders.image_path = 'img/team/anders.jpg'
+anders.image_path = 'img/team/Johnson_Anders.jpg'
 anders.major = 'Mechanical Engineering'
 anders.year = '2017'
 anders.title = 'General Project Manager'
@@ -121,17 +105,10 @@ kelli.contact = "kelli.shimazu@students.olin.edu"
 keenan = team_member()
 keenan.name = "Keenan Zucker"
 keenan.image_path = 'img/team/keenan.jpg'
-keenan.major = 'Mekeenanical Engineering'
+keenan.major = 'Human Centered Computing'
 keenan.year = '2018'
 keenan.title = "Old Car Czar"
 keenan.contact = 'keenan.zucker@students.olin.edu'
-
-forrest = team_member()
-forrest.name = "Forrest Bourke"
-forrest.image_path = "img/team/forrest.jpg"
-forrest.major = "Electrical and Computer Engineering"
-forrest.year = '2016'
-forrest.contact = "forrest.bourke@students.olin.edu"
 
 patrick = team_member()
 patrick.name = "Patrick Huston"
@@ -147,34 +124,81 @@ kai.major = "Electrikail and Computer Engineering"
 kai.year = "2018"
 kai.contact = "kai.levy@students.olin.edu"
 
-michael = team_member()
-michael.name = "Michael Resnick"
-michael.image_path = "img/team/rezzy.jpg"
-michael.major = "Mechanical Engineering"
-michael.year = "2016"
-michael.contact = "michael.resnick@students.olin.edu"
-
 jc = team_member()
 jc.name = "Juan Carlos del Rio"
 jc.image_path = "img/team/jc.jpg"
 jc.major = "Mechanical Engineering"
+jc.title = "Suspension Lead"
 jc.year = "2018"
 jc.contact = "juancarlos.delrio@students.olin.edu"
 
 radmer = team_member()
-radmer.name = "Radmer van der Hyde"
+radmer.name = "Redmer van der Heyde"
 radmer.image_path = "img/team/radmer.jpg"
 radmer.major = "Electrical and Computer Engineering"
+radmer.title = "Electrical Lead"
 radmer.year = "2017"
 radmer.contact = "radmer.vanderhyde@students.olin.edu"
 
+keving = team_member()
+keving.name = "Kevin Guo"
+keving.image_path = "img/team/kevin_guo.jpg"
+keving.year = "2019"
+keving.major = "Undeclared"
+keving.contact = "kevin.guo@students.olin.edu"
+
+andrew = team_member()
+andrew.name = "Andrew Holmes"
+andrew.image_path = "img/team/Holmes_Andrew.jpg"
+andrew.year = "2019"
+andrew.major = "Mechanical Engineering"
+andrew.contact = "andrew.holmes@students.olin.edu"
+
+andrewp = team_member()
+andrewp.name = "Andrew Pan"
+andrewp.image_path = "img/team/andrew_pan-1.jpg"
+andrewp.year = "2019"
+andrewp.major = "Undeclared"
+andrewp.contact = "andrew.pan@students.olin.edu"
+
+hunter = team_member()
+hunter.name = "Hunter Normandeau"
+hunter.image_path = "img/team/hunter_normandeau-1.jpg"
+hunter.year = "2019"
+hunter.major = "Mechanical Engineering"
+hunter.contact = "hunter.Normandeau@students.olin.edu"
+
+gwyn = team_member()
+gwyn.name = "Gwyn Phelps"
+gwyn.image_path = "img/team/gwyn_phelps-2.jpg"
+gwyn.year = "2019"
+gwyn.major = "Undeclared"
+gwyn.contact = "gwyn.phelps@students.olin.edu"
+
+mary = team_member()
+mary.name = "Mary Keenan"
+mary.image_path = "img/team/mary_keenan-2.jpg"
+mary.major = "Undeclared"
+mary.contact = "mary.keenan@students.olin.edu"
+
+uma = team_member()
+uma.name = "Uma Desai"
+uma.image_path = "img/team/uma_desai-1.jpg"
+uma.major = "Undeclared"
+uma.contact = "uma.desai@students.olin.edu"
+
+steven = team_member()
+steven.name = "Steven Meyer"
+steven.image_path = "img/team/steven_meyer-2.jpg"
+steven.major = "Mechanical Engineering"
+steven.contact = "steven.meyer@students.olin.edu"
 
 team_leads = {'joe': joe, "harris": harris, 'anders': anders}
 
 system_leads = {'manik': manik, 'brett': brett, 'jc': jc, 'radmer': radmer}
 
 general_mems = {'kevin': kevin, 'daniel':daniel, 'lindsey': lindsey,\
-	'brett': brett, 'manik':manik, 'sawyer':sawyer, \
-	'searing': searing, 'kelli':kelli, 'keenan':keenan, \
-	'forrest': forrest, 'patrick': patrick, 'kai': kai,\
-	"michael": michael, 'deborah': deborah}
+	'sawyer':sawyer, 'hunter':hunter, 'gwyn':gwyn, 'mary':mary, 'uma':uma,\
+	'searing': searing, 'kelli':kelli, 'keenan':keenan, 'steven':steven,\
+	'kai': kai,'keving': keving, 'andrew': andrew, 'andrewp': andrewp,\
+	'deborah': deborah}
