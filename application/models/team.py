@@ -12,9 +12,7 @@ class team_member(object):
 		self.contact = contact
 
 team_leads = {}
-
 system_leads = {}
-
 general_mems = {}
 
 anders = team_member()
@@ -22,7 +20,7 @@ anders.name = "Anders Johnson"
 anders.image_path = 'img/team/Johnson_Anders.jpg'
 anders.major = 'Mechanical Engineering'
 anders.year = '2017'
-anders.title = 'General Project Manager'
+anders.title = 'Project Manager'
 anders.contact = 'anders.johnson@students.olin.edu'
 team_leads['anders'] = anders
 
@@ -30,17 +28,17 @@ harris = team_member()
 harris.name = "Harris Davidson"
 harris.image_path = 'img/team/harris_davidson.jpg'
 harris.major = "Mechanical Engineering"
-harris.year = "2019"
-harris.title = "Product Manager"
+harris.year = "2017"
+harris.title = "Product Owner"
 harris.contact = "harris.davidson@students.olin.edu"
 team_leads['harris'] = harris
 
 lindsey = team_member()
 lindsey.name = 'Lindsey Andrade'
-lindsey.image_path = 'img/team/lindsay.JPG'
+lindsey.image_path = 'img/team/lindsay.jpg'
 lindsey.major = 'Mechanical Engineering'
 lindsey.year = '2017'
-lindsey.title = 'Design and Fabrication Lead'
+lindsey.title = 'Design and Fabrication Manager'
 lindsey.contact = 'lindsey.andrade@students.olin.edu'
 team_leads['lindsey'] = lindsey
 
@@ -49,7 +47,7 @@ manik.name = 'Manik Singh Sethi'
 manik.image_path = 'img/team/manik_sethi.jpg'
 manik.major = 'Mechanical Engineering'
 manik.year = '2018'
-manik.title = "Drivetrain System Lead"
+manik.title = "Drivetrain Lead"
 manik.contact = 'Manik.Sethi@students.olin.edu'
 system_leads['manik'] = manik
 
@@ -89,6 +87,14 @@ kevin.title = 'Financial Manager'
 kevin.contact = 'kevin.suzuki@students.olin.edu'
 general_mems['kevin'] = kevin
 
+mary = team_member()
+mary.name = "Mary Keenan"
+mary.image_path = "img/team/mary_keenan.jpg"
+mary.major = "Electrical and Computer Engineering"
+mary.year = '2019'
+mary.contact = "mary.keenan@students.olin.edu"
+general_mems['mary'] = mary
+
 keenan = team_member()
 keenan.name = "Keenan Zucker"
 keenan.image_path = 'img/team/keenan_zucker.jpg'
@@ -104,6 +110,14 @@ kai.major = "Electrikail and Computer Engineering"
 kai.year = "2018"
 kai.contact = "kai.levy@students.olin.edu"
 general_mems['kai'] = kai
+
+gwyn = team_member()
+gwyn.name = "Gwyn Phelps"
+gwyn.image_path = "img/team/gwyn_phelps-2.jpg"
+gwyn.year = "2019"
+gwyn.major = "Undeclared"
+gwyn.contact = "gwyn.phelps@students.olin.edu"
+general_mems['gwyn'] = gwyn
 
 andrew = team_member()
 andrew.name = "Andrew Holmes"
@@ -129,26 +143,10 @@ hunter.major = "Mechanical Engineering"
 hunter.contact = "hunter.Normandeau@students.olin.edu"
 general_mems['hunter'] = hunter
 
-gwyn = team_member()
-gwyn.name = "Gwyn Phelps"
-gwyn.image_path = "img/team/gwyn_phelps-2.jpg"
-gwyn.year = "2019"
-gwyn.major = "Undeclared"
-gwyn.contact = "gwyn.phelps@students.olin.edu"
-general_mems['gwyn'] = gwyn
-
-mary = team_member()
-mary.name = "Mary Keenan"
-mary.image_path = "img/team/mary_keenan-2.jpg"
-mary.major = "Undeclared"
-mary.year = '2019'
-mary.contact = "mary.keenan@students.olin.edu"
-general_mems['mary'] = mary
-
 uma = team_member()
 uma.name = "Uma Desai"
 uma.image_path = "img/team/uma_desai-1.jpg"
-uma.major = "Undeclared"
+uma.major = "Electrical and Computer Engineering"
 uma.year = '2019'
 uma.contact = "uma.desai@students.olin.edu"
 general_mems['uma'] = uma
@@ -200,4 +198,65 @@ benjamin.major = "Mechanical Engineering"
 benjamin.year = '2020'
 benjamin.contact = "benjamin.lilly@students.olin.edu"
 general_mems['benjamin'] = benjamin
+
+elena = team_member()
+elena.name = "Elena Meyerson"
+elena.image_path = "img/team/elena_meyerson.jpg"
+elena.major = "Electrical and Computer Engineering"
+elena.year = '2020'
+elena.contact = "elena.meyerson@students.olin.edu"
+general_mems['elena'] = elena
+
+ilya = team_member()
+ilya.name = "Ilya Besancon"
+ilya.image_path = "img/team/ilya_besancon.jpg"
+ilya.major = "Mechanical Engineering"
+ilya.year = '2020'
+ilya.contact = "ilya.besancon@students.olin.edu"
+general_mems['ilya'] = ilya
+
+cant_use_min_because_its_a_python_keyword = team_member()
+cant_use_min_because_its_a_python_keyword.name = "Min Jang"
+cant_use_min_because_its_a_python_keyword.image_path = "img/team/person-placeholder.jpg"
+cant_use_min_because_its_a_python_keyword.major = "Mechanical Engineering"
+cant_use_min_because_its_a_python_keyword.year = '2019'
+cant_use_min_because_its_a_python_keyword.contact = "sumin.jang@students.olin.edu"
+general_mems['min'] = cant_use_min_because_its_a_python_keyword
+
+anupama = team_member()
+anupama.name = "Anupama (Ana) Krishnan"
+anupama.image_path = "img/team/person-placeholder.jpg"
+anupama.major = "Mechanical Engineering"
+anupama.year = '2020'
+anupama.contact = "anupama.krishnan@students.olin.edu"
+general_mems['anupama'] = anupama
+
+halley = team_member()
+halley.name = "Halley Pollock-Muskin"
+halley.image_path = "img/team/Halley_Pollock-Muskin.jpg"
+halley.major = "Mechanical Engineering"
+halley.year = '2017'
+halley.contact = "halley.pollock-muskin@students.olin.edu"
+general_mems['halley'] = halley
+
+anil = team_member()
+anil.name = "Anil Patel"
+anil.image_path = "img/team/anil_patel.jpg"
+anil.major = "Undecided"
+anil.year = '2017'
+anil.contact = "halley.pollock-muskin@students.olin.edu"
+general_mems['anil'] = anil
+
+remy = team_member()
+remy.name = "Remy Boudousquie"
+remy.image_path = "img/team/remy_boudousquie.jpg"
+remy.major = "Mechanical Engineering"
+remy.year = '2020'
+remy.contact = "remy@students.olin.edu"
+general_mems['remy'] = remy
+
+
+
+
+
 
