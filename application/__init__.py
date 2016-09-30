@@ -29,8 +29,8 @@ else:
     app.config.from_pyfile('mongo_config.cfg')
     app.config['TEST'] = True
     app.config['DEBUG'] = True
+
 socketio = SocketIO(app)
-print(socketio)
 db = MongoEngine(app)
 
 # Setup the login system
