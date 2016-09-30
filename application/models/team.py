@@ -35,7 +35,7 @@ team_leads['harris'] = harris
 
 lindsey = team_member()
 lindsey.name = 'Lindsey Andrade'
-lindsey.image_path = 'img/team/lindsay.jpg'
+lindsey.image_path = 'img/team/lindsey.jpg'
 lindsey.major = 'Mechanical Engineering'
 lindsey.year = '2017'
 lindsey.title = 'Design and Fabrication Manager'
@@ -44,7 +44,7 @@ team_leads['lindsey'] = lindsey
 
 manik = team_member()
 manik.name = 'Manik Singh Sethi'
-manik.image_path = 'img/team/manik_sethi.jpg'
+manik.image_path = 'img/team/manik_sethi.png'
 manik.major = 'Mechanical Engineering'
 manik.year = '2018'
 manik.title = "Drivetrain Lead"
@@ -185,7 +185,7 @@ general_mems['missoury'] = missoury
 
 adam = team_member()
 adam.name = "Adam Selker"
-adam.image_path = "img/team/adam_selker.jpg"
+adam.image_path = "img/team/person-placeholder.jpg"
 adam.major = "Undeclared"
 adam.year = '2020'
 adam.contact = "adam@students.olin.edu"
