@@ -201,7 +201,7 @@ general_mems['benjamin'] = benjamin
 
 elena = team_member()
 elena.name = "Elena Meyerson"
-elena.image_path = "img/team/elena_meyerson.jpg"
+elena.image_path = "img/team/elena_meyerson.JPG"
 elena.major = "Electrical and Computer Engineering"
 elena.year = '2020'
 elena.contact = "elena.meyerson@students.olin.edu"
