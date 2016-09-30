@@ -26,14 +26,9 @@ if host:
     app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
     app.config['TEST'] = False
 else:
-    #app.config.from_pyfile('mongo_config.cfg')
+    app.config.from_pyfile('mongo_config.cfg')
     app.config['TEST'] = True
     app.config['DEBUG'] = True
-    app.config['MONGODB_SETTINGS'] = {
-        'db': 'test',
-        'host': 'localhost',
-        'port': 27017
-    }
 socketio = SocketIO(app)
 print(socketio)
 db = MongoEngine(app)

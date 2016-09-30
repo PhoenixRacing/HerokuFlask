@@ -1,7 +1,6 @@
 from application import app as application
 from gevent import monkey
 from socketio.server import SocketIOServer
-import socketio
 
 
 monkey.patch_all()
