@@ -185,7 +185,7 @@ general_mems['missoury'] = missoury
 
 adam = team_member()
 adam.name = "Adam Selker"
-adam.image_path = "img/team/person-placeholder.jpg"
+adam.image_path = "img/team/adam_selker.jpg"
 adam.major = "Undeclared"
 adam.year = '2020'
 adam.contact = "adam@students.olin.edu"
@@ -225,7 +225,7 @@ general_mems['min'] = cant_use_min_because_its_a_python_keyword
 
 anupama = team_member()
 anupama.name = "Anupama (Ana) Krishnan"
-anupama.image_path = "img/team/person-placeholder.jpg"
+anupama.image_path = "img/team/anupama_krishnan.jpg"
 anupama.major = "Mechanical Engineering"
 anupama.year = '2020'
 anupama.contact = "anupama.krishnan@students.olin.edu"
