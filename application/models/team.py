@@ -61,7 +61,7 @@ jc.contact = "juancarlos.delrio@students.olin.edu"
 system_leads['jc'] = jc
 
 radmer = team_member()
-radmer.name = "Redmer van der Heyde"
+radmer.name = "Radmer van der Heyde"
 radmer.image_path = "img/team/radmer.jpg"
 radmer.major = "Electrical and Computer Engineering"
 radmer.title = "Electrical Lead"
