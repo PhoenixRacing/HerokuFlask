@@ -243,7 +243,7 @@ anil = team_member()
 anil.name = "Anil Patel"
 anil.image_path = "img/team/anil_patel.jpg"
 anil.major = "Undecided"
-anil.year = '2017'
+anil.year = '2020'
 anil.contact = "halley.pollock-muskin@students.olin.edu"
 general_mems['anil'] = anil
 
