@@ -53,7 +53,7 @@ system_leads['manik'] = manik
 
 jc = team_member()
 jc.name = "Juan Carlos del Rio"
-jc.image_path = "img/team/jc.jpg"
+jc.image_path = "img/team/juancarlos.jpg"
 jc.major = "Mechanical Engineering"
 jc.title = "Suspension Lead"
 jc.year = "2018"
