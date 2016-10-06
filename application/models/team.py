@@ -80,7 +80,7 @@ system_leads['sawyer'] = sawyer
 
 kevin = team_member()
 kevin.name = 'Kevin Suzuki'
-kevin.image_path = 'img/team/ksuzi.JPG'
+kevin.image_path = 'img/team/kevin_suzuki.jpg'
 kevin.major = 'Bioengineering'
 kevin.year = '2017'
 kevin.title = 'Financial Manager'
