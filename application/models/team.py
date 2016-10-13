@@ -255,6 +255,57 @@ remy.year = '2020'
 remy.contact = "remy@students.olin.edu"
 general_mems['remy'] = remy
 
+katya = team_member()
+katya.name = "Katya Donovan"
+katya.image_path = "img/team/katya_donovan.jpg"
+katya.major = "Mechanical Engineering"
+katya.year = '2020'
+katya.contact = "katya.donovan@students.olin.edu"
+general_mems['katya'] = katya
+
+john = team_member()
+john.name = "John Bozzella"
+john.major = "Mechanical Engineering"
+john.year = '2018'
+john.contact = "John.Bozzella@students.olin.edu"
+general_mems['john'] = john
+
+anna = team_member()
+anna.name = "Anna Buchele"
+anna.major = "Mechanical Engineering"
+anna.year = '2019'
+anna.contact = "Anna.buchele@students.olin.edu"
+general_mems['anna'] = anna
+
+siena = team_member()
+siena.name = "Siena Okuno"
+siena.major = "Mechanical Engineering"
+siena.year = '2020'
+siena.contact = "siena.okuno@students.olin.edu"
+general_mems['siena'] = siena
+
+lisa = team_member()
+lisa.name = "Lisa Joelle Hachmann"
+lisa.image_path = "img/team/lisa_hachmann.jpg"
+lisa.major = "Electrical and Computer Engineering"
+lisa.year = '2018'
+lisa.contact = "lisa.hachmann@students.olin.edu"
+general_mems['lisa'] = lisa
+
+duncan = team_member()
+duncan.name = "Duncan Michael"
+duncan.major = "Mechanical Engineering"
+duncan.year = '2017'
+duncan.contact = "duncan.michael@students.olin.edu"
+general_mems['duncan'] = duncan
+
+pranay = team_member()
+pranay.name = "Pranay Dubey"
+pranay.major = "Mechanical Engineering"
+pranay.year = '2020'
+pranay.contact = "pranay.dubey@students.olin.edu"
+general_mems['pranay'] = pranay
+
 
 
 
