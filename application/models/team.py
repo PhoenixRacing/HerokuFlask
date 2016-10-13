@@ -3,7 +3,7 @@
 from flask import url_for
 
 class team_member(object):
-	def __init__(self, name = "nobody", image_path= "static/img/team/person-placeholder.jpg", major="Engineering", year="20XX",title=' ',contact=' '):
+	def __init__(self, name = "nobody", image_path= "img/team/person-placeholder.jpg", major="Engineering", year="20XX",title=' ',contact=' '):
 		self.name = name
 		self.image_path = image_path
 		self.major = major
