@@ -3,9 +3,5 @@ venv
 *~
 application/mongo_config.cfg
 *.sublime-project
-<<<<<<< HEAD
 *.sublime-workspace
 static/uploads/*
-=======
-*.sublime-workspace
->>>>>>> data
